@@ -8535,6 +8535,9 @@ var Map = {
             $('[data-action="provider"]').click(function() {
                 Map.openProviderList();
             });
+            $('[data-action="zoom"]').click(function() { // customIRCELINE
+                Map.zoomPhenomenon(); // customIRCELINE
+            }); // customIRCELINE
             $('[data-action="locate"]').click(function() {
                 Map.locateUser();
             });
@@ -8973,6 +8976,12 @@ var Map = {
             });
         }
     },
+    /*----- zoom customIRCELINE -----*/
+    zoomPhenomenon: function() { // customIRCELINE
+        this.map.fitBounds([ // customIRCELINE
+        [49.5, 3.5],[51.5, 5.5] // customIRCELINE
+      ]); // customIRCELINE
+    }, // customIRCELINE
     /*----- locate user -----*/
     locateUser: function() {
         Button.setLoadingButton($('[data-action="locate"]'), true);
