@@ -8881,11 +8881,27 @@ var Map = {
     },
     createPhenomenaEntry: function(phenomenon) {
         this.selectedPhenomenon = null;
+        if (phenomenon.id != 482){ // customIRCELINE
+          if (phenomenon.id != 20){ // customIRCELINE
+            if (phenomenon.id != 71){ // customIRCELINE
+              if (phenomenon.id != 10){ // customIRCELINE
+                if (phenomenon.id != 4013){ // customIRCELINE
+                  if (phenomenon.id != 431){ // customIRCELINE
+                    if (phenomenon.id != 464){ // customIRCELINE
+                      if (phenomenon.id != 38){ // customIRCELINE
+                        if (phenomenon.id != 90500){ // customIRCELINE
+                          if (phenomenon.id != 6002){ // customIRCELINE
+                            if (phenomenon.id != 1){ // customIRCELINE
+                              if (phenomenon.id != 62101){ // customIRCELINE
+                                if (phenomenon.id != 21){ // customIRCELINE
+                                  if (phenomenon.id != 61102){ // customIRCELINE
+                                    if (phenomenon.id != 61110){ // customIRCELINE
         var html = Template.createHtml("phenomenon-entry", {
             id: phenomenon.id,
             label: phenomenon.label
         });
         return html;
+      }}}}}}}}}}}}}}} // customIRCELINE
     },
     createDefaultPhenomenaEntry: function() {
         $('.phenomena-entry').append(this.createPhenomenaEntry({
