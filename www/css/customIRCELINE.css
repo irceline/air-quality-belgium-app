@@ -1,0 +1,93 @@
+.leaflet-tile {
+	-webkit-backface-visibility: visible !important;
+}
+.btn-xs{
+	height: 38px;
+}
+.leftPanelButton{
+	top:10px;
+	right:10px;
+}
+.item.selected {
+    background-color: #00A6E0;
+    color: white;
+}
+a {
+	color: #00A6E0;
+	text-decoration: none;
+}
+.text-primary {
+	color: #00A6E0;
+}
+.bg-primary {
+	color: #fff;
+	background-color: #00A6E0;
+}
+.btn-primary {
+	color: #ffffff;
+	background-color: #00A6E0;
+	border-color: #357ebd;
+}
+fieldset[disabled] .btn-primary.active {
+	background-color: #00A6E0;
+	border-color: #357ebd;
+}
+.btn-primary .badge {
+  color: #00A6E0;
+  background-color: #ffffff;
+}
+.btn-link {
+  color: #00A6E0;
+  font-weight: normal;
+  cursor: pointer;
+  border-radius: 0;
+}
+.dropdown-menu > .active > a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  outline: 0;
+  background-color: #00A6E0;
+}
+.nav .open > a:focus {
+  background-color: #eeeeee;
+  border-color: #00A6E0;
+}
+.nav-pills > li.active > a:focus {
+  color: #ffffff;
+  background-color: #00A6E0;
+}
+.pagination > li > span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  text-decoration: none;
+  color: #00A6E0;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  margin-left: -1px;
+}
+.pagination > .active > span:focus {
+  z-index: 2;
+  color: #ffffff;
+  background-color: #00A6E0;
+  border-color: #00A6E0;
+  cursor: default;
+}
+.panel-primary {
+  border-color: #00A6E0;
+}
+.panel-primary > .panel-heading {
+  color: #ffffff;
+  background-color: #00A6E0;
+  border-color: #00A6E0;
+}
+.panel-primary > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #00A6E0;
+}
+.panel-primary > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #00A6E0;
+}
+
+00A6E0
+428bca
