@@ -3,6 +3,7 @@
 }
 .btn-xs{
 	height: 38px;
+	font-size: 1em;
 }
 .leftPanelButton{
 	top:10px;
@@ -88,6 +89,3 @@ fieldset[disabled] .btn-primary.active {
 .panel-primary > .panel-footer + .panel-collapse .panel-body {
   border-bottom-color: #00A6E0;
 }
-
-00A6E0
-428bca
