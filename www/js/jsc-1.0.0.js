@@ -7075,7 +7075,8 @@ var Settings = {
       zIndex: -9999
     },
     enableGeoSearch: true
-};/*
+};
+/*
  * Copyright (C) 2014-2014 52°North Initiative for Geospatial Open Source
  * Software GmbH
  *
