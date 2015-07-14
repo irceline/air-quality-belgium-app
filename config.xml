@@ -3,13 +3,13 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "eu.eenvplus.sweviewer"
-        version   = "0.0.1">
+        id        = "be.irceline.mobile"
+        version   = "0.1.1">
 
-    <name>SWE client</name>
+    <name>Air Quality Belgium</name>
 
     <description>
-        JavaScript Sensor Web Mobile client
+        Realtime and forecast air quality information - Belgium
     </description>
 
     <author href="http://www.irceline.be" email="info@irceline.be">
