@@ -8,6 +8,7 @@
 .leftPanelButton{
 	top:10px;
 	right:10px;
+	z-index: 10000;
 }
 .item.selected {
     background-color: #00A6E0;
