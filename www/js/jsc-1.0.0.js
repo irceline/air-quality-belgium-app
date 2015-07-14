@@ -8596,8 +8596,8 @@ var Map = {
                 }).addTo(this.map);
             }
             this.map.fitBounds([
-            [-80, -170],
-            [80, 170]]);
+            [49.5, 3.5],[51.5, 5.5] // customIRCELINE
+            ]);
         }
     },
     /*----- stations -----*/
