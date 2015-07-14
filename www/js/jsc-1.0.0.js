@@ -8644,7 +8644,7 @@ var Map = {
                     if (geom[1] < bottommost) {
                         bottommost = geom[1];
                     }
-                    /* customIRCELINE */
+                    /* begin customIRCELINE */
                     var LeafIcon = L.Icon.extend({
                     		options: {
                     				iconSize:     [24, 24]
@@ -8671,6 +8671,7 @@ var Map = {
         changeWMS(this.selectedPhenomenon, timestring, timestring_day, boundingbox); // customIRCELINE
     },
     createColoredMarkers: function(results) {
+      var boundingbox = [] // customIRCELINE
         if (this.stationMarkers) {
             this.map.removeLayer(this.stationMarkers);
         }
