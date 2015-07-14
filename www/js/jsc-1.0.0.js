@@ -164,7 +164,7 @@ i18n.en = {
     chart: {
         noTimeseriesSelected: 'You have selected no timeseries, the selected timeseries have no values in the given time range or the timeseries are hidden.',
         outsideOfDataRange: 'Outside of data range!',
-        annotation: 'Data without warranty!',
+        annotation: 'Unvalidated data!',
         monthNames: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     },
     table: {
@@ -472,7 +472,7 @@ i18n.de = {
   chart: {
     noTimeseriesSelected: 'Sie haben keine Zeitreihe ausgewählt, die gewählten Zeitreihen haben keine Werte in dem derzeitigen Zeitraum oder die Zeitreihen sind unsichtbar.',
     outsideOfDataRange: 'Außerhalb des Datenbereichs!',
-    annotation: 'Daten ohne Gewähr!',
+    annotation: 'Unvalidierte Daten!',
     monthNames: [ 'Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez' ]
   },
   table: {
@@ -2567,7 +2567,7 @@ i18n.fr = {
   chart: {
     noTimeseriesSelected: 'Vous avez sélectionné aucun timeseries, les séries chronologiques sélectionnées ne ont pas de valeurs dans l&#39;intervalle de temps donné ou les séries chronologiques sont cachés.',
     outsideOfDataRange: 'En dehors de la plage de données!',
-    annotation: 'Données sans garantie!',
+    annotation: 'Données non validées!',
     monthNames: [ 'Jan', 'Février', 'Mar', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre' ]
   },
   table: {
@@ -4652,7 +4652,7 @@ i18n.nl = {
     settings: 'Instellingen',
     stationSelection: 'Selecteer een zender',
     chartView: 'Kaartweergave',
-    allPhenomena: 'Alle Phenomena',
+    allPhenomena: 'Alle Fenomenen',
     phenomenon: 'Fenomeen',
     favoritesList: 'Favorieten',
     importFavorites: 'Import',
@@ -4663,7 +4663,7 @@ i18n.nl = {
   chart: {
     noTimeseriesSelected: 'Je hebt geen tijdreeks geselecteerd, worden de geselecteerde tijdreeksen hebben geen waarden in de gegeven tijd bereik of de tijdreeksen zijn verborgen.',
     outsideOfDataRange: 'Buitenkant van data range!',
-    annotation: 'Gegevens zonder garantie!',
+    annotation: 'Niet gevalideerde gegevens!',
     monthNames: [ 'Jan', 'Februari', 'Ontsieren', 'April', 'Mei', 'Juni', 'Juli', 'Augustus', 'September', 'Oktober', 'November', 'December' ]
   },
   table: {
