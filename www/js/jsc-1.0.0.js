@@ -281,8 +281,8 @@ i18n.en = {
         generalizeData: 'generalize Data',
         imprint: {
             header: 'Imprint',
-            github: 'Find this project at <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a>',
-            text: '<p><a href="http://52north.org" target="_blank">52&deg;North GmbH</a> is responsible for this website.</p><p>52&deg;North Initiative for Geospatial Open Source Software GmbH<br>Martin-Luther-King-Weg 24<br>48155 Muenster, Germany</p>'
+            github: 'Find this project at <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+            text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
         }
     },
     permalink: {
@@ -589,8 +589,8 @@ i18n.de = {
     generalizeData: 'Daten generalisiert abfragen',
     imprint: {
       header: 'Impressum',
-      github: 'Zur <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a>-Seite dieses Projekts',
-      text: '<p><a href="http://52north.org" target="_blank">52&deg;North GmbH</a> ist für diese Website verantwortlich.</p><p>52&deg;North Initiative for Geospatial Open Source Software GmbH<br>Martin-Luther-King-Weg 24<br>48155 Muenster, Deutschland</p>'
+      github: 'Zur <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>-Seite dieses Projekts',
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
@@ -850,8 +850,8 @@ i18n.bg = {
     generalizeData: 'обобщим данните',
     imprint: {
       header: 'Отпечатък',
-      github: 'Намерете този проект в <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a>',
-      text: '<p> <a href="http://52north.org" target="_blank">52 ° север GmbH</a> е отговорен за този сайт. </p><p> 52 ° север Инициатива за геопространствена Open Source Software GmbH <br> Martin-Luther-King-Weg 24 <br> 48155 Мюнстер, Германия </p>'
+      github: 'Намерете този проект в <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
@@ -1112,8 +1112,8 @@ i18n.cz = {
     generalizeData: 'zobecnit dat',
     imprint: {
       header: 'Otisk',
-      github: 'Najít tento projekt na <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a>',
-      text: '<p> <a href="http://52north.org" target="_blank">52 ° severní GmbH</a> je zodpovědný za tuto webovou stránku. </p><p> 52 ° severní Initiative for Geospatial Open Source Software GmbH <br> Martin-Luther-King-Weg 24 <br> 48155 Münster, Německo </p>'
+      github: 'Najít tento projekt na <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
@@ -1374,8 +1374,8 @@ i18n.dk = {
     generalizeData: 'generalisere data',
     imprint: {
       header: 'Imprint',
-      github: 'Find dette projekt på <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a>',
-      text: '<p> <a href="http://52north.org" target="_blank">52 ° North GmbH</a> er ansvarlig for dette websted. </p><p> 52 ° North initiativ for Geospatial Open Source Software GmbH <br> Martin-Luther-King-Weg 24 <br> 48155 Muenster, Tyskland </p>'
+      github: 'Find dette projekt på <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
@@ -1636,8 +1636,8 @@ i18n.gr = {
     generalizeData: 'γενίκευση των δεδομένων',
     imprint: {
       header: 'Αποτύπωμα',
-      github: 'Βρείτε αυτό το έργο στο <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a>',
-      text: '<p> <a href="http://52north.org" target="_blank">52 ° Βόρεια GmbH</a> είναι υπεύθυνη για αυτή την ιστοσελίδα. </p><p> 52 ° Βόρεια Πρωτοβουλία για Γεωχωρικών Λογισμικό Ανοικτού Κώδικα GmbH <br> Martin-Luther-King-Weg 24 <br> 48155 Μούνστερ, Γερμανία </p>'
+      github: 'Βρείτε αυτό το έργο στο <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
@@ -1898,8 +1898,8 @@ i18n.es = {
     generalizeData: 'generalizar los datos',
     imprint: {
       header: 'Pie de imprenta',
-      github: 'Encuentra este proyecto en <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a>',
-      text: '<p> <a href="http://52north.org" target="_blank">52 ° norte GmbH</a> es responsable de este sitio web. </p><p> 52 ° Iniciativa del Norte para Geoespacial de Código Abierto Software GmbH <br> Martin-Luther-King-Weg 24 <br> 48155 Münster, Alemania </p>'
+      github: 'Encuentra este proyecto en <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
@@ -2160,8 +2160,8 @@ i18n.ee = {
     generalizeData: 'üldistada andmed',
     imprint: {
       header: 'Jälg',
-      github: 'Leia selle projekti juures <a href="https://github.com/52North/js-sensorweb-client" target="_blank">github</a>',
-      text: '<p> <a href="http://52north.org" target="_blank">52 ° North GmbH</a> vastutab sellel veebilehel. </p><p> 52 ° North algatus Geospatial Open Source Software GmbH <br> Martin-Luther-King-Weg 24 <br> 48155 Münster, Saksamaa </p>'
+      github: 'Leia selle projekti juures <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
@@ -2422,8 +2422,8 @@ i18n.fi = {
     generalizeData: 'yleistää Data',
     imprint: {
       header: 'Jälki',
-      github: 'Etsi tätä hanketta <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a>',
-      text: '<p> <a href="http://52north.org" target="_blank">52 ° North GmbH</a> vastaa tällä sivustolla. </p><p> 52 ° North aloitteen Geospatiaalinen Open Source Software GmbH <br> Martin-Luther-King-Weg 24 <br> 48155 Münster, Saksa </p>'
+      github: 'Etsi tätä hanketta <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
@@ -2684,8 +2684,8 @@ i18n.fr = {
     generalizeData: 'généraliser données',
     imprint: {
       header: 'Empreinte',
-      github: 'Trouvez ce projet à <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a>',
-      text: '<p> <a href="http://52north.org" target="_blank">52 ° Nord GmbH</a> est responsable de ce site. </p><p> 52 ° Initiative du Nord pour Geospatial Open Source Software GmbH <br> Martin-Luther-King-Weg 24 <br> 48155 Münster, Allemagne </p>'
+      github: 'Trouvez ce projet à <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
@@ -2946,8 +2946,8 @@ i18n.ga = {
     generalizeData: 'ghinearálú Sonraí',
     imprint: {
       header: 'Imprint',
-      github: 'Faigh an tionscadal seo ag <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a>',
-      text: '<p> <a href="http://52north.org" target="_blank">52 ° GmbH Thuaidh</a> freagrach as an suíomh gréasáin seo. </p><p> 52 ° Tionscnamh Thuaidh do geospáis Foinse Oscailte Bogearraí GmbH <br> Martin Luther--King-Weg 24 <br> 48,155 MUENSTER, An Ghearmáin </p>'
+      github: 'Faigh an tionscadal seo ag <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
@@ -3208,8 +3208,8 @@ i18n.hr = {
     generalizeData: 'generalizirati podataka',
     imprint: {
       header: 'Otisak',
-      github: 'Nađi ovaj projekt na <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a>',
-      text: '<p> <a href="http://52north.org" target="_blank">52 ° North GmbH</a> je odgovorna za ove web stranice. </p><p> 52 ° North Inicijativa geoprostornih Open Source Software GmbH <br> Martin Luther--kralj-Weg 24 <br> 48155 Münster, Njemačka </p>'
+      github: 'Nađi ovaj projekt na <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
@@ -3470,8 +3470,8 @@ i18n.hu = {
     generalizeData: 'általánosítani adatok',
     imprint: {
       header: 'Impresszum',
-      github: 'Keresd meg ezt a projektet <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a>',
-      text: '<p> <a href="http://52north.org" target="_blank">52 ° North GmbH</a> felelős ezen a weboldalon. </p><p> 52 ° North Initiative for térinformatikai nyílt forráskódú szoftver GmbH <br> Martin-Luther-King-Weg 24 <br> 48155 Münster, Németország </p>'
+      github: 'Keresd meg ezt a projektet <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
@@ -3732,8 +3732,8 @@ i18n.it = {
     generalizeData: 'generalizzare dati',
     imprint: {
       header: 'Impronta',
-      github: 'Trova questo progetto <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a>',
-      text: '<p> <a href="http://52north.org" target="_blank">52 ° Nord GmbH</a> è responsabile di questo sito. </p><p> 52 ° Nord Initiative for Open Source Geospatial Software GmbH <br> Martin-Luther-King-Weg 24 <br> 48155 Muenster, Germania </p>'
+      github: 'Trova questo progetto <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
@@ -3994,8 +3994,8 @@ i18n.lt = {
     generalizeData: 'apibendrinti duomenys',
     imprint: {
       header: 'Atspaudas',
-      github: 'Surasti šį projektas <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a>',
-      text: '<p> <a href="http://52north.org" target="_blank">52 ° šiaurės GmbH</a> yra atsakingas už šioje svetainėje. </p><p> 52 ° šiaurės iniciatyva Geospatial Open Source Software GmbH <br> Martin-Luther-King Weg 24 <br> 48155 Miunsteris, Vokietija </p>'
+      github: 'Surasti šį projektas <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
@@ -4256,8 +4256,8 @@ i18n.lv = {
     generalizeData: 'vispārināt datus',
     imprint: {
       header: 'Nospiedums',
-      github: 'Atrast šo projektu <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a>',
-      text: '<p> <a href="http://52north.org" target="_blank">52 ° North GmbH</a> ir atbildīga par šo vietni. </p><p> 52 ° North iniciatīva Ģeotelpiskās Open Source Software GmbH <br> Martin-Luther-King-Weg 24 <br> 48155 Muenster, Vācija </p>'
+      github: 'Atrast šo projektu <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
@@ -4518,8 +4518,8 @@ i18n.mt = {
     generalizeData: 'jiġġeneralizza Data',
     imprint: {
       header: 'Imprint',
-      github: 'Sib dan il-proġett fuq <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a>',
-      text: '<p> <a href="http://52north.org" target="_blank">52 ° Tramuntana GmbH</a> hija responsabbli għal din il-websajt. </p><p> 52 ° Inizjattiva North għat ġeospazjali Open Source Software GmbH <br> Martin Luther King-Weg 24 <br> 48155 Muenster, il-Ġermanja </p>'
+      github: 'Sib dan il-proġett fuq <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
@@ -4780,8 +4780,8 @@ i18n.nl = {
     generalizeData: 'generaliseren Gegevens',
     imprint: {
       header: 'Afdruk',
-      github: 'Vind dit project op <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a>',
-      text: '<p> <a href="http://52north.org" target="_blank">52 ° Noord GmbH</a> is verantwoordelijk voor deze website. </p><p> 52 ° Noord initiatief voor Geospatial Open Source Software GmbH <br> Martin-Luther-King-Weg 24 <br> 48155 Münster, Duitsland </p>'
+      github: 'Vind dit project op <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
@@ -5042,8 +5042,8 @@ i18n.pl = {
     generalizeData: 'uogólnienie danych',
     imprint: {
       header: 'Odcisk',
-      github: 'Znajdź projekt na <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a>',
-      text: '<p> <a href="http://52north.org" target="_blank">52 ° Północna GmbH</a> jest odpowiedzialny za tę stronę. </p><p> 52 ° Północna Inicjatywa na rzecz Open Source Geospatial Software GmbH <br> Martin-Luther-King-Weg 24 <br> 48155 Muenster, Niemcy </p>'
+      github: 'Znajdź projekt na <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
@@ -5304,8 +5304,8 @@ i18n.pt = {
     generalizeData: 'generalizar dados',
     imprint: {
       header: 'Cunho',
-      github: 'Encontre este projeto no <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a>',
-      text: '<p> <a href="http://52north.org" target="_blank">52 ° Norte GmbH</a> é responsável por este site. </p><p> 52 ° Iniciativa do Norte para a Open Source Geospatial Software GmbH <br> Martin-Luther-King-Weg 24 <br> 48155 Muenster, Alemanha </p>'
+      github: 'Encontre este projeto no <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
@@ -5566,8 +5566,8 @@ i18n.ro = {
     generalizeData: 'generală de date',
     imprint: {
       header: 'Imprima',
-      github: 'Găsiți acest proiect la <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a>',
-      text: '<p> <a href="http://52north.org" target="_blank">52 ° nord GmbH</a> este responsabil pentru acest site. </p><p> 52 ° Inițiativa nord de geospațiale Open Source Software GmbH <br> Martin Luther--King-Weg 24 <br> 48155 Muenster, Germania </p>'
+      github: 'Găsiți acest proiect la <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
@@ -5828,8 +5828,8 @@ i18n.sk = {
     generalizeData: 'zovšeobecniť dát',
     imprint: {
       header: 'Odtlačok',
-      github: 'Nájsť tento projekt na <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a>',
-      text: '<p> <a href="http://52north.org" target="_blank">52 ° severnej GmbH</a> je zodpovedný za túto webovú stránku. </p><p> 52 ° severnej Initiative for Geospatial Open Source Software GmbH <br> Martin-Luther-King-Weg 24 <br> 48155 Münster, Nemecko </p>'
+      github: 'Nájsť tento projekt na <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
@@ -6090,8 +6090,8 @@ i18n.si = {
     generalizeData: 'posploševati podatkov',
     imprint: {
       header: 'Imprint',
-      github: 'Išči projekta na <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a>',
-      text: '<p> <a href="http://52north.org" target="_blank">52 ° North GmbH</a> je odgovoren za to spletno stran. </p><p> 52 ° North Pobuda za GEOPROSTORSKEGA Open Source Software GmbH <br> Martin-Luther-King-Weg 24 <br> 48155 Münster, Nemčija </p>'
+      github: 'Išči projekta na <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
@@ -6352,8 +6352,8 @@ i18n.se = {
     generalizeData: 'generalisera Data',
     imprint: {
       header: 'Imprint',
-      github: 'Hitta det här projektet på <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a>',
-      text: '<p> <a href="http://52north.org" target="_blank">52 ° North GmbH</a> ansvarar för denna webbplats. </p><p> 52 ° North initiativet för Geospatial Open Source Software GmbH <br> Martin-Luther-King-Weg 24 <br> 48155 Münster, Tyskland </p>'
+      github: 'Hitta det här projektet på <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
