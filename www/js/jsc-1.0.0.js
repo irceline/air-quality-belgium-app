@@ -7070,7 +7070,9 @@ var Settings = {
     // configuration for the tile layer in the leaflet map (see for more information: http://leafletjs.com/reference.html#tilelayer )
     tileLayerUrl: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
     tileLayerOptions: {
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+      pane: 'mapPane',
+      zIndex: -9999
     },
     enableGeoSearch: true
 };/*
@@ -8525,7 +8527,9 @@ var TimeController = {
 var Map = {
     defaultTileLayerUrl: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
     defaultTileLayerOptions: {
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+      pane: 'mapPane',
+      zIndex: -9999
     },
     timeseriesCache: [],
     init: function() {
