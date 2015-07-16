@@ -18,7 +18,7 @@
     "saveStatus": true,
     "saveStatusPossible": true,
     "concentrationMarker": true,
-    "pagesize": 30,
+    "pagesize": 10,
     "enableGeoSearch": true,
     "ignoreAfterDuration": "moment.duration(0.5, 'h')"
 }
