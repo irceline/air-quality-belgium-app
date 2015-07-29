@@ -8657,7 +8657,7 @@ var Map = {
                         icon: ircelineIcon
                     });
                     /* end customIRCELINE */
-                    marker.on('touchend', $.proxy(that.markerClicked, that)); // customIRCELINE
+                    marker.on('click', $.proxy(that.markerClicked, that)); // customIRCELINE
                     this.stationMarkers.addLayer(marker);
                 }
             }, this));
