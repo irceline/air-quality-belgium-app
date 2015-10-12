@@ -8540,9 +8540,6 @@ var Map = {
             $('[data-action="provider"]').click(function() {
                 Map.openProviderList();
             });
-            $('[data-action="zoom"]').click(function() { // customIRCELINE
-                Map.zoomPhenomenon(); // customIRCELINE
-            }); // customIRCELINE
             $('[data-action="locate"]').click(function() {
                 Map.locateUser();
             });
@@ -8621,7 +8618,6 @@ var Map = {
         if (this.stationMarkers) {
             this.map.removeLayer(this.stationMarkers);
         }
-        var boundingbox = [] // customIRCELINE
         if (results.length > 0) {
             var firstElemCoord = results[0].geometry.coordinates;
             var topmost = firstElemCoord[1];
@@ -8645,34 +8641,20 @@ var Map = {
                     if (geom[1] < bottommost) {
                         bottommost = geom[1];
                     }
-                    /* begin customIRCELINE */
-                    var LeafIcon = L.Icon.extend({
-                    		options: {
-                    				iconSize:     [24, 24]
-                    		}
-                    });
-                    var ircelineIcon = new LeafIcon({iconUrl: 'images/marker-icon-irceline.png'});
                     var marker = new L.Marker([geom[1], geom[0]], {
-                        id: elem.properties.id,
-                        icon: ircelineIcon
+                        id: elem.properties.id
                     });
-                    /* end customIRCELINE */
-                    marker.on('click', $.proxy(that.markerClicked, that)); // customIRCELINE
+                    marker.on('click', $.proxy(that.markerClicked, that));
                     this.stationMarkers.addLayer(marker);
                 }
             }, this));
             this.map.addLayer(this.stationMarkers);
-            boundingbox = [ // customIRCELINE (double-click zoom to extend of phenomenon)
-                  [parseFloat(bottommost), parseFloat(leftmost)], // customIRCELINE
-                  [parseFloat(topmost), parseFloat(rightmost)]]; // customIRCELINE
-            /*this.map.fitBounds([
+            this.map.fitBounds([
                 [parseFloat(bottommost), parseFloat(leftmost)],
-                [parseFloat(topmost), parseFloat(rightmost)]]);*/
+                [parseFloat(topmost), parseFloat(rightmost)]]);
         }
-        changeWMS(this.selectedPhenomenon, timestring, timestring_day, boundingbox); // customIRCELINE
     },
     createColoredMarkers: function(results) {
-      var boundingbox = [] // customIRCELINE
         if (this.stationMarkers) {
             this.map.removeLayer(this.stationMarkers);
         }
@@ -8726,14 +8708,10 @@ var Map = {
                 }
             }, this));
             this.map.addLayer(this.stationMarkers);
-            boundingbox = [ // customIRCELINE (double-click zoom to extend of phenomenon)
-                [parseFloat(bottommost), parseFloat(leftmost)], // customIRCELINE
-                [parseFloat(topmost), parseFloat(rightmost)]]; // customIRCELINE
-            /*this.map.fitBounds([
+            this.map.fitBounds([
                 [parseFloat(bottommost), parseFloat(leftmost)],
-                [parseFloat(topmost), parseFloat(rightmost)]]);*/
+                [parseFloat(topmost), parseFloat(rightmost)]]);
         }
-        changeWMS(this.selectedPhenomenon, timestring, timestring_day, boundingbox); // customIRCELINE
     },
     getMatchingInterval: function(elem) {
         var matchedInterval = null;
@@ -8982,12 +8960,6 @@ var Map = {
             });
         }
     },
-    /*----- zoom customIRCELINE -----*/
-    zoomPhenomenon: function() { // customIRCELINE
-        this.map.fitBounds([ // customIRCELINE
-        [49.5, 3.5],[51.5, 5.5] // customIRCELINE
-      ]); // customIRCELINE
-    }, // customIRCELINE
     /*----- locate user -----*/
     locateUser: function() {
         Button.setLoadingButton($('[data-action="locate"]'), true);
