@@ -6923,6 +6923,10 @@ var Settings = {
     concentrationMarker: false,
     // map options of leaflet
     mapOptions: {},
+    // default map extent
+    mapExtent: [[47.2, 5.8],[55.1, 15.1]],
+    // selected phenomenon id in map,
+    selectedPhenomenon: null,
     // zoom level in the map, used for user location and station position
     zoom: 13,
     // how long a station popup to visualize the location should be visible on the map (in msec)
@@ -8540,15 +8544,17 @@ var Map = {
             $('[data-action="provider"]').click(function() {
                 Map.openProviderList();
             });
-            $('[data-action="zoom"]').click(function() { // customIRCELINE
-                Map.zoomPhenomenon(); // customIRCELINE
-            }); // customIRCELINE
             $('[data-action="locate"]').click(function() {
                 Map.locateUser();
             });
         });
         this.createMap();
-        this.loadStations();
+        this.loadPhenomena();
+        if (Settings.selectedPhenomenon !== null) {
+            this.loadStations4Phenomenon(Settings.selectedPhenomenon);
+        } else {
+            this.loadStations();
+        }
         EventManager.subscribe("resetStatus", $.proxy(this.loadStations, this));
         EventManager.subscribe("clusterStations", $.proxy(this.loadStations, this));
         EventManager.subscribe("timeseries:showInMap", $.proxy(this.showTsInMap, this));
@@ -8595,10 +8601,20 @@ var Map = {
                     zoomLevel: 13
                 }).addTo(this.map);
             }
-            this.map.fitBounds([
-            [49.5, 3.5],[51.5, 5.5] // customIRCELINE
-            ]);
+            var extent;
+            if (Settings.mapExtent !== null) {
+                extent = Settings.mapExtent;
+            } else {
+                extent = [[-80, -170], [80, 170]];
+            }
+            this.map.fitBounds(extent);
         }
+    },
+    loadPhenomena: function () {
+        var provider = Status.get('provider');
+        Rest.phenomena(null, provider.apiUrl, {
+            service: provider.serviceID
+        }).done($.proxy(this.fillPhenomenaList, this));
     },
     /*----- stations -----*/
     loadStations: function() {
@@ -8610,9 +8626,6 @@ var Map = {
             this.createStationMarker(result, Status.get('clusterStations'));
             this.loading(false);
         }, this));
-        Rest.phenomena(null, provider.apiUrl, {
-            service: provider.serviceID
-        }).done($.proxy(this.fillPhenomenaList, this));
     },
     createStationMarker: function(results, clustering) {
         if (!this.map) {
@@ -8621,7 +8634,6 @@ var Map = {
         if (this.stationMarkers) {
             this.map.removeLayer(this.stationMarkers);
         }
-        var boundingbox = [] // customIRCELINE
         if (results.length > 0) {
             var firstElemCoord = results[0].geometry.coordinates;
             var topmost = firstElemCoord[1];
@@ -8645,34 +8657,20 @@ var Map = {
                     if (geom[1] < bottommost) {
                         bottommost = geom[1];
                     }
-                    /* begin customIRCELINE */
-                    var LeafIcon = L.Icon.extend({
-                    		options: {
-                    				iconSize:     [24, 24]
-                    		}
-                    });
-                    var ircelineIcon = new LeafIcon({iconUrl: 'images/marker-icon-irceline.png'});
                     var marker = new L.Marker([geom[1], geom[0]], {
-                        id: elem.properties.id,
-                        icon: ircelineIcon
+                        id: elem.properties.id
                     });
-                    /* end customIRCELINE */
-                    marker.on('click', $.proxy(that.markerClicked, that)); // customIRCELINE
+                    marker.on('click', $.proxy(that.markerClicked, that));
                     this.stationMarkers.addLayer(marker);
                 }
             }, this));
             this.map.addLayer(this.stationMarkers);
-            boundingbox = [ // customIRCELINE (double-click zoom to extend of phenomenon)
-                  [parseFloat(bottommost), parseFloat(leftmost)], // customIRCELINE
-                  [parseFloat(topmost), parseFloat(rightmost)]]; // customIRCELINE
-            /*this.map.fitBounds([
+            this.map.fitBounds([
                 [parseFloat(bottommost), parseFloat(leftmost)],
-                [parseFloat(topmost), parseFloat(rightmost)]]);*/
+                [parseFloat(topmost), parseFloat(rightmost)]]);
         }
-        changeWMS(this.selectedPhenomenon, timestring, timestring_day, boundingbox); // customIRCELINE
     },
     createColoredMarkers: function(results) {
-      var boundingbox = [] // customIRCELINE
         if (this.stationMarkers) {
             this.map.removeLayer(this.stationMarkers);
         }
@@ -8726,14 +8724,10 @@ var Map = {
                 }
             }, this));
             this.map.addLayer(this.stationMarkers);
-            boundingbox = [ // customIRCELINE (double-click zoom to extend of phenomenon)
-                [parseFloat(bottommost), parseFloat(leftmost)], // customIRCELINE
-                [parseFloat(topmost), parseFloat(rightmost)]]; // customIRCELINE
-            /*this.map.fitBounds([
+            this.map.fitBounds([
                 [parseFloat(bottommost), parseFloat(leftmost)],
-                [parseFloat(topmost), parseFloat(rightmost)]]);*/
+                [parseFloat(topmost), parseFloat(rightmost)]]);
         }
-        changeWMS(this.selectedPhenomenon, timestring, timestring_day, boundingbox); // customIRCELINE
     },
     getMatchingInterval: function(elem) {
         var matchedInterval = null;
@@ -8852,77 +8846,92 @@ var Map = {
             var html = this.createPhenomenaEntry(elem);
             $('.phenomena-entry').append(html);
             $('[data-id=' + elem.id + ']').click($.proxy(function(event) {
-                $('.phenomena-entry').find('.selected').removeClass('selected');
-                $('[data-id=' + elem.id + ']').find('.item').addClass('selected').addClass('loadPhen');
-                this.selectedPhenomenon = elem.id;
-                var coloredMarkers = Status.get('concentrationMarker');
-                var provider = Status.get('provider');
-                Rest.abortRequest(this.phenomenonPromise);
-                if (coloredMarkers) {
-                    this.phenomenonPromise = Rest.timeseries(null, provider.apiUrl, {
-                        service: provider.serviceID,
-                        phenomenon: elem.id,
-                        expanded: true,
-                        force_latest_values: true,
-                        status_intervals: true
-                    }).done($.proxy(function(result) {
-                        $.each(result, function(idx, elem) {
-                            Map.timeseriesCache[elem.getInternalId()] = elem;
-                        });
-                        Pages.togglePhenomenon(false, elem.label);
-                        this.createColoredMarkers(result);
-                    }, this)).always($.proxy(function() {
-                        $('[data-id=' + elem.id + ']').find('.item').removeClass('loadPhen');
-                    }));
-                } else {
-                    this.phenomenonPromise = Rest.stations(null, provider.apiUrl, {
-                        service: provider.serviceID,
-                        phenomenon: elem.id
-                    }).done($.proxy(function(result) {
-                        Pages.togglePhenomenon(false, elem.label);
-                        this.createStationMarker(result, Status.get('clusterStations'));
-                    }, this)).always($.proxy(function() {
-                        $('[data-id=' + elem.id + ']').find('.item').removeClass('loadPhen');
-                    }));
-                }
+                this.loadStations4Phenomenon(elem.id);
             }, this));
+            if (this.selectedPhenomenon === elem.id) {
+                this.loadStations4Phenomenon(elem.id);
+            }
         }, this));
     },
-    createPhenomenaEntry: function(phenomenon) {
-        this.selectedPhenomenon = null;
-        if (phenomenon.id != 482){ // customIRCELINE
-          if (phenomenon.id != 20){ // customIRCELINE
-            if (phenomenon.id != 71){ // customIRCELINE
-              if (phenomenon.id != 10){ // customIRCELINE
-                if (phenomenon.id != 4013){ // customIRCELINE
-                  if (phenomenon.id != 431){ // customIRCELINE
-                    if (phenomenon.id != 464){ // customIRCELINE
-                      if (phenomenon.id != 38){ // customIRCELINE
-                        if (phenomenon.id != 90500){ // customIRCELINE
-                          if (phenomenon.id != 6002){ // customIRCELINE
-                            if (phenomenon.id != 1){ // customIRCELINE
-                              if (phenomenon.id != 62101){ // customIRCELINE
-                                if (phenomenon.id != 21){ // customIRCELINE
-                                  if (phenomenon.id != 61102){ // customIRCELINE
-                                    if (phenomenon.id != 61110){ // customIRCELINE
-        var html = Template.createHtml("phenomenon-entry", {
-            id: phenomenon.id,
-            label: phenomenon.label
-        });
-        return html;
-      }}}}}}}}}}}}}}} // customIRCELINE
+    loadStations4Phenomenon: function (phenomenonId) {
+        $('.phenomena-entry').find('.selected').removeClass('selected');
+        var item = $('[data-id=' + phenomenonId + ']').find('.item');
+        item.addClass('selected').addClass('loadPhen');
+        this.selectedPhenomenon = phenomenonId;
+        var coloredMarkers = Status.get('concentrationMarker');
+        var provider = Status.get('provider');
+        Rest.abortRequest(this.phenomenonPromise);
+        if (coloredMarkers) {
+            this.phenomenonPromise = Rest.timeseries(null, provider.apiUrl, {
+                service: provider.serviceID,
+                phenomenon: phenomenonId,
+                expanded: true,
+                force_latest_values: true,
+                status_intervals: true
+            }).done($.proxy(function (result) {
+                $.each(result, function (idx, elem) {
+                    Map.timeseriesCache[elem.getInternalId()] = elem;
+                });
+                Pages.togglePhenomenon(false, item.text().trim());
+                this.createColoredMarkers(result);
+            }, this)).always($.proxy(function () {
+                $('[data-id=' + phenomenonId + ']').find('.item').removeClass('loadPhen');
+            }));
+        } else {
+            this.phenomenonPromise = Rest.stations(null, provider.apiUrl, {
+                service: provider.serviceID,
+                phenomenon: phenomenonId
+            }).done($.proxy(function (result) {
+                Pages.togglePhenomenon(false, item.text().trim());
+                this.createStationMarker(result, Status.get('clusterStations'));
+            }, this)).always($.proxy(function () {
+                $('[data-id=' + phenomenonId + ']').find('.item').removeClass('loadPhen');
+            }));
+        }
     },
-    createDefaultPhenomenaEntry: function() {
+    createPhenomenaEntry: function (phenomenon, valid) {
+        if (valid || this.isPhenomenonAllowed(phenomenon)) {
+            var html = Template.createHtml("phenomenon-entry", {
+                id: phenomenon.id,
+                label: phenomenon.label
+            });
+            return html;
+        }
+    },
+    isPhenomenonAllowed: function(phenomenon) {
+        var serviceId = Status.get('provider').serviceID;
+        if (Settings.phenomenonsInMap && Settings.phenomenonsInMap[serviceId]) {
+            var isAllowed = false;
+            $.each(Settings.phenomenonsInMap[serviceId], function (idx, id){
+                if (phenomenon.id === id) {
+                    isAllowed = true;
+                }
+            });
+            return isAllowed;
+        }
+        if (Settings.phenomenonsNotInMap && Settings.phenomenonsNotInMap[serviceId]) {
+            var isAllowed = true;
+            $.each(Settings.phenomenonsNotInMap[serviceId], function (idx, id){
+                if (phenomenon.id === id) {
+                    isAllowed = false;
+                }
+            });
+            return isAllowed;
+        }
+        return true;
+    },
+    createDefaultPhenomenaEntry: function () {
         $('.phenomena-entry').append(this.createPhenomenaEntry({
             id: "all",
             label: _('main.allPhenomena')
-        }));
-        $('[data-id=all]').click($.proxy(function(event, bla) {
+        }, true));
+        $('[data-id=all]').click($.proxy(function (event, bla) {
+            this.selectedPhenomenon = null;
             $('.phenomena-entry').find('.selected').removeClass('selected');
             $('[data-id=all]').find('.item').addClass('selected');
             Pages.togglePhenomenon(false);
             Map.loadStations();
-        }));
+        }, this));
         $('[data-id=all]').append("<hr />");
         $('[data-id=all]').find('.item').addClass('selected');
     },
@@ -8982,12 +8991,6 @@ var Map = {
             });
         }
     },
-    /*----- zoom customIRCELINE -----*/
-    zoomPhenomenon: function() { // customIRCELINE
-        this.map.fitBounds([ // customIRCELINE
-        [49.5, 3.5],[51.5, 5.5] // customIRCELINE
-      ]); // customIRCELINE
-    }, // customIRCELINE
     /*----- locate user -----*/
     locateUser: function() {
         Button.setLoadingButton($('[data-action="locate"]'), true);
