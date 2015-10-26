@@ -865,7 +865,7 @@ i18n.fr = {
     },
     step1: {
       header: 'JavaScript client - Visite guidée',
-      text: 'Ce guide donne en quelques étapes un aperçu de l\'utilisation de l'\'application.'
+      text: 'Ce guide donne en quelques étapes un aperçu de l\'utilisation de l\'application.'
     },
     step2: {
       header: 'Accéder à la carte',
