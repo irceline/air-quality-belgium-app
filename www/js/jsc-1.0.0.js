@@ -1715,7 +1715,7 @@ var Settings = {
     // should saving the status be possible,
     saveStatusPossible: true,
     // entries on a page for the values table
-    pagesize: 20,
+    pagesize: 24,
     // line width for selected timeseries
     selectedLineWidth: 5,
     // common line width for unselected timeseries

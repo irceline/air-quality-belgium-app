@@ -15,14 +15,14 @@
     },
     "clusterStations": false,
     "generalizeData": true,
-    "saveStatus": true,
-    "saveStatusPossible": true,
+    "saveStatus": false,
+    "saveStatusPossible": false,
     "concentrationMarker": true,
-    "pagesize": 10,
+    "pagesize": 24,
     "enableGeoSearch": true,
     "ignoreAfterDuration": "moment.duration(0.5, 'h')",
     "mapExtent": [[49.5, 3.5],[51.5, 5.5]],
-    "selectedPhenomenon": "7",
+    "selectedPhenomenon": "6001",
     "phenomenonsInMap": {
         "1": ["391", "8", "7", "5", "6001"]
     }
