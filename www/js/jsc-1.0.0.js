@@ -715,7 +715,7 @@ i18n.de = {
  */
 i18n.fr = {
   fullName: 'Français',
-  ok: 'D&#39;ACCORD',
+  ok: 'OK',
   main: {
     legend: 'Légende',
     diagram: 'Diagramme',
@@ -723,20 +723,20 @@ i18n.fr = {
     favoriteView: 'Favoris',
     settings: 'Paramètres',
     stationSelection: 'Sélectionnez une station',
-    chartView: 'vue graphique',
-    allPhenomena: 'Tous les phénomènes',
-    phenomenon: 'Phénomène',
+    chartView: 'Graphique',
+    allPhenomena: 'Tous les polluants',
+    phenomenon: 'Polluant',
     favoritesList: 'Favoris',
-    importFavorites: 'Importation',
-    exportFavorites: 'Exportation',
-    importExportHelp: 'Pour importer un fichier, se il vous plaît choisir un fichier que vous avez exporté auparavant.',
+    importFavorites: 'Import',
+    exportFavorites: 'Export',
+    importExportHelp: 'Pour importer un fichier, veuillez s\'il vous plaît choisir un fichier que vous avez déjà exporté',
     noFileSelected: 'Aucun fichier sélectionné'
   },
   chart: {
-    noTimeseriesSelected: 'Vous avez sélectionné aucun timeseries, les séries chronologiques sélectionnées ne ont pas de valeurs dans l&#39;intervalle de temps donné ou les séries chronologiques sont cachés.',
-    outsideOfDataRange: 'En dehors de la plage de données!',
-    annotation: 'Données non validées!',
-    monthNames: [ 'Jan', 'Février', 'Mar', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre' ]
+    noTimeseriesSelected: 'Vous n\'avez sélectionné aucun jeu de données, ou les données ne sont pas disponibles pendant la période sélectionnée',
+    outsideOfDataRange: 'En dehors de la plage de données',
+    annotation: 'Données non validées',
+    monthNames: [ 'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre' ]
   },
   table: {
     time: 'Temps'
@@ -745,218 +745,218 @@ i18n.fr = {
     userLocation: 'Voici votre position actuelle',
     stationSelection: {
       station: 'Station',
-      selectAllTimeseries: 'sélectionner toutes les séries chronologiques'
+      selectAllTimeseries: 'Sélectionnez toutes les périodes'
     },
     stationLocation: {
       station: 'Station',
-      timeseries: 'Timeseries',
+      timeseries: 'Période',
       provider: 'Fournisseur',
       jumpBackToChart: 'Retour au tableau'
     },
     providerList: {
       provider: 'Fournisseur',
       stations: 'Stations',
-      timeseries: 'Timeseries',
-      phenomena: 'Phénomènes'
+      timeseries: 'Période',
+      phenomena: 'Polluants'
     },
     search: {
-      label: 'Recherche d&#39;adresse ...',
-      noResult: 'Désolé, cette adresse n&#39;a pu être trouvée.'
+      label: 'Recherche d\'adresse ...',
+      noResult: 'Désolé, cette adresse n\'a pu être trouvée.'
     }
   },
   listSelection: {
-    header: 'Sélectionnez timeseries par liste',
+    header: 'Sélectionnez un jeu de données par liste',
     headers: {
       category: 'Catégorie',
       station: 'Station',
-      phenomenon: 'Phénomène',
+      phenomenon: 'Polluant',
       procedure: 'Capteur'
     },
     warning: {
-      moreThanOneTimeseries: 'trouvé plus d&#39;un timeseries'
+      moreThanOneTimeseries: 'Plus d\'un jeu de données sélectionné'
     }
   },
   legend: {
     entry: {
       noData: 'Aucune donnée disponible',
-      jumpToLastValue: 'sauter à la dernière valeur',
+      jumpToLastValue: 'Aller à la dernière valeur',
       firstValueAt: 'Première valeur à',
-      lastValueAt: 'Dernière valeur au'
+      lastValueAt: 'Dernière valeur à'
     }
   },
   export: {
     label: 'Les données au format CSV (Archive Zip)'
   },
   timeSelection: {
-    header: 'Plage de temps',
-    presetsHeader: 'presets',
+    header: 'Plage temporelle',
+    presetsHeader: 'Périodes prédéfinies',
     presets: {
-      lastHour: 'dernière heure',
-      today: 'aujourd&#39;hui',
-      yesterday: 'hier',
-      todayYesterday: 'aujourd&#39;hui et hier',
+      lastHour: 'Dernière heure',
+      today: 'Aujourd\'hui',
+      yesterday: 'Hier',
+      todayYesterday: 'Aujourd\'hui et hier',
       thisWeek: 'cette semaine',
       lastWeek: 'la semaine dernière',
       thisMonth: 'ce mois-ci',
       lastMonth: 'mois dernier',
       thisYear: 'cette année',
-      lastYear: 'l&#39;année dernière'
+      lastYear: 'l\'année dernière'
     },
     custom: {
-      header: 'coutume',
+      header: 'Période',
       start: 'Date de début',
       end: 'Date de fin'
     },
     warning: {
-      startBeforeEnd: 'La date de début ne peut pas être supérieur à la date de fin',
-      maxTimeRange: 'La plage de temps ne peut pas être supérieur à un année'
+      startBeforeEnd: 'La date de début ne peut être postérieure à la date de fin',
+      maxTimeRange: 'La période ne peut couvrir plus d\'une année'
     }
   },
   styleChange: {
     header: 'Changer le style',
     currentColor: 'Couleur actuelle',
     selectColor: 'Sélectionnez une nouvelle couleur',
-    selectBarInterval: 'Sélectionnez l&#39;intervalle de bar',
+    selectBarInterval: 'Sélectionnez l\'intervalle de barres',
     barChartInterval: {
       hour: 'Heure',
       day: 'Jour',
       week: 'Semaine',
       month: 'Mois'
     },
-    zeroScaled: 'zéro axe Y mises à l&#39;échelle',
-    groupedAxis: 'axe regroupés'
+    zeroScaled: 'axe Y commence à 0',
+    groupedAxis: 'axes regroupés'
   },
   settings: {
     header: 'Paramètres',
     chooseLanguage: 'Changer de langue',
-    requiresRestart: 'Redémarrer besoins!',
+    requiresRestart: 'Doit être réinitialisé!',
     permalink: {
-      create: 'Créez un permalien que',
-      inWindow: 'lien dans une nouvelle fenêtre',
-      inMail: 'lien dans un email',
-      inClipboard: 'Lien vers le presse-papiers',
+      create: 'Exportez le lien vers',
+      inWindow: 'Une nouvelle fenêtre',
+      inMail: 'Un destinataire',
+      inClipboard: 'Le presse-papiers',
       clipboardInfo: 'Copier dans le presse-papiers:',
-      inQrCode: 'que QR-Code',
-      favorite: 'Enregistrer environnement de travail que l&#39;entrée préférée'
+      inQrCode: 'QR-Code',
+      favorite: 'Sauver l\'environnement de travail comme entrée'
     },
-    clusterMarker: 'marqueur pôle',
+    clusterMarker: 'Indiquer les groupements de stations',
     markerWithLastInfo: {
-      header: 'marqueur des informations de dernière valeur',
-      label: 'attention - certains fournisseurs de données sont très lents'
+      header: 'Indiquer les stations avec les dernières valeurs',
+      label: 'Attention - certains fournisseurs de données sont très lents'
     },
     saveStatus: {
-      header: 'Sauvegarder l&#39;environnement',
-      label: 'Toutes les séries chronologiques, le laps de temps sélectionné et les paramètres sont enregistrés en continu.'
+      header: 'Sauvegarder l\'environnement de travail',
+      label: 'Toutes les périodes, intervalles de temps et paramètres sélectionnés sont enregistrés en continu.'
     },
-    resetStatus: 'Réinitialiser environnement',
-    generalizeData: 'généraliser données',
+    resetStatus: 'Réinitialiser',
+    generalizeData: 'Généraliser données',
     imprint: {
-      header: 'Empreinte',
-      github: 'Trouvez ce projet à <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      header: 'Références',
+      github: 'Retrouvez ce projet sur <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
       text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
     }
   },
   permalink: {
-    noMatchingTimeseriesFound: 'Pas de séries chronologiques est trouvé.'
+    noMatchingTimeseriesFound: 'Aucun jeu de données n\'a été trouvé.'
   },
   guide: {
     start: {
-      request: 'Lorsque vous démarrez ce guide, le l&#39;état actuel sera réinitialisé.'
+      request: 'Le démarrage de ce guide réinitialise le menu'
     },
     step1: {
       header: 'JavaScript client - Visite guidée',
-      text: 'Cette visite donne en quelques étapes un aperçu comment utiliser ce client. D&#39;abord, nous ajoutons un timeseries de la carte.'
+      text: 'Ce guide donne en quelques étapes un aperçu de l\'utilisation de l'\'application.'
     },
     step2: {
       header: 'Accéder à la carte',
-      text: 'Ici, nous passons la vue pour obtenir une carte.'
+      text: 'Ici, nous accédons à la carte.'
     },
     step3: {
       header: 'Voir la carte',
-      text: 'Ce est la vue de la carte. Dans la carte vous pouvez voir des marqueurs ou markergroups.'
+      text: 'Voici la vue de la carte. Vous pouvez y voir les marqueurs des stations ou les groupements de stations.'
     },
     step4: {
       header: 'Changer de fournisseur',
-      text: 'Ici vous pouvez choisir un autre fournisseur de séries chronologiques.'
+      text: 'Ici, vous pouvez choisir un autre service fournissant les données.'
     },
     step5: {
-      header: 'Montrer emplacement',
-      text: 'Et là, vous pouvez localiser votre appareil sur la carte.'
+      header: 'Localisation',
+      text: 'Ici, vous pouvez vous localiser avec votre appareil portable sur la carte.'
     },
     step6: {
-      header: 'Sélection d&#39;une liste',
-      text: 'Ici vous pouvez sélectionner un timeseries sur les listes ordonnées.'
+      header: 'Sélection d\'une liste',
+      text: 'Ici, vous pouvez sélectionner un jeu de données d\'après une liste de sélection.'
     },
     step7: {
       header: 'Sélectionnez une station',
-      text: 'Se il vous plaît sélectionnez maintenant une station sur la carte.'
+      text: 'Veuillez maintenant sélectionner une station sur la carte.'
     },
     step8: {
-      header: 'Sélectionnez timeseries',
-      text: 'Cochez cette case. Se il ya seulement une séries chronologiques pour cette station, la case est déjà cochée. Maintenant vous pouvez aller avec le bouton &quot;OK&quot; pour charger les séries chronologiques.'
+      header: 'Sélectionnez un jeu de données',
+      text: 'Cochez cette case. S\'il ya seulement un seul jeu de données pour cette station, la case est déjà cochée. Vous pouvez maintenant avec le bouton "OK" pour charger les jeux de données.'
     },
     step9: {
-      header: 'Légende entrée',
-      text: 'Ici, vous voyez la série de temps additionnel. Vous pouvez supprimer ou de localiser la série de temps ou de modifier la couleur.'
+      header: 'Légende',
+      text: 'Ici, vous voyez la série temporelle additionnelle. Vous pouvez supprimer, déplacer la série temporelle, ou  modifier la couleur.'
     },
     step10: {
       header: 'Graphique',
-      text: 'Ce est le tableau de la série de temps sélectionné.'
+      text: 'Ceci est le graphique du jeu de données sélectionné.'
     },
     step11: {
-      header: 'Changer temps',
-      text: 'Ici vous pouvez changer la mesure de temps pour votre série de temps sélectionné.'
+      header: 'Changer la plage de temps',
+      text: 'Ici vous pouvez changer la plage de temps pour votre série sélectionnée.'
     },
     step12: {
-      header: 'Table View',
-      text: 'Ici, vous obtenez un tableau des valeurs de données brutes à votre série de temps sélectionné.'
+      header: 'Table',
+      text: 'Ici, vous obtenez un tableau de données brutes pour votre jeu de données sélectionné.'
     },
     step13: {
-      header: 'Gestion des Signets',
-      text: 'Les entrées de légende / séries chronologiques pourraient être enregistrés comme favoris. Dans ce point de vue tous les favoris sont répertoriés et peuvent être maintenues.'
+      header: 'Gestion des options',
+      text: 'Les entrées de la légende / jeu de données peuvent être enregistrés comme favoris. Dans cette option, tous les favoris sont répertoriés et peuvent être gardés.'
     },
     step14: {
       header: 'Fini',
-      text: 'Bravo! <br> Ce client est un produit de <a href="http://52north.org" target="_blank">52 ° Nord GmbH</a> . Vous pouvez trouver le code source sur <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a> .'
+      text: 'Bien joué! <br> Ce client est un produit de <a href="http://52north.org" target="_blank">52 ° Nord GmbH</a> . Vous pouvez trouver le code source sur <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a> .'
     }
   },
   favorite: {
     firstValueAt: 'Première valeur à',
-    lastValueAt: 'Dernière valeur au',
+    lastValueAt: 'Dernière valeur à',
     label: 'favori',
     edit: {
-      header: 'Modifier préférée'
+      header: 'Modifier favoris'
     },
     group: {
-      add: 'Le statut &#39;{0}&#39; est ajouté à la liste des favoris.',
-      exists: 'Ce statut existe toujours.',
-      noTimeseries: 'Actuellement aucun timeseries sont sélectionnés.',
-      notSupported: 'Le fournisseur d&#39;une entrée de l&#39;état &#39;{0}&#39; ne est pas supporté et ne peut pas être chargé.'
+      add: 'Le statut \'{0}\' est ajouté à la liste des favoris.',
+      exists: 'Ce statut existe déjà.',
+      noTimeseries: 'Actuellement aucun jeu de données n\'a été sélectionné.',
+      notSupported: 'Une des entrées du statut \'{0}\' n\'est pas disponible  et ne peut pas être chargée.'
     },
     single: {
-      add: 'Un nouveau favori &#39;{0}&#39; est ajouté à la liste.',
-      remove: 'Le favori &#39;{0}&#39; est retiré.',
-      exists: 'Ce favori existe toujours.',
-      notSupported: 'Le fournisseur de la favorite &#39;{0}&#39; ne est pas supporté et ne peut pas être chargé.'
+      add: 'Un nouveau favori \'{0}\' est ajouté à la liste.',
+      remove: 'Le favori \'{0}\' est retiré.',
+      exists: 'Ce favori existe déjà.',
+      notSupported: 'Une des entrées du statut \'{0}\' n\'est pas disponible  et ne peut pas être chargée.'
     },
     import: {
       override: 'Voulez-vous remplacer vos favoris actuels?',
       wrongFile: 'Impossible de lire le fichier',
-      noValidJson: 'Le fichier JSON est pas valide!',
-      header: 'favoris d&#39;importation',
-      text: 'Ici vous pouvez importer vos favoris exportés. Il suffit de coller l&#39;JSON dans ce champ de texte:'
+      noValidJson: 'Le fichier JSON n\'est pas valide!',
+      header: 'Importer vos favoris',
+      text: 'Vous pouvez ici importer vos favoris exportés. Il suffit de coller le JSON dans ce champ de texte:'
     },
     export: {
       header: 'Exporter les favoris',
-      text: 'Ici vous pouvez exporter vos favoris. Il suffit de copier le JSON sortir de cette zone de texte et l&#39;enregistrer dans un fichier à importer plus tard:'
+      text: 'Ici vous pouvez exporter vos favoris. Il suffit de copier le JSON à partir de ce texte et de l\'enregistrer dans un fichier pour l\'importer plus tard:'
     },
     error: {
-      fileApiNotSupported: 'Les API de fichiers ne sont pas entièrement pris en charge dans ce navigateur.'
+      fileApiNotSupported: 'Les fichiers API ne sont pas entièrement pris en charge dans ce navigateur.'
     }
   },
   inform: {
     error: 'Une erreur est survenue:',
-    warn: 'Se il vous plaît ne oubliez pas que:'
+    warn: 'S\'il vous plaît, n\'oubliez pas que:'
   }
 };
 /*
