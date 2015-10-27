@@ -16,6 +16,17 @@ customisations are marked in js/jsc-1.0.0.js with:
 * limit number of phenomena listed in navigation (still available via listed search timeseries)
 * added zoom to full extent button
 
+## Note
+in `config.xml` keep phonegap verion at `3.7.0`, like so:
+```xml
+<preference name="phonegap-version"       value="3.7.0" />
+```
+ignore message in `https://build.phonegap.com/`:
+```
+This app isn't using the latest version of PhoneGap. We recommend upgrading to cli-5.2.0.
+```
+There are still some unresolved compilation issues in this version of phonegap build.
+
 ## Acknowledgement
 This app was created within the [eENVplus project](http://www.eenvplus.eu) funded by European Union under the Competitiveness and Innovation Framework Programme – Information and Communication Technologies Policy Support Programme ([CIP-ICT-PSP](http://ec.europa.eu/cip/)) grant No. 325232.
 
