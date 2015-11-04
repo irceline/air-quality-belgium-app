@@ -376,8 +376,8 @@ Map.init = function () {
     oldInit.apply(Map, arguments); // Use #apply in case `init` uses `this`
     $(document).ready(function () {
         $('[data-action="zoom"]').click(function () {
-            this.map.fitBounds([
-                [49.5, 3.5], [51.5, 5.5]
+            Map.map.fitBounds([
+                [49.5, 3.3], [51.5, 5.7]
             ]);
         });
     });
