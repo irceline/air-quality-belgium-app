@@ -3502,7 +3502,7 @@ var Map = {
                 if (interval.lower === null) {
                     interval.lower = Number.MIN_VALUE;
                 }
-                if (!isNaN(interval.upper) && !isNaN(interval.lower) && parseFloat(interval.lower) < lastValue && lastValue < parseFloat(interval.upper)) {
+                if (!isNaN(interval.upper) && !isNaN(interval.lower) && parseFloat(interval.lower) < lastValue && lastValue <= parseFloat(interval.upper)) {
                     matchedInterval = interval;
                     return false;
                 }
