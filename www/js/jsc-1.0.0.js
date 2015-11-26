@@ -159,7 +159,8 @@ i18n.en = {
         importFavorites: 'Import',
         exportFavorites: 'Export',
         importExportHelp: 'To import a file, please choose a file you exported before.',
-        noFileSelected: 'No file selected'
+        noFileSelected: 'No file selected',
+        tableView: 'Table view'
     },
     chart: {
         noTimeseriesSelected: 'You have selected no timeseries, the selected timeseries have no values in the given time range or the timeseries are hidden.',
@@ -2679,7 +2680,7 @@ var StartController = {
         SettingsController.init();
     },
     loadMainPage: function(){
-        var main = Template.createHtml("main");
+        var main = Template.createHtml("mainIRCELINE");
         $('.jsc-main').append(main);
     }
 };/*

@@ -14,17 +14,6 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
     }
 // different aggregations of the same pollutant (PM10):
     if (phenomenonId === "5") {
-        this.pm10_current24 = L.tileLayer.wms("http://geo.irceline.be/wms", {
-            layers: 'rio:pm10_actueel24',
-            transparent: true,
-            format: 'image/png',
-            cql_filter: timestring,
-            opacity: 0.7,
-            projection: 'EPSG:4326',
-            pane: 'tilePane',
-            zIndex: -9998,
-            units: 'm'
-        }).addTo(Map.map);
         this.pm10_current = L.tileLayer.wms("http://geo.irceline.be/wms", {
             layers: 'rio:pm10_actueel',
             transparent: true,
@@ -36,7 +25,31 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
             zIndex: -9998,
             projection: 'EPSG:4326',
             units: 'm'
-        });
+        }).addTo(Map.map);
+        this.pm10_current24 = new L.LayerGroup();
+        this.pm10_current24_rio = L.tileLayer.wms("http://geo.irceline.be/wms", {
+            layers: 'rio:pm10_actueel24',
+            transparent: true,
+            format: 'image/png',
+            cql_filter: timestring,
+            opacity: 0.7,
+            visibility: true,
+            pane: 'tilePane',
+            zIndex: -9998,
+            projection: 'EPSG:4326',
+            units: 'm'
+        }).addTo(pm10_current24);
+        this.pm10_current24_station = L.tileLayer.wms("http://geo.irceline.be/wms", {
+            layers: 'realtime:pm10_station_actueel24',
+            transparent: true,
+            format: 'image/png',
+            cql_filter: timestring,
+            opacity: 0.7,
+            projection: 'EPSG:4326',
+            pane: 'tilePane',
+            zIndex: -9998,
+            units: 'm'
+        }).addTo(pm10_current24);
         this.pm10_daily_mean = new L.LayerGroup();
         this.pm10_daily_mean_rio = L.tileLayer.wms("http://geo.irceline.be/wms", {
             layers: 'rio:pm10_daggemiddelde',
@@ -71,8 +84,8 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
         this.pm10day2 = L.imageOverlay(imageUrlPM10day2, imageBounds, {transparent: true, opacity: 0.7, pane: 'tilePane', zIndex: -9998, projection: 'EPSG:4326', units: 'm'});
         // add layers control
         this.baseLayers = {
-            "current running 24 hour mean PM10": this.pm10_current24,
             "current hourly mean PM10": this.pm10_current,
+            "current running 24 hour mean PM10": this.pm10_current24,
             "daily mean (yesterday) PM10": this.pm10_daily_mean,
             "forecast - daily mean today": this.pm10day0,
             "forecast - daily mean tomorrow": this.pm10day1,
@@ -83,10 +96,12 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
             collapsed: true
         }).addTo(Map.map);
         Map.map.on('baselayerchange', function (eventLayer) {
-            if (eventLayer.name === 'daily mean (yesterday) PM10') {
+            if (eventLayer.name === 'current running 24 hour mean PM10') {
+                Map.map.removeLayer(Map.stationMarkers);
+            } else if (eventLayer.name === 'daily mean (yesterday) PM10') {
                 Map.map.removeLayer(Map.stationMarkers);
             } else if (eventLayer.name === 'forecast - daily mean today') {
-                Map.map.removeLayer(Map.stationMarkers);
+                  Map.map.removeLayer(Map.stationMarkers);
             } else if (eventLayer.name === 'forecast - daily mean tomorrow') {
                 Map.map.removeLayer(Map.stationMarkers);
             } else if (eventLayer.name === 'forecast - daily mean in 2 days') {
