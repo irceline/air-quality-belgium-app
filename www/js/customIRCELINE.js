@@ -214,31 +214,54 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
             projection: 'EPSG:4326',
             units: 'm'
         }).addTo(o3_current8);
-
-        // this.o3_daily_mean = new L.LayerGroup();
-        // this.o3_daily_mean_rio = L.tileLayer.wms("http://geo.irceline.be/wms", {
-        // layers: 'rio:o3_daggemiddelde',
-        // transparent: true,
-        // format: 'image/png',
-        // cql_filter: timestring_day,
-        // opacity: 0.7,
-        // visibility: true,
-        // pane: 'tilePane',
-        // zIndex: -9998,
-        // projection: 'EPSG:4326',
-        // units: 'm'
-        // }).addTo(o3_daily_mean);
-        // this.o3_daily_mean_station = L.tileLayer.wms("http://geo.irceline.be/wms", {
-        // layers: 'realtime:o3_station_daggemiddelde',
-        // transparent: true,
-        // format: 'image/png',
-        // cql_filter: timestring_day,
-        // visibility: true,
-        // pane: 'tilePane',
-        // zIndex: -9997,
-        // projection: 'EPSG:4326',
-        // units: 'm'
-        // }).addTo(o3_daily_mean);
+        this.o3_max_hour = new L.LayerGroup();
+        this.o3_max_hour_rio = L.tileLayer.wms("http://geo.irceline.be/wms", {
+            layers: 'rio:o3_max',
+            transparent: true,
+            format: 'image/png',
+            cql_filter: timestring_day,
+            opacity: 0.7,
+            visibility: true,
+            pane: 'tilePane',
+            zIndex: -9998,
+            projection: 'EPSG:4326',
+            units: 'm'
+        }).addTo(o3_max_hour);
+        this.o3_max_hour_station = L.tileLayer.wms("http://geo.irceline.be/wms", {
+            layers: 'realtime:o3_station_max',
+            transparent: true,
+            format: 'image/png',
+            cql_filter: timestring_day,
+            visibility: true,
+            pane: 'tilePane',
+            zIndex: -9997,
+            projection: 'EPSG:4326',
+            units: 'm'
+        }).addTo(o3_max_hour);
+        this.o3_max_8hour = new L.LayerGroup();
+        this.o3_max_8hour_rio = L.tileLayer.wms("http://geo.irceline.be/wms", {
+            layers: 'rio:o3_max8',
+            transparent: true,
+            format: 'image/png',
+            cql_filter: timestring_day,
+            opacity: 0.7,
+            visibility: true,
+            pane: 'tilePane',
+            zIndex: -9998,
+            projection: 'EPSG:4326',
+            units: 'm'
+        }).addTo(o3_max_8hour);
+        this.o3_max_8hour_station = L.tileLayer.wms("http://geo.irceline.be/wms", {
+            layers: 'realtime:o3_station_max8',
+            transparent: true,
+            format: 'image/png',
+            cql_filter: timestring_day,
+            visibility: true,
+            pane: 'tilePane',
+            zIndex: -9997,
+            projection: 'EPSG:4326',
+            units: 'm'
+        }).addTo(o3_max_8hour);
         // the forecast layers
         this.imageUrlo3day0 = 'http://www.irceline.be/air/forecast/map/air_quality_O3max_day0.png';
         this.imageUrlo3day1 = 'http://www.irceline.be/air/forecast/map/air_quality_O3max_day1.png';
@@ -251,7 +274,8 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
         this.baseLayers = {
             "current hourly mean": this.o3_current,
             "current 8 hour mean": this.o3_current8,
-            // "daily mean (yesterday) PM10": this.o3_daily_mean,
+            "max hourly mean today": this.o3_max_hour,
+            "max 8 hour mean today": this.o3_max_8hour,
             "forecast - daily mean today": this.o3day0,
             "forecast - daily mean tomorrow": this.o3day1,
             "forecast - daily mean in 2 days": this.o3day2
@@ -262,6 +286,10 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
         }).addTo(Map.map);
         Map.map.on('baselayerchange', function (eventLayer) {
             if (eventLayer.name === 'current 8 hour mean') {
+                Map.map.removeLayer(Map.stationMarkers);
+            } else if (eventLayer.name === 'max hourly mean today') {
+                Map.map.removeLayer(Map.stationMarkers);
+            } else if (eventLayer.name === 'max 8 hour mean today') {
                 Map.map.removeLayer(Map.stationMarkers);
             } else if (eventLayer.name === 'forecast - daily mean today') {
                 Map.map.removeLayer(Map.stationMarkers);
@@ -281,7 +309,8 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
             Map.map.removeLayer(this.o3_current);
             this.o3ControlLayer.removeLayer(this.o3_current);
             this.o3ControlLayer.removeLayer(this.o3_current8);
-            // this.o3ControlLayer.removeLayer(this.o3_daily_mean);
+            this.o3ControlLayer.removeLayer(this.o3_max_hour);
+            this.o3ControlLayer.removeLayer(this.o3_max_8hour);
             this.o3ControlLayer.removeLayer(this.o3day0);
             this.o3ControlLayer.removeLayer(this.o3day1);
             this.o3ControlLayer.removeLayer(this.o3day2);
@@ -291,17 +320,30 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
             Map.map.removeLayer(this.o3_current8);
             this.o3ControlLayer.removeLayer(this.o3_current);
             this.o3ControlLayer.removeLayer(this.o3_current8);
-            // this.o3ControlLayer.removeLayer(this.o3_daily_mean);
+            this.o3ControlLayer.removeLayer(this.o3_max_hour);
+            this.o3ControlLayer.removeLayer(this.o3_max_8hour);
             this.o3ControlLayer.removeLayer(this.o3day0);
             this.o3ControlLayer.removeLayer(this.o3day1);
             this.o3ControlLayer.removeLayer(this.o3day2);
             Map.map.removeControl(o3ControlLayer);
         }
-        if (Map.map.hasLayer(this.o3_daily_mean)) {
-            Map.map.removeLayer(this.o3_daily_mean);
+        if (Map.map.hasLayer(this.o3_max_hour)) {
+            Map.map.removeLayer(this.o3_max_hour);
             this.o3ControlLayer.removeLayer(this.o3_current);
             this.o3ControlLayer.removeLayer(this.o3_current8);
-            // this.o3ControlLayer.removeLayer(this.o3_daily_mean);
+            this.o3ControlLayer.removeLayer(this.o3_max_hour);
+            this.o3ControlLayer.removeLayer(this.o3_max_8hour);
+            this.o3ControlLayer.removeLayer(this.o3day0);
+            this.o3ControlLayer.removeLayer(this.o3day1);
+            this.o3ControlLayer.removeLayer(this.o3day2);
+            Map.map.removeControl(o3ControlLayer);
+        }
+        if (Map.map.hasLayer(this.o3_max_8hour)) {
+            Map.map.removeLayer(this.o3_max_8hour);
+            this.o3ControlLayer.removeLayer(this.o3_current);
+            this.o3ControlLayer.removeLayer(this.o3_current8);
+            this.o3ControlLayer.removeLayer(this.o3_max_hour);
+            this.o3ControlLayer.removeLayer(this.o3_max_8hour);
             this.o3ControlLayer.removeLayer(this.o3day0);
             this.o3ControlLayer.removeLayer(this.o3day1);
             this.o3ControlLayer.removeLayer(this.o3day2);
@@ -311,7 +353,8 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
             Map.map.removeLayer(this.o3day0);
             this.o3ControlLayer.removeLayer(this.o3_current);
             this.o3ControlLayer.removeLayer(this.o3_current8);
-            // this.o3ControlLayer.removeLayer(this.o3_daily_mean);
+            this.o3ControlLayer.removeLayer(this.o3_max_hour);
+            this.o3ControlLayer.removeLayer(this.o3_max_8hour);
             this.o3ControlLayer.removeLayer(this.o3day0);
             this.o3ControlLayer.removeLayer(this.o3day1);
             this.o3ControlLayer.removeLayer(this.o3day2);
@@ -322,7 +365,8 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
             Map.map.removeLayer(this.o3day1);
             this.o3ControlLayer.removeLayer(this.o3_current);
             this.o3ControlLayer.removeLayer(this.o3_current8);
-            // this.o3ControlLayer.removeLayer(this.o3_daily_mean);
+            this.o3ControlLayer.removeLayer(this.o3_max_hour);
+            this.o3ControlLayer.removeLayer(this.o3_max_8hour);
             this.o3ControlLayer.removeLayer(this.o3day0);
             this.o3ControlLayer.removeLayer(this.o3day1);
             this.o3ControlLayer.removeLayer(this.o3day2);
@@ -332,7 +376,8 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
             Map.map.removeLayer(this.o3day2);
             this.o3ControlLayer.removeLayer(this.o3_current);
             this.o3ControlLayer.removeLayer(this.o3_current8);
-            // this.o3ControlLayer.removeLayer(this.o3_daily_mean);
+            this.o3ControlLayer.removeLayer(this.o3_max_hour);
+            this.o3ControlLayer.removeLayer(this.o3_max_8hour);
             this.o3ControlLayer.removeLayer(this.o3day0);
             this.o3ControlLayer.removeLayer(this.o3day1);
             this.o3ControlLayer.removeLayer(this.o3day2);
