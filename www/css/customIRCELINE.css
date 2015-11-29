@@ -90,3 +90,16 @@ fieldset[disabled] .btn-primary.active {
 .panel-primary > .panel-footer + .panel-collapse .panel-body {
   border-bottom-color: #00A6E0;
 }
+.button-bottom-right {
+    position: absolute;
+    z-index: 11;
+    bottom: 0;
+		right: 0;
+    width: 50%;
+    margin: 10px 10px 25px;
+    text-align: right;
+}
+
+.button-bottom-right .btn {
+    padding: 4px 10px;
+}
