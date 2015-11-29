@@ -1,0 +1,307 @@
+<div id="infoIRCELINE" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Table legend-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">{{_i}}info.title{{/i}}</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <thead>
+            <td>
+              {{_i}}info.head_index{{/i}}
+            </td>
+            <td>
+              {{_i}}info.head_BC{{/i}}
+            </td>
+            <td>
+              {{_i}}info.head_NO2{{/i}}
+            </td>
+            <td>
+              {{_i}}info.head_O3{{/i}}
+            </td>
+            <td>
+              {{_i}}info.head_PM10{{/i}}
+            </td>
+            <td>
+              {{_i}}info.head_PM25{{/i}}
+            </td>
+          </thead>
+          <tbody>
+            <tr>
+              <td bgcolor="#0000FF" style="color:#FFFFFF;">
+                {{_i}}info.index_1{{/i}} - 1
+              </td>
+              <td>
+                0 - 0.99
+              </td>
+              <td>
+                0 - 25
+              </td>
+              <td>
+                0 - 30
+              </td>
+              <td>
+                0 - 10
+              </td>
+              <td>
+                0 - 5
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#007EFD" style="color:#FFFFFF;">
+                {{_i}}info.index_2{{/i}} - 2
+              </td>
+              <td>
+                1 - 1.99
+              </td>
+              <td>
+                26 - 45
+              </td>
+              <td>
+                26 - 45
+              </td>
+              <td>
+                11 - 20
+              </td>
+              <td>
+                6 - 10
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#00C000" style="color:#FFFFFF;">
+                {{_i}}info.index_3{{/i}} - 3
+              </td>
+              <td>
+                2 - 2.99
+              </td>
+              <td>
+                46 - 60
+              </td>
+              <td>
+                46 - 60
+              </td>
+              <td>
+                21 - 30
+              </td>
+              <td>
+                11 - 15
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#00FF00" style="color:#000000;">
+                {{_i}}info.index_4{{/i}} - 4
+              </td>
+              <td>
+                3 - 3.99
+              </td>
+              <td>
+                61 - 80
+              </td>
+              <td>
+                61 - 80
+              </td>
+              <td>
+                31 - 40
+              </td>
+              <td>
+                16 - 20
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#CCFF33" style="color:#000000;">
+                {{_i}}info.index_5{{/i}} - 5
+              </td>
+              <td>
+                4 - 4.99
+              </td>
+              <td>
+                81 - 110
+              </td>
+              <td>
+                81 - 110
+              </td>
+              <td>
+                41 - 50
+              </td>
+              <td>
+                21 - 30
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#F8E748" style="color:#000000;">
+                {{_i}}info.index_6{{/i}} - 6
+              </td>
+              <td>
+                5 - 6.99
+              </td>
+              <td>
+                111 - 150
+              </td>
+              <td>
+                111 - 150
+              </td>
+              <td>
+                51 - 70
+              </td>
+              <td>
+                31 - 40
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#FF8000" style="color:#000000;">
+                {{_i}}info.index_7{{/i}} - 7
+              </td>
+              <td>
+                7 - 9.99
+              </td>
+              <td>
+                151 - 200
+              </td>
+              <td>
+                151 - 200
+              </td>
+              <td>
+                71 - 100
+              </td>
+              <td>
+                41 - 50
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#FF0000" style="color:#000000;">
+                {{_i}}info.index_8{{/i}} - 8
+              </td>
+              <td>
+                10 - 14.99
+              </td>
+              <td>
+                201 - 270
+              </td>
+              <td>
+                201 - 270
+              </td>
+              <td>
+                101 - 150
+              </td>
+              <td>
+                51 - 60
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#C00000" style="color:#FFFFFF;">
+                {{_i}}info.index_9{{/i}} - 9
+              </td>
+              <td>
+                15 - 19.99
+              </td>
+              <td>
+                271 - 400
+              </td>
+              <td>
+                271 - 400
+              </td>
+              <td>
+                151 - 200
+              </td>
+              <td>
+                61 - 70
+              </td>
+            </tr>
+            <tr>
+              <td bgcolor="#800000" style="color:#FFFFFF;">
+                {{_i}}info.index_10{{/i}} - 10
+              </td>
+              <td>
+                20 - MAX
+              </td>
+              <td>
+                401 - MAX
+              </td>
+              <td>
+                401 - MAX
+              </td>
+              <td>
+                201 - MAX
+              </td>
+              <td>
+                71 - MAX
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="container">
+          <p>{{_i}}info.schale_decription{{/i}}</p>
+        </div>
+        <h4>{{_i}}info.pollutant{{/i}}</h4>
+        <table class="table">
+          <tr>
+            <td>
+              {{_i}}info.BC{{/i}} (BC)
+            </td>
+            <td>
+              {{_i}}info.BC_description{{/i}}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {{_i}}info.NO2{{/i}} (NO2)
+            </td>
+            <td>
+              {{_i}}info.NO2_description{{/i}}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {{_i}}info.O3{{/i}} (O3)
+            </td>
+            <td>
+              {{_i}}info.O3_description{{/i}}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {{_i}}info.PM10{{/i}} (PM10)
+            </td>
+            <td>
+              {{_i}}info.PM10_description{{/i}}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {{_i}}info.PM25{{/i}} (PM2.5)
+            </td>
+            <td>
+              {{_i}}info.PM25_description{{/i}}
+            </td>
+          </tr>
+        </table>
+        <hr />
+        <h4>{{_i}}info.source{{/i}}</h4>
+        <div class="container-fluid">
+          <p>
+            {{_i}}info.cooperation{{/i}}
+          </p>
+        </div>
+        <div class="container-fluid">
+          <div class="panel-body">
+    		    <a title="Agence wallonne de l’Air et du Climat (AWAC)" href="http://www.awac.be/">
+              <img src="images/AWAC.png" alt="Agence wallonne de l’Air et du Climat (AWAC)">
+          </div>
+          <div class="panel-body">
+    		    <a title="Bruxelles Environnement - Leefmilieu Brussel" href="http://www.ibgebim.be/">
+              <img src="images/IBGE-BIM.png" alt="Bruxelles Environnement - Leefmilieu Brussel">
+          </div>
+          <div class="panel-body">
+    		    <a title="Vlaamse Milieumaatschappij (VMM)" href="http://www.vmm.be/">
+              <img src="images/VMM.png" alt="Vlaamse Milieumaatschappij (VMM)">
+          </div>
+		    </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
