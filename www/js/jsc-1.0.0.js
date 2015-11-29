@@ -143,6 +143,41 @@ function read_prop(obj, prop) {
  * limitations under the License.
  */
 i18n.en = {
+  //customIRCELINE
+    info: {
+      title: 'Information',
+      head_index: 'Index',
+      head_BC: 'BC',
+      head_NO2: 'NO2',
+      head_O3: 'O3',
+      head_PM10: 'PM10',
+      head_PM25: 'PM25',
+      index_1: 'excellent',
+      index_2: 'very good',
+      index_3: 'good',
+      index_4: 'fairly good',
+      index_5: 'moderate',
+      index_6: 'poor',
+      index_7: 'very poor',
+      index_8: 'bad',
+      index_9: 'very bad',
+      index_10: 'horrible',
+      schale_decription: 'Note: all values in the above table are given as microgram per cubic meter (µg/m³)',
+      pollutant: 'Pollutants:',
+      BC: 'Black Carbon',
+      NO2: 'Nitrogen dioxide',
+      O3: 'Ozone',
+      PM25: 'Particulate Matter < 2.5 µm',
+      PM10:'Particulate Matter < 10 µm',
+      BC_description: 'Soot is emitted during incomplete combustion (diesel cars, woodburn, etc.). BC concentrations are typically higher close to traffic and in neighbourhouds where wood is broadly used as a fuel for heating.',
+      NO2_description: 'NO2 is considered a good proxy for traffic emissions, but there are also significant industrial sources.',
+      O3_description: 'Ozone is associated with hot, sunny days.',
+      PM10_description: '',
+      PM25_description: '',
+      source: 'Source:',
+      cooperation: 'The <a title="Belgian Interregional Environment Agency (IRCEL - CELINE)" href="http://www.irceline.be/en">Belgian Interregional Environment Agency (IRCEL - CELINE)</a> is a permanent cooperation between three regional environment agencies:'
+    },
+  //end customIRCELINE
     fullName: 'English',
     ok: 'OK',
     main: {
@@ -2683,8 +2718,10 @@ var StartController = {
         SettingsController.init();
     },
     loadMainPage: function(){
-        var main = Template.createHtml("main");
+        var main = Template.createHtml("mainIRCELINE");
+        var info = Template.createHtml("infoIRCELINE");
         $('.jsc-main').append(main);
+        $('.jsc-main').append(info);
     }
 };/*
  * Copyright (C) 2014-2014 52°North Initiative for Geospatial Open Source
