@@ -2719,7 +2719,10 @@ var StartController = {
     },
     loadMainPage: function(){
         var main = Template.createHtml("mainIRCELINE");
+<<<<<<< HEAD
         var info = Template.createHtml("infoIRCELINE");
+=======
+>>>>>>> origin/master
         $('.jsc-main').append(main);
         $('.jsc-main').append(info);
     }
