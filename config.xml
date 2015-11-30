@@ -72,7 +72,7 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" source="npm" version="1.0.0" />
     <gap:plugin name="org.apache.cordova.vibration" source="npm" version="0.3.13" />
-    <!-- <gap:plugin name="org.apache.cordova.statusbar" source="npm" version="1.0.1" / > -->
+    <gap:plugin name="cordova-plugin-statusbar" source="npm" / >
 
 
 
