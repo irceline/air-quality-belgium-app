@@ -172,8 +172,8 @@ i18n.en = {
       BC_description: 'Soot is emitted during incomplete combustion (diesel cars, woodburn, etc.). BC concentrations are typically higher close to traffic and in neighbourhouds where wood is broadly used as a fuel for heating.',
       NO2_description: 'NO2 is considered a good proxy for traffic emissions, but there are also significant industrial sources.',
       O3_description: 'Ozone is associated with hot, sunny days.',
-      PM10_description: '',
-      PM25_description: '',
+      PM10_description: 'The mass of all particles smaller than 10 µm.',
+      PM25_description: 'The mass of all particles smaller than 2.5 µm.',
       source: 'Source:',
       cooperation: 'The <a title="Belgian Interregional Environment Agency (IRCEL - CELINE)" href="http://www.irceline.be/en">Belgian Interregional Environment Agency (IRCEL - CELINE)</a> is a permanent cooperation between three regional environment agencies:'
     },
