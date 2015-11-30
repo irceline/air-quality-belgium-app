@@ -161,7 +161,7 @@ i18n.en = {
       index_7: 'very poor',
       index_8: 'bad',
       index_9: 'very bad',
-      index_10: 'horrible',
+      index_10: 'extremely bad',
       schale_decription: 'Note: all values in the above table are given as microgram per cubic meter (µg/m³)',
       pollutant: 'Pollutants:',
       BC: 'Black Carbon',
