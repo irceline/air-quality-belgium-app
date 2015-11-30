@@ -69,7 +69,7 @@
     <gap:plugin name="org.apache.cordova.media" source="npm" version="0.2.16" />
     <gap:plugin name="org.apache.cordova.media-capture" source="npm" version="0.3.6" />
     <!-- <gap:plugin name="org.apache.cordova.network-information" source="npm" version="0.2.15" /> -->
-    <gap:plugin name="cordova-plugin-network-information" source="npm" />
+    <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" source="npm" version="1.0.0" />
     <gap:plugin name="org.apache.cordova.vibration" source="npm" version="0.3.13" />
     <!-- <gap:plugin name="org.apache.cordova.statusbar" source="npm" version="1.0.1" / > -->

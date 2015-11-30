@@ -41,26 +41,31 @@
     </script>
     <script type="text/javascript" charset="utf-8">
 
-    function checkConnection() {
-    var networkState = navigator.connection.type;
+    function onDeviceReady(){
+        try{
+            var networkState = navigator.connection && navigator.connection.type;
 
-    var states = {};
-    states[Connection.UNKNOWN]  = 'Unknown connection';
-    states[Connection.ETHERNET] = 'Ethernet connection';
-    states[Connection.WIFI]     = 'WiFi connection';
-    states[Connection.CELL_2G]  = 'Cell 2G connection';
-    states[Connection.CELL_3G]  = 'Cell 3G connection';
-    states[Connection.CELL_4G]  = 'Cell 4G connection';
-    states[Connection.CELL]     = 'Cell generic connection';
-    states[Connection.NONE]     = 'No network connection';
+            setTimeout(function(){
+                networkState = navigator.connection && navigator.connection.type;
 
-    alert('Connection type: ' + states[networkState]);
-    if (networkState == Connection.NONE){
-        alert('no internet - this app needs internet');
-      };
+                var states = {};
+                states[Connection.UNKNOWN]  = 'Unknown connection';
+                states[Connection.ETHERNET] = 'Ethernet connection';
+                states[Connection.WIFI]     = 'WiFi connection';
+                states[Connection.CELL_2G]  = 'Cell 2G connection';
+                states[Connection.CELL_3G]  = 'Cell 3G connection';
+                states[Connection.CELL_4G]  = 'Cell 4G connection';
+                states[Connection.NONE]     = 'No network connection';
+
+                alert('Connection type: ' + states[networkState]);
+            }, 500);
+        }catch(e){
+            alert(e);
+            $.each(navigator, function(key, value){
+                alert(key+' => '+value);
+            });
+        }
     }
-
-    checkConnection();
 
       </script>
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -73,7 +78,7 @@
         <script type="text/javascript" src="js/customIRCELINE.js"></script>
     </head>
 
-    <body class="jsc-main" onload="checkConnection()">
+    <body class="jsc-main" onload="onDeviceReady()">
         <script type="text/javascript">
             var DEBUG = true;
         </script>
