@@ -116,3 +116,28 @@ fieldset[disabled] .btn-primary.active {
 .button-bottom-right .btn {
     padding: 4px 10px;
 }
+@media (max-width: 640px) {
+        body {
+          font-size: 1.4em;
+        }
+}
+@media (max-width: 580px) {
+        body {
+          font-size: 1.35em;
+        }
+}
+@media (max-width: 540px) {
+        body {
+          font-size: 1.3em;
+        }
+}
+@media (max-width: 480px) {
+        body {
+          font-size: 1.25em;
+        }
+}
+@media (max-width: 360px) {
+        body {
+          font-size: 1.2em;
+        }
+}
