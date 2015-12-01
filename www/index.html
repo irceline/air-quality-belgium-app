@@ -38,7 +38,7 @@
                     || window.navigator.msMaxTouchPoints > 0 // < IE11
                     || 'ontouchstart' in document.documentElement;
             };
-            // StatusBar.overlaysWebView(false);
+            StatusBar.overlaysWebView(false);
             if (navigator.onLine) {
               // alert('You\'re online.')
             } else {
@@ -51,15 +51,9 @@
             document.addEventListener("You\'re online.", function(e) {
               alert("online");
             }, false);
-    </script>
-    <!-- <script type="text/javascript" charset="utf-8">
-
-    function onDeviceReady(){
-        try{
-            var networkState = navigator.connection && navigator.connection.type;
-
-            setTimeout(function(){
-                networkState = navigator.connection && navigator.connection.type;
+            // Check network cordova-plugin-network-information
+            function checkConnection() {
+                var networkState = navigator.connection.type;
 
                 var states = {};
                 states[Connection.UNKNOWN]  = 'Unknown connection';
@@ -68,19 +62,19 @@
                 states[Connection.CELL_2G]  = 'Cell 2G connection';
                 states[Connection.CELL_3G]  = 'Cell 3G connection';
                 states[Connection.CELL_4G]  = 'Cell 4G connection';
+                states[Connection.CELL]     = 'Cell generic connection';
                 states[Connection.NONE]     = 'No network connection';
 
                 alert('Connection type: ' + states[networkState]);
-            }, 500);
-        }catch(e){
-            alert(e);
-            $.each(navigator, function(key, value){
-                alert(key+' => '+value);
-            });
-        }
-    }
+            }
+            checkConnection();
 
-      </script> -->
+            document.addEventListener("offline", onOffline, false);
+
+            function onOffline() {
+                alert('Your device is now offline. This app needs an active internet connection for fresh data.'
+            }
+    </script>
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
