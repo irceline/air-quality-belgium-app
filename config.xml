@@ -66,8 +66,8 @@
     <gap:plugin name="org.apache.cordova.geolocation" source="npm" version="0.3.12" />
     <gap:plugin name="org.apache.cordova.globalization" source="npm" version="0.3.4" />
     <gap:plugin name="org.apache.cordova.inappbrowser" source="npm" version="0.6.0" />
-    <gap:plugin name="org.apache.cordova.media" source="npm" version="0.2.16" />
-    <gap:plugin name="org.apache.cordova.media-capture" source="npm" version="0.3.6" />
+    <gap:plugin name="cordova-plugin-media" source="npm" />
+    <gap:plugin name="cordova-plugin-media-capture" source="npm" />
     <gap:plugin name="cordova-plugin-network-information" source="npm" />
     <gap:plugin name="org.apache.cordova.splashscreen" source="npm" version="1.0.0" />
     <gap:plugin name="org.apache.cordova.vibration" source="npm" version="0.3.13" />
