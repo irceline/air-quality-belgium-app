@@ -42,14 +42,14 @@
             if (navigator.onLine) {
               // alert('You\'re online.')
             } else {
-              alert('Your device is offline. This app needs an active internet connection for fresh data.');
+              navigator.notification.alert('Your device is offline. This app needs an active internet connection for fresh data.');
             }
-            window.addEventListener("offline", function(e) {
-              alert("Your device is now offline. This app needs an active internet connection for fresh data.");
+            document.addEventListener("offline", function(e) {
+              navigator.notification.alert("Your device is now offline. This app needs an active internet connection for fresh data.");
             }, false);
 
-            window.addEventListener("You\'re online.", function(e) {
-              alert("online");
+            document.addEventListener("You\'re online.", function(e) {
+              navigator.notification.alert("online");
             }, false);
     </script>
     <!-- <script type="text/javascript" charset="utf-8">
