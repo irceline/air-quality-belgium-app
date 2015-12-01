@@ -47,7 +47,7 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
             opacity: 0.7,
             projection: 'EPSG:4326',
             pane: 'tilePane',
-            zIndex: -9998,
+            zIndex: -9997,
             units: 'm'
         }).addTo(pm10_current24);
         this.pm10_daily_mean = new L.LayerGroup();
@@ -434,7 +434,7 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
                 opacity: 0.7,
                 projection: 'EPSG:4326',
                 pane: 'tilePane',
-                zIndex: -9998,
+                zIndex: -9997,
                 units: 'm'
             }).addTo(bc_current24);
             this.bc_daily_mean = new L.LayerGroup();
@@ -564,7 +564,7 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
                 opacity: 0.7,
                 projection: 'EPSG:4326',
                 pane: 'tilePane',
-                zIndex: -9998,
+                zIndex: -9997,
                 units: 'm'
             }).addTo(pm25_current24);
             this.pm25_daily_mean = new L.LayerGroup();
