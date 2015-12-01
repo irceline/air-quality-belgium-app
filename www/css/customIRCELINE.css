@@ -141,3 +141,6 @@ fieldset[disabled] .btn-primary.active {
           font-size: 1.2em;
         }
 }
+.modal-body{
+    overflow-x: auto;
+}
