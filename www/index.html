@@ -65,14 +65,14 @@
                 states[Connection.CELL]     = 'Cell generic connection';
                 states[Connection.NONE]     = 'No network connection';
 
-                alert('Connection type: ' + states[networkState]);
+                alert("Connection type: " + states[networkState]);
             }
             checkConnection();
 
             document.addEventListener("offline", onOffline, false);
 
             function onOffline() {
-                alert('Your device is now offline. This app needs an active internet connection for fresh data.'
+                alert("Your device is now offline. This app needs an active internet connection for fresh data.")
             }
     </script>
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
