@@ -1,11 +1,10 @@
 <div class="swc-main">
     <div class="swc-page" id="chart-page">
         <div class="navbar navbar-fixed-top" role="navigation">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> </button>
             <div class="container-fluid">
                 <div class="navbar-header chart">
                     <div class="navbar-brand">
-                        <i class="glyphicon glyphicon-menu-hamburger"></i>
+                        <span class="glyphicon glyphicon-stats"></span>
                         <div class="navbar-header-text hidden-xs pull-right">
                             <span>{{_i}}main.diagram{{/i}}</span>
                         </div>
@@ -16,7 +15,7 @@
                         <span class="buttonCaption">{{_i}}main.mapView{{/i}}</span>
                     </a>
                     <a class="btn btn-default navbar-btn button-right"
-                    data-action="dataTable" href="#" data-toggle="tooltip" data-placement="bottom" title="{{_i}}main.tableView{{/i}}">
+                       data-action="dataTable" href="#chart-page" data-toggle="tooltip" data-placement="bottom" title="{{_i}}main.tableView{{/i}}" style="display: none">
                         <span class="glyphicon glyphicon-list"></span>
                         <span class="buttonCaption">{{_i}}main.tableView{{/i}}</span>
                     </a>
@@ -34,7 +33,6 @@
                         <span class="glyphicon glyphicon-star"></span>
                         <span class="buttonCaption">{{_i}}main.favoriteView{{/i}}</span>
                     </a>
-
                 </div>
             </div>
         </div>
@@ -187,7 +185,7 @@
                 <div class="input-group import-export-btns">
                     <span class="input-group-btn input-group-addon">
                         <span class="btn btn-primary btn-file">
-                            {{_i}}main.importFavorites{{/i}} <input type="file" id="favorites-file-import">
+                            {{_i}}main.importFavorites{{/i}} <input type="file" id="favorites-file-import" />
                         </span>
                     </span>
 
