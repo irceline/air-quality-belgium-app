@@ -38,9 +38,21 @@
                     || window.navigator.msMaxTouchPoints > 0 // < IE11
                     || 'ontouchstart' in document.documentElement;
             };
-            StatusBar.overlaysWebView(false);
+            // StatusBar.overlaysWebView(false);
+            if (navigator.onLine) {
+              // alert('You\'re online.')
+            } else {
+              alert('Your device is offline. This app needs an active internet connection for fresh data.');
+            }
+            window.addEventListener("offline", function(e) {
+              alert("Your device is now offline. This app needs an active internet connection for fresh data.");
+            }, false);
+
+            window.addEventListener("You\'re online.", function(e) {
+              alert("online");
+            }, false);
     </script>
-    <script type="text/javascript" charset="utf-8">
+    <!-- <script type="text/javascript" charset="utf-8">
 
     function onDeviceReady(){
         try{
@@ -68,7 +80,7 @@
         }
     }
 
-      </script>
+      </script> -->
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
