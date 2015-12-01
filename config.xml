@@ -47,7 +47,7 @@
     <!-- <preference name="InAppBrowserStorageEnabled" value="true"/> -->
     <!--
         Define a specific version of PhoneGap to build into your app.     -->
-    <preference name="phonegap-version"       value="3.7.0" />
+    <preference name="phonegap-version"       value="cli-5.2.0" />
 
 
     <!-- Plugins -->
