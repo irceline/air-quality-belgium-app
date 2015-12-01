@@ -52,6 +52,7 @@
               alert("online");
             }, false);
             // Check network cordova-plugin-network-information
+            window.alert = navigator.notification.alert;
             function checkConnection() {
                 var networkState = navigator.connection.type;
 
