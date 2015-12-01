@@ -399,20 +399,136 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
     if (phenomenonId !== "8" && Map.map.hasLayer(this.no2_current)) {
         Map.map.removeLayer(this.no2_current);
     }
-    if (phenomenonId === "391") {
-        this.bc_current = L.tileLayer.wms("http://geo.irceline.be/wms", {
-            layers: 'rio:bc_actueel',
-            transparent: true,
-            format: 'image/png',
-            cql_filter: timestring,
-            opacity: 0.7,
-            visibility: true,
-            units: 'm'
-        }).addTo(Map.map);
-    }
-    if (phenomenonId !== "391" && Map.map.hasLayer(this.bc_current)) {
-        Map.map.removeLayer(this.bc_current);
-    }
+    // different aggregations of the same pollutant (BC):
+        if (phenomenonId === "391") {
+            this.bc_current = L.tileLayer.wms("http://geo.irceline.be/wms", {
+                layers: 'rio:bc_actueel',
+                transparent: true,
+                format: 'image/png',
+                cql_filter: timestring,
+                opacity: 0.7,
+                visibility: true,
+                pane: 'tilePane',
+                zIndex: -9998,
+                projection: 'EPSG:4326',
+                units: 'm'
+            }).addTo(Map.map);
+            this.bc_current24 = new L.LayerGroup();
+            this.bc_current24_rio = L.tileLayer.wms("http://geo.irceline.be/wms", {
+                layers: 'rio:bc_actueel24',
+                transparent: true,
+                format: 'image/png',
+                cql_filter: timestring,
+                opacity: 0.7,
+                visibility: true,
+                pane: 'tilePane',
+                zIndex: -9998,
+                projection: 'EPSG:4326',
+                units: 'm'
+            }).addTo(bc_current24);
+            this.bc_current24_station = L.tileLayer.wms("http://geo.irceline.be/wms", {
+                layers: 'realtime:bc_station_actueel24',
+                transparent: true,
+                format: 'image/png',
+                cql_filter: timestring,
+                opacity: 0.7,
+                projection: 'EPSG:4326',
+                pane: 'tilePane',
+                zIndex: -9998,
+                units: 'm'
+            }).addTo(bc_current24);
+            this.bc_daily_mean = new L.LayerGroup();
+            this.bc_daily_mean_rio = L.tileLayer.wms("http://geo.irceline.be/wms", {
+                layers: 'rio:bc_daggemiddelde',
+                transparent: true,
+                format: 'image/png',
+                cql_filter: timestring_day,
+                opacity: 0.7,
+                visibility: true,
+                pane: 'tilePane',
+                zIndex: -9998,
+                projection: 'EPSG:4326',
+                units: 'm'
+            }).addTo(bc_daily_mean);
+            this.bc_daily_mean_station = L.tileLayer.wms("http://geo.irceline.be/wms", {
+                layers: 'realtime:bc_station_daggemiddelde',
+                transparent: true,
+                format: 'image/png',
+                cql_filter: timestring_day,
+                visibility: true,
+                pane: 'tilePane',
+                zIndex: -9997,
+                projection: 'EPSG:4326',
+                units: 'm'
+            }).addTo(bc_daily_mean);
+            // add layers control
+            this.baseLayers = {
+                "current hourly mean BC": this.bc_current,
+                "current running 24 hour mean BC": this.bc_current24,
+                "daily mean (yesterday) BC": this.bc_daily_mean
+            };
+            this.bcControlLayer = L.control.layers(this.baseLayers, null, {
+                position: 'bottomright',
+                collapsed: true
+            }).addTo(Map.map);
+            Map.map.on('baselayerchange', function (eventLayer) {
+                if (eventLayer.name === 'current running 24 hour mean BC') {
+                    Map.map.removeLayer(Map.stationMarkers);
+                } else if (eventLayer.name === 'daily mean (yesterday) BC') {
+                    Map.map.removeLayer(Map.stationMarkers);
+                } else {
+                    Map.map.addLayer(Map.stationMarkers);
+                }
+            });
+        }
+    // clean-up on change phenomenon
+        if (phenomenonId !== "391") {
+            console.log("remove layers");
+            if (Map.map.hasLayer(this.bc_current24)) {
+                Map.map.removeLayer(this.bc_current24);
+                this.bcControlLayer.removeLayer(this.bc_current24);
+                this.bcControlLayer.removeLayer(this.bc_current);
+                this.bcControlLayer.removeLayer(this.bc_daily_mean);
+                Map.map.removeControl(bcControlLayer);
+            }
+            if (Map.map.hasLayer(this.bc_current)) {
+                Map.map.removeLayer(this.bc_current);
+                this.bcControlLayer.removeLayer(this.bc_current24);
+                this.bcControlLayer.removeLayer(this.bc_current);
+                this.bcControlLayer.removeLayer(this.bc_daily_mean);
+                Map.map.removeControl(bcControlLayer);
+            }
+            if (Map.map.hasLayer(this.bc_daily_mean)) {
+                Map.map.removeLayer(this.bc_daily_mean);
+                this.bcControlLayer.removeLayer(this.bc_current24);
+                this.bcControlLayer.removeLayer(this.bc_current);
+                this.bcControlLayer.removeLayer(this.bc_daily_mean);
+                Map.map.removeControl(bcControlLayer);
+            }
+            if (Map.map.hasLayer(this.bcday0)) {
+                Map.map.removeLayer(this.bcday0);
+                this.bcControlLayer.removeLayer(this.bc_current24);
+                this.bcControlLayer.removeLayer(this.bc_current);
+                this.bcControlLayer.removeLayer(this.bc_daily_mean);
+                this.bcControlLayer.removeLayer(this.stationMarkers);
+                this.map.removeLayer(this.stationMarkers);
+                Map.map.removeControl(bcControlLayer);
+            }
+            if (Map.map.hasLayer(this.bcday1)) {
+                Map.map.removeLayer(this.bcday1);
+                this.bcControlLayer.removeLayer(this.bc_current24);
+                this.bcControlLayer.removeLayer(this.bc_current);
+                this.bcControlLayer.removeLayer(this.bc_daily_mean);
+                Map.map.removeControl(bcControlLayer);
+            }
+            if (Map.map.hasLayer(this.bcday2)) {
+                Map.map.removeLayer(this.bcday2);
+                this.bcControlLayer.removeLayer(this.bc_current24);
+                this.bcControlLayer.removeLayer(this.bc_current);
+                this.bcControlLayer.removeLayer(this.bc_daily_mean);
+                Map.map.removeControl(bcControlLayer);
+            }
+        }
     // different aggregations of the same pollutant (PM2.5):
         if (phenomenonId === "6001") {
             this.pm25_current = L.tileLayer.wms("http://geo.irceline.be/wms", {
