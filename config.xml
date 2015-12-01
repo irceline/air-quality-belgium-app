@@ -62,7 +62,7 @@
     <gap:plugin name="org.apache.cordova.device-orientation" source="npm" version="0.3.11" />
     <gap:plugin name="org.apache.cordova.dialogs" source="npm" version="0.3.0" />
     <gap:plugin name="cordova-plugin-file" source="npm" />
-    <gap:plugin name="org.apache.cordova.file-transfer" source="npm" version="0.5.0" />
+    <gap:plugin name="cordova-plugin-file-transfer" source="npm" />
     <gap:plugin name="org.apache.cordova.geolocation" source="npm" version="0.3.12" />
     <gap:plugin name="org.apache.cordova.globalization" source="npm" version="0.3.4" />
     <gap:plugin name="org.apache.cordova.inappbrowser" source="npm" version="0.6.0" />
