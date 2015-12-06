@@ -672,6 +672,9 @@ Map.init = function () {
                 [49.5, 3.3], [51.5, 5.7]
             ]);
         });
+        $('[data-action="refresh"]').click(function () {
+            location.reload();
+        });
     });
 };
 
