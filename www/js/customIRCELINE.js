@@ -384,21 +384,138 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
             Map.map.removeControl(o3ControlLayer);
         }
     }
-    if (phenomenonId === "8") {
-        this.no2_current = L.tileLayer.wms("http://geo.irceline.be/wms", {
-            layers: 'rio:no2_actueel',
-            transparent: true,
-            format: 'image/png',
-            cql_filter: timestring,
-            opacity: 0.7,
-            visibility: true,
-            units: 'm'
-        });
-        Map.map.addLayer(this.no2_current);
-    }
-    if (phenomenonId !== "8" && Map.map.hasLayer(this.no2_current)) {
-        Map.map.removeLayer(this.no2_current);
-    }
+    // different aggregations of the same pollutant (NO2):
+        if (phenomenonId === "8") {
+            this.no2_current = L.tileLayer.wms("http://geo.irceline.be/wms", {
+                layers: 'rio:no2_actueel',
+                transparent: true,
+                format: 'image/png',
+                cql_filter: timestring,
+                opacity: 0.7,
+                visibility: true,
+                pane: 'tilePane',
+                zIndex: -9998,
+                projection: 'EPSG:4326',
+                units: 'm'
+            }).addTo(Map.map);
+            this.no2_max = new L.LayerGroup();
+            this.no2_max_rio = L.tileLayer.wms("http://geo.irceline.be/wms", {
+                layers: 'rio:no2_max',
+                transparent: true,
+                format: 'image/png',
+                cql_filter: timestring_day,
+                opacity: 0.7,
+                visibility: true,
+                pane: 'tilePane',
+                zIndex: -9998,
+                projection: 'EPSG:4326',
+                units: 'm'
+            }).addTo(no2_max);
+            this.no2_max_station = L.tileLayer.wms("http://geo.irceline.be/wms", {
+                layers: 'realtime:no2_station_max',
+                transparent: true,
+                format: 'image/png',
+                cql_filter: timestring_day,
+                opacity: 0.7,
+                projection: 'EPSG:4326',
+                pane: 'tilePane',
+                zIndex: -9997,
+                units: 'm'
+            }).addTo(no2_max);
+            // the forecast layers
+            this.imageUrlNO2day0 = 'http://www.irceline.be/air/forecast/map/air_quality_NO2max_day0.png';
+            this.imageUrlNO2day1 = 'http://www.irceline.be/air/forecast/map/air_quality_NO2max_day1.png';
+            this.imageUrlNO2day2 = 'http://www.irceline.be/air/forecast/map/air_quality_NO2max_day2.png';
+            this.imageBounds = [[49.42970232967725, 2.2959900496768988], [51.54563342675961, 7.546266537830604]];
+            this.no2day0 = L.imageOverlay(imageUrlNO2day0, imageBounds, {transparent: true, opacity: 0.7, pane: 'tilePane', zIndex: -9998, projection: 'EPSG:4326', units: 'm'});
+            this.no2day1 = L.imageOverlay(imageUrlNO2day1, imageBounds, {transparent: true, opacity: 0.7, pane: 'tilePane', zIndex: -9998, projection: 'EPSG:4326', units: 'm'});
+            this.no2day2 = L.imageOverlay(imageUrlNO2day2, imageBounds, {transparent: true, opacity: 0.7, pane: 'tilePane', zIndex: -9998, projection: 'EPSG:4326', units: 'm'});
+            // add layers control
+            this.baseLayers = {
+                "current hourly mean NO2": this.no2_current,
+                "highest hourly mean NO2": this.no2_max,
+                "forecast - daily mean today": this.no2day0,
+                "forecast - daily mean tomorrow": this.no2day1,
+                "forecast - daily mean in 2 days": this.no2day2
+            };
+            this.no2ControlLayer = L.control.layers(this.baseLayers, null, {
+                position: 'bottomright',
+                collapsed: true
+            }).addTo(Map.map);
+            Map.map.on('baselayerchange', function (eventLayer) {
+                if (eventLayer.name === 'highest hourly mean NO2') {
+                    Map.map.removeLayer(Map.stationMarkers);
+                } else if (eventLayer.name === 'forecast - daily mean today') {
+                      Map.map.removeLayer(Map.stationMarkers);
+                } else if (eventLayer.name === 'forecast - daily mean tomorrow') {
+                    Map.map.removeLayer(Map.stationMarkers);
+                } else if (eventLayer.name === 'forecast - daily mean in 2 days') {
+                    Map.map.removeLayer(Map.stationMarkers);
+                } else {
+                    Map.map.addLayer(Map.stationMarkers);
+                }
+            });
+        }
+    // clean-up on change phenomenon
+        if (phenomenonId !== "8") {
+            console.log("remove layers");
+            if (Map.map.hasLayer(this.no2_max)) {
+                Map.map.removeLayer(this.no2_max);
+                this.no2ControlLayer.removeLayer(this.no2_max);
+                this.no2ControlLayer.removeLayer(this.no2_current);
+                this.no2ControlLayer.removeLayer(this.no2day0);
+                this.no2ControlLayer.removeLayer(this.no2day1);
+                this.no2ControlLayer.removeLayer(this.no2day2);
+                Map.map.removeControl(no2ControlLayer);
+            }
+            if (Map.map.hasLayer(this.no2_current)) {
+                Map.map.removeLayer(this.no2_current);
+                this.no2ControlLayer.removeLayer(this.no2_max);
+                this.no2ControlLayer.removeLayer(this.no2_current);
+                this.no2ControlLayer.removeLayer(this.no2day0);
+                this.no2ControlLayer.removeLayer(this.no2day1);
+                this.no2ControlLayer.removeLayer(this.no2day2);
+                Map.map.removeControl(no2ControlLayer);
+            }
+            if (Map.map.hasLayer(this.no2_daily_mean)) {
+                Map.map.removeLayer(this.no2_daily_mean);
+                this.no2ControlLayer.removeLayer(this.no2_max);
+                this.no2ControlLayer.removeLayer(this.no2_current);
+                this.no2ControlLayer.removeLayer(this.no2day0);
+                this.no2ControlLayer.removeLayer(this.no2day1);
+                this.no2ControlLayer.removeLayer(this.no2day2);
+                Map.map.removeControl(no2ControlLayer);
+            }
+            if (Map.map.hasLayer(this.no2day0)) {
+                Map.map.removeLayer(this.no2day0);
+                this.no2ControlLayer.removeLayer(this.no2_max);
+                this.no2ControlLayer.removeLayer(this.no2_current);
+                this.no2ControlLayer.removeLayer(this.no2day0);
+                this.no2ControlLayer.removeLayer(this.no2day1);
+                this.no2ControlLayer.removeLayer(this.no2day2);
+                this.no2ControlLayer.removeLayer(this.stationMarkers);
+                this.map.removeLayer(this.stationMarkers);
+                Map.map.removeControl(no2ControlLayer);
+            }
+            if (Map.map.hasLayer(this.no2day1)) {
+                Map.map.removeLayer(this.no2day1);
+                this.no2ControlLayer.removeLayer(this.no2_max);
+                this.no2ControlLayer.removeLayer(this.no2_current);
+                this.no2ControlLayer.removeLayer(this.no2day0);
+                this.no2ControlLayer.removeLayer(this.no2day1);
+                this.no2ControlLayer.removeLayer(this.no2day2);
+                Map.map.removeControl(no2ControlLayer);
+            }
+            if (Map.map.hasLayer(this.no2day2)) {
+                Map.map.removeLayer(this.no2day2);
+                this.no2ControlLayer.removeLayer(this.no2_max);
+                this.no2ControlLayer.removeLayer(this.no2_current);
+                this.no2ControlLayer.removeLayer(this.no2day0);
+                this.no2ControlLayer.removeLayer(this.no2day1);
+                this.no2ControlLayer.removeLayer(this.no2day2);
+                Map.map.removeControl(no2ControlLayer);
+            }
+        }
     // different aggregations of the same pollutant (BC):
         if (phenomenonId === "391") {
             this.bc_current = L.tileLayer.wms("http://geo.irceline.be/wms", {
