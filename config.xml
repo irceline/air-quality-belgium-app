@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "be.irceline.mobile"
-        version   = "0.1.9.9">
+        version   = "0.1.10">
 
     <name>Air Quality Belgium</name>
 
@@ -33,8 +33,9 @@
     <preference name="webviewbounce"              value="true" />           <!-- ios: control whether the screen 'bounces' when scrolled beyond the top -->
     <preference name="prerendered-icon"           value="true" />           <!-- ios: if icon is prerendered, iOS will not apply it's gloss to the app's icon on the user's home screen -->
     <preference name="stay-in-webview"            value="false" />          <!-- ios: external links should open in the default browser, 'true' would use the webview the app lives in -->
-    <preference name="StatusBarStyle"             value="blackopaque" />   <!-- ios: black-translucent will appear black because the PhoneGap webview doesn't go beneath the status bar -->
-    <preference name="StatusBarOverlaysWebView"   value="false"/>             <!-- ios: for iOS 7 or higher -->
+    <preference name="StatusBarOverlaysWebView"   value="false"/>           <!-- ios: for iOS 7 or higher -->
+    <preference name="StatusBarBackgroundColor"   value="#030F13"/>           <!-- ios: only applies works when status bar overlay false -->
+    <preference name="StatusBarStyle"             value="lightcontent" />               <!-- ios: light text and icons. The PhoneGap webview doesn't go beneath the status bar -->
     <preference name="detect-data-types"          value="true" />           <!-- ios: controls whether data types (such as phone no. and dates) are automatically turned into links by the system -->
     <preference name="exit-on-suspend"            value="false" />          <!-- ios: if set to true, app will terminate when home button is pressed -->
     <preference name="show-splash-screen-spinner" value="true" />           <!-- ios: if set to false, the spinner won't appear on the splash screen during app loading -->
