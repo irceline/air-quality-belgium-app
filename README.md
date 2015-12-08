@@ -10,22 +10,14 @@ customisations are marked in js/jsc-1.0.0.js with:
 // customIRCELINE
 ```
 * upgrade leaflet.js 0.7.1 > 0.7.3 (see js/jsc-1.0.0.deps.js)
-* added layers (see customIRCELINE.js)
-* added custom styling (see customIRCELINE.css)
+* added layers (see js/customIRCELINE.js)
+* added custom styling (see css/customIRCELINE.css)
+* added custom GUI (see templates/customIRCELINE.html)
+* added information page (see templates/infoIRCELINE.html)
 * double-click on phenomenon in listing to zoom to extend of specific phenomenon
 * limit number of phenomena listed in navigation (still available via listed search timeseries)
 * added zoom to full extent button
-
-## Note
-in `config.xml` keep phonegap verion at `3.7.0`, like so:
-```xml
-<preference name="phonegap-version"       value="3.7.0" />
-```
-ignore message in `https://build.phonegap.com/`:
-```
-This app isn't using the latest version of PhoneGap. We recommend upgrading to cli-5.2.0.
-```
-There are still some unresolved compilation issues in this version of phonegap build.
+* added refresh button
 
 ## Acknowledgement
 This app was created within the [eENVplus project](http://www.eenvplus.eu) funded by European Union under the Competitiveness and Innovation Framework Programme – Information and Communication Technologies Policy Support Programme ([CIP-ICT-PSP](http://ec.europa.eu/cip/)) grant No. 325232.
