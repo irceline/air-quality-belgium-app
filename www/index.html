@@ -42,14 +42,14 @@
             if (navigator.onLine) {
               // alert('You\'re online.')
             } else {
-              alert('Your device is offline. This app needs an active internet connection for fresh data.');
+              navigator.notification.alert('Your device is offline. This app needs an active internet connection for fresh data.');
             }
             document.addEventListener("offline", function(e) {
-              alert("Your device is now offline. This app needs an active internet connection for fresh data.");
+              navigator.notification.alert("Your device is now offline. This app needs an active internet connection for fresh data.");
             }, false);
 
             document.addEventListener("You\'re online.", function(e) {
-              alert("online");
+              navigator.notification.alert("online");
             }, false);
             // Check network cordova-plugin-network-information
             window.alert = navigator.notification.alert;
@@ -66,14 +66,14 @@
                 states[Connection.CELL]     = 'Cell generic connection';
                 states[Connection.NONE]     = 'No network connection';
 
-                alert("Connection type: " + states[networkState]);
+                navigator.notification.alert("Connection type: " + states[networkState]);
             }
             checkConnection();
 
             document.addEventListener("offline", onOffline, false);
 
             function onOffline() {
-                alert("Your device is now offline. This app needs an active internet connection for fresh data.")
+                navigator.notification.alert("Your device is now offline. This app needs an active internet connection for fresh data.")
             }
     </script>
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
