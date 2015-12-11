@@ -794,7 +794,7 @@ Map.init = function () {
         });
     });
     function checkInternet() {
-        var networkState = navigator.network.connection.type;
+        var networkState = navigator.connection.type;
         if(networkState == Connection.NONE) {
             onConnexionError();
             return false;
