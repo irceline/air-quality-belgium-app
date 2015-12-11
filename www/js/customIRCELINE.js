@@ -793,7 +793,23 @@ Map.init = function () {
             location.reload();
         });
     });
-    var a = moment(lastupdate).format('dddd D MMMM YYYY, HH:mm');
+    function checkInternet() {
+        var networkState = navigator.connection.type;
+        if(networkState == Connection.NONE) {
+            onConnexionError();
+            return false;
+        } else {
+            return true;
+        }
+    };
+    var isOffline = 'onLine' in navigator && !navigator.onLine;
+
+    if ( isOffline || checkInternet===false) {
+        var a = "Your device is offline";
+    }
+    else {
+        var a = moment(lastupdate).format('dddd D MMMM YYYY, HH:mm');
+    }
     $("span#lastupdate").text(a);
 };
 
