@@ -116,31 +116,70 @@ fieldset[disabled] .btn-primary.active {
 .button-bottom-right .btn {
     padding: 4px 10px;
 }
+@media (max-width: 1024px) {
+				.lastupdate{
+					position: relative;
+					top: -10px !important;
+				}
+}
+@media (max-width: 768px) {
+				.lastupdate{
+					position: relative;
+					top: -12px !important;
+				}
+}
 @media (max-width: 640px) {
         body {
           font-size: 1.4em;
         }
+				.lastupdate{
+					position: relative;
+					top: -11px !important;
+				}
 }
 @media (max-width: 580px) {
         body {
           font-size: 1.35em;
         }
+				.lastupdate{
+					position: relative;
+					top: -10px !important;
+				}
 }
 @media (max-width: 540px) {
         body {
           font-size: 1.3em;
         }
+				.lastupdate{
+					position: relative;
+					top: -10px !important;
+				}
 }
 @media (max-width: 480px) {
         body {
           font-size: 1.25em;
         }
+				.lastupdate{
+					position: relative;
+					top: -10px !important;
+				}
 }
 @media (max-width: 360px) {
         body {
           font-size: 1.2em;
         }
+				.lastupdate{
+					position: relative;
+					top: -9px !important;
+				}
 }
 .modal-body{
     overflow-x: auto;
+}
+.lastupdate{
+	font-size: 0.8em;
+	text-align: center;
+	width: 100%;
+	position: relative;
+	top: -10px;
 }

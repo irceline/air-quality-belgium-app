@@ -793,6 +793,8 @@ Map.init = function () {
             location.reload();
         });
     });
+    var a = moment(lastupdate).format('dddd D MMMM YYYY, HH:mm');
+    $("span#lastupdate").text(a);
 };
 
 Map.createStationMarker = function (results, clustering) {
