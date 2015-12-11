@@ -55,7 +55,7 @@
             // Check network cordova-plugin-network-information
             window.alert = navigator.notification.alert;
             function checkConnection() {
-                var networkState = navigator.connection.type;
+                var networkState = navigator.network.connection.type;
 
                 var states = {};
                 states[Connection.UNKNOWN]  = 'Unknown connection';
