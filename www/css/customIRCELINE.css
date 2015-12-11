@@ -125,7 +125,7 @@ fieldset[disabled] .btn-primary.active {
 @media (max-width: 768px) {
 				.lastupdate{
 					position: relative;
-					top: -12px !important;
+					top: -11px !important;
 				}
 }
 @media (max-width: 640px) {
@@ -143,7 +143,7 @@ fieldset[disabled] .btn-primary.active {
         }
 				.lastupdate{
 					position: relative;
-					top: -10px !important;
+					top: -11px !important;
 				}
 }
 @media (max-width: 540px) {
