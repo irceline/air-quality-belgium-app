@@ -183,3 +183,6 @@ fieldset[disabled] .btn-primary.active {
 	position: relative;
 	top: -10px;
 }
+.leaflet-popup {
+	z-index: 1;
+}
