@@ -195,7 +195,8 @@ i18n.en = {
         exportFavorites: 'Export',
         importExportHelp: 'To import a file, please choose a file you exported before.',
         noFileSelected: 'No file selected',
-        tableView: 'Table view'
+        tableView: 'Table view',
+        refresh: 'Refresh'
     },
     chart: {
         noTimeseriesSelected: 'You have selected no timeseries, the selected timeseries have no values in the given time range or the timeseries are hidden.',
@@ -540,7 +541,8 @@ i18n.de = {
     exportFavorites: 'Exportieren',
     importExportHelp: 'Zum Import wählen sie eine zuvor exportierten JSON-Datei.',
     noFileSelected: 'Keine Datei ausgewählt',
-    tableView: 'Tabellenansicht'
+    tableView: 'Tabellenansicht',
+    refresh: 'Aktualisieren'
   },
   chart: {
     noTimeseriesSelected: 'Sie haben keine Zeitreihe ausgewählt, die gewählten Zeitreihen haben keine Werte in dem derzeitigen Zeitraum oder die Zeitreihen sind unsichtbar.',
@@ -803,7 +805,8 @@ i18n.fr = {
     exportFavorites: 'Export',
     importExportHelp: 'Pour importer un fichier, veuillez s\'il vous plaît choisir un fichier que vous avez déjà exporté',
     noFileSelected: 'Aucun fichier sélectionné',
-    tableView: 'Vue tableau'
+    tableView: 'Vue tableau',
+    refresh: 'Actualiser'
   },
   chart: {
     noTimeseriesSelected: 'Vous n\'avez sélectionné aucun jeu de données, ou les données ne sont pas disponibles pendant la période sélectionnée',
@@ -1066,7 +1069,8 @@ i18n.nl = {
     exportFavorites: 'Export',
     importExportHelp: 'Om een ​​bestand te importeren, kies dan een bestand dat u eerder geëxporteerd.',
     noFileSelected: 'Geen bestand geselecteerd',
-    tableView: 'Tabelweergave'
+    tableView: 'Tabelweergave',
+    refresh: 'Verversen'
   },
   chart: {
     noTimeseriesSelected: 'Je hebt geen tijdreeks geselecteerd, worden de geselecteerde tijdreeksen hebben geen waarden in de gegeven tijd bereik of de tijdreeksen zijn verborgen.',
