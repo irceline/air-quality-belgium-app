@@ -788,6 +788,41 @@ i18n.de = {
  * limitations under the License.
  */
 i18n.fr = {
+  //customIRCELINE
+    info: {
+      title: 'Information',
+      head_index: 'Index',
+      head_BC: 'BC',
+      head_NO2: 'NO<sub>2</sub>',
+      head_O3: 'O<sub>3</sub>',
+      head_PM10: 'PM<sub>10</sub>',
+      head_PM25: 'PM<sub>2.5</sub>',
+      index_1: 'excellent',
+      index_2: 'très bon',
+      index_3: 'bon',
+      index_4: 'assez bon',
+      index_5: 'moyen',
+      index_6: 'médiocre',
+      index_7: 'très médiocre',
+      index_8: 'mauvais',
+      index_9: 'très mauvais',
+      index_10: 'exécrable',
+      schale_decription: 'Note: all values in the above table are given as microgram per cubic meter (µg/m³)',
+      pollutant: 'Pollutants:',
+      BC: 'Black Carbon',
+      NO2: 'Dioxyde d\'azote',
+      O3: 'Ozone',
+      PM25: 'Particules fines < 2.5 µm',
+      PM10:'Particules fines < 10 µm',
+      BC_description: 'Black carbon (BC) or soot is the most strongly light-absorbing component of particulate matter (PM) and is formed during incomplete combustion of fossil fuels (e.g. diesel), biofuels (e.g. bio-diesel), and biomass (e.g. wood). BC is emitted directly into the atmosphere in the form of fine particles (smaller than 2.5 µm, see PM2.5). There is evidence of carcinogenic effects of BC and this pollutant is also a known as a “short-lived climate forcer”. This means that there is a clear relation between climate change and BC, but this pollutant remains in the atmosphere much shorter than e.g. carbon dioxide (CO<sub>2</sub>). After CO<sub>2</sub>, BC is the second most important factor with regards to climate change.',
+      NO2_description: 'Nitrogen dioxide (NO<sub>2</sub>) is emitted during combustion at  high temperatures (e.g. diesel engines, industrial processes). NO<sub>2</sub> is considered a good proxy for traffic related air pollution, but there are also significant industrial sources. NO<sub>2</sub> is an important precursor for the formation of ozone (summer-SMOG) and “Secondary Inorganic Aerosols” (fine particles). There is growing evidence of detrimental health effects of this pollutant (adverse respiratory effects including airway inflammation).',
+      O3_description: 'High ozone (O<sub>3</sub>) concentrations are associated with hot, sunny days. O<sub>3</sub> is formed in a photochemical reaction when nitrogen oxides (NOx) and volatile organic compounds (VOC\'s) react in the atmosphere in the presence of sunlight (UV - ultra violate radiation). Ozone concentrations are typically lower close to traffic emissions since (diesel) engines also emit nitrogen monoxide (NO), which consumes formed O3. Indoors ozone concentrations are typically about half as high as outdoor concentrations during summer-SMOG episodes. High ozone concentration have well documented adverse respiratory effects.',
+      PM10_description: 'The mass of all particles smaller than 10 µm. This fraction of particulate matter (PM) has many other sources besides combustion and the scientific evidence of detrimental health effects are well documented. A large part of PM<sub>10</sub> is typically secondary, meaning that particles are formed in the presence of precursors (Nitrogen oxides – NOx – from traffic/industry, Sulphur dioxide – SO<sub>2</sub> – from industry and ammonia – NH<sub>3</sub> – primarily agricultural emissions).',
+      PM25_description: 'The mass of all particles smaller than 2.5 µm. There is a clear link between higher mortality risk and high PM<sub>2.5</sub> concentrations. Besides traffic and industrial emissions, secondary emissions play a significant role (see explanation PM<sub>10</sub>). PM<sub>2.5</sub> is more harmful for human health than PM<sub>10</sub>. PM<sub>2.5</sub> is by far the most important pollutant linked to adverse effects on human health. There is a better relationship between traffic emissions and PM<sub>2.5</sub> than PM<sub>10</sub>.',
+      source: 'Source:',
+      cooperation: 'La <a title="Cellule Interrégionale de l\'Environnement (CELINE)" href="http://www.irceline.be/fr">Cellule Interrégionale de l\'Environnement (CELINE)</a> is a permanent cooperation between three Belgian regional environment agencies:'
+    },
+  //end customIRCELINE
   fullName: 'Français',
   ok: 'OK',
   main: {
