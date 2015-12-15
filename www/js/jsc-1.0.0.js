@@ -1106,18 +1106,18 @@ i18n.nl = {
     index_8: 'slecht',
     index_9: 'zeer slecht',
     index_10: 'uitermate slecht',
-    schale_decription: 'Nota: alle waarden in de bovenstaande tabel worden gegeven als microgram per kubieke meter (µg/m³)',
+    schale_decription: 'Nota: alle waarden in de bovenstaande tabel worden gegeven in microgram per kubieke meter (µg/m³)',
     pollutant: 'Polluenten:',
     BC: 'Black Carbon',
     NO2: 'Stikstofdioxide',
     O3: 'Ozon',
     PM25: 'Fijnstof < 2.5 µm',
     PM10:'Fijnstof < 10 µm',
-    BC_description: 'Zwarte koolstof (Black Carbon – BC) of roet is het sterkst lichtabsorberende component van fijnstof (PM) en wordt gevormd bij onvolledige verbranding van fossiele brandstoffen (bv. diesel), biobrandstoffen (bv. biodiesel) en biomassa (bv. hout). BC wordt rechtstreeks uitgestoten in de atmosfeer in de vorm van fijne deeltjes (kleiner dan 2,5 micrometer, zie PM2.5). Er zijn bewijzen van carcinogene effecten van BC en deze polluent is ook bekend als een "kortstondige klimaat schaadstof". Dit betekent dat er een duidelijke relatie is tussen klimaatverandering en BC, maar dat deze verontreinigende stof veel korter in de atmosfeer blijft dan bv. kooldioxide (CO<sub>2</sub>). Na CO<sub>2</sub>, is BC de tweede meest belangrijke factor met betrekking tot klimaatverandering.',
+    BC_description: 'Zwarte koolstof (Black Carbon – BC) of roet is de sterkst lichtabsorberende component van fijnstof (PM) en wordt gevormd bij onvolledige verbranding van fossiele brandstoffen (bv. diesel), biobrandstoffen (bv. biodiesel) en biomassa (bv. hout). BC wordt rechtstreeks uitgestoten in de atmosfeer in de vorm van fijne deeltjes (kleiner dan 2,5 micrometer, zie PM2.5). Er zijn bewijzen van carcinogene effecten van BC en deze polluent is ook bekend als een "short-lived climate forcer". Dit betekent dat er een duidelijke relatie is tussen klimaatverandering en BC, maar dat deze verontreinigende stof veel korter in de atmosfeer blijft dan bv. koolstofdioxide (CO<sub>2</sub>). Na CO<sub>2</sub>, is BC de tweede meest belangrijke factor met betrekking tot klimaatverandering.',
     NO2_description: 'Stikstofdioxide (NO<sub>2</sub>) wordt tijdens de verbranding bij hoge temperaturen (bv. dieselmotoren, industriële processen) uitgestoten. NO<sub>2</sub> wordt beschouwd als een goede indicator voor verkeersgerelateerde luchtverontreiniging, maar er zijn ook significante industriële bronnen. NO<sub>2</sub> is een belangrijke precursor voor de vorming van ozon (zomersmog) en "secundaire anorganische aerosolen" (fijne deeltjes). Er is steeds meer bewijslast van de schadelijke effecten op de gezondheid van deze polluent (nadelige effecten op de ademhaling, inclusief luchtwegontsteking).',
-    O3_description: 'Hoge ozon (O<sub>3</sub>) concentraties worden geassocieerd met warme, zonnige dagen. O<sub>3</sub> wordt gevormd tijdens een fotochemische reactie waarbij stikstofoxiden (NOx) en vluchtige organische stoffen (VOS\'s) in de atmosfeer reageren in de aanwezigheid van zonlicht (UV - ultraviolette straling). Ozon concentraties zijn meestal lager in de buurt van verkeersemissies aangezien dieselmotoren stikstofmonoxide (NO) uitstoten, dat het gevormde O<sub>3</sub> consumeert. Ozonconcentraties binnenshuis zijn meestal ongeveer half zo hoog als in de buitenlucht tijdens zomersmogepisodes. Dat hoge ozonconcentratie een nadelige effecten hebben op de ademhaling is goed gedocumenteerd.',
-    PM10_description: 'De massa van alle deeltjes kleiner dan 10 micrometer. Deze fractie van fijnstof (PM) heeft naast verbranding andere belangrijke bronnen en de wetenschappelijke bewijslast m.b.t. de schadelijke effecten op de gezondheid zijn goed gedocumenteerd. Een groot deel van PM<sub>10</sub> is secundaire van oorsprong, dit wil zeggen dat de deeltjes gevormd in de aanwezigheid van precursor (stikstofoxiden - NOx - van verkeer/industrie, zwaveldioxide - SO<sub>2</sub> - van industrie en ammoniak - NH<sub>3</sub> - voornamelijk agrarische emissies).',
-    PM25_description: 'De massa van alle deeltjes kleiner dan 2,5 micrometer. Er is een duidelijk verband tussen hoger mortaliteit en hoge PM<sub>2.5</sub> concentraties. Naast het verkeer en industriële emissies, spelen secundaire emissies een belangrijke rol (zie toelichting PM<sub>10</sub>). PM<sub>2.5</sub> is schadelijker voor de gezondheid dan PM<sub>10</sub>. PM<sub>2.5</sub> is veruit de belangrijkste polluent in verband met schadelijke effecten op de gezondheid van de mens. Er is een betere relatie tussen de verkeersemissies en PM<sub>2.5</sub> dan PM<sub>10</sub>.',
+    O3_description: 'Hoge ozon (O<sub>3</sub>) concentraties worden geassocieerd met warme, zonnige dagen. O<sub>3</sub> wordt gevormd tijdens fotochemische reacties waarbij stikstofoxiden (NOx) en vluchtige organische stoffen (VOS\'s) in de atmosfeer reageren in de aanwezigheid van zonlicht (UV - ultraviolette straling). Ozon concentraties zijn meestal lager in de buurt van verkeer door de uitstoot van het kortlevende stikstofmonoxide (NO) dat het gevormde O<sub>3</sub> consumeert. Ozonconcentraties binnenshuis zijn meestal ongeveer half zo hoog als in de buitenlucht tijdens zomersmogepisodes. Dat hoge ozonconcentraties nadelige effecten hebben op de ademhaling is goed gedocumenteerd.',
+    PM10_description: 'De massa van alle deeltjes kleiner dan 10 micrometer. Deze fractie van fijnstof (PM) heeft naast verbranding andere belangrijke bronnen en de wetenschappelijke bewijslast m.b.t. de schadelijke effecten op de gezondheid zijn goed gedocumenteerd. Een groot deel van PM<sub>10</sub> is secundair van oorsprong, dit wil zeggen dat de deeltjes gevormd worden in de atmosfeer in de aanwezigheid van precursors (stikstofoxiden - NOx - van verkeer/industrie, zwaveldioxide - SO<sub>2</sub> - van industrie en ammoniak - NH<sub>3</sub> - voornamelijk agrarische emissies).',
+    PM25_description: 'De massa van alle deeltjes kleiner dan 2,5 micrometer. Er is een duidelijk verband tussen mortaliteit en hoge PM<sub>2.5</sub> concentraties. Naast het verkeer en industriële emissies, speelt ook de secundaire vorming een belangrijke rol (zie toelichting PM<sub>10</sub>). PM<sub>2.5</sub> is schadelijker voor de gezondheid dan PM<sub>10</sub>. PM<sub>2.5</sub> is veruit de belangrijkste polluent in verband met schadelijke effecten op de gezondheid van de mens. Er is een betere relatie tussen de verkeersemissies en PM<sub>2.5</sub> dan PM<sub>10</sub>.',
     source: 'Bron:',
     cooperation: 'De <a title="Intergewestelijke Cel voor het Leefmilieu (IRCEL)" href="http://www.irceline.be/nl">Intergewestelijke Cel voor het Leefmilieu (IRCEL)</a> is een permanente samenwerking tussen de drie Belgische regionale milieuagentschappen:'
   },
@@ -1130,52 +1130,52 @@ i18n.nl = {
     mapView: 'Kaartweergave',
     favoriteView: 'Favorieten',
     settings: 'Instellingen',
-    stationSelection: 'Selecteer een zender',
-    chartView: 'Kaartweergave',
-    allPhenomena: 'Alle Fenomenen',
-    phenomenon: 'Fenomeen',
+    stationSelection: 'Selecteer een station',
+    chartView: 'Diagramweergave',
+    allPhenomena: 'Alle polluenten',
+    phenomenon: 'Polluent',
     favoritesList: 'Favorieten',
     importFavorites: 'Import',
     exportFavorites: 'Export',
-    importExportHelp: 'Om een ​​bestand te importeren, kies dan een bestand dat u eerder geëxporteerd.',
+    importExportHelp: 'Om een ​​bestand te importeren, kies een bestand dat u eerder geëxporteerde.',
     noFileSelected: 'Geen bestand geselecteerd',
     tableView: 'Tabelweergave',
     refresh: 'Verversen'
   },
   chart: {
-    noTimeseriesSelected: 'Je hebt geen tijdreeks geselecteerd, worden de geselecteerde tijdreeksen hebben geen waarden in de gegeven tijd bereik of de tijdreeksen zijn verborgen.',
-    outsideOfDataRange: 'Buitenkant van data range!',
+    noTimeseriesSelected: 'U hebt nog geen tijdreeks geselecteerd, de geselecteerde tijdreeksen hebben geen gegevens in het gekozen tijdsinterval of de tijdreeksen zijn verborgen.',
+    outsideOfDataRange: 'Buiten het gegevensbereik!',
     annotation: 'Niet gevalideerde gegevens!',
-    monthNames: [ 'Jan', 'Februari', 'Ontsieren', 'April', 'Mei', 'Juni', 'Juli', 'Augustus', 'September', 'Oktober', 'November', 'December' ]
+    monthNames: [ 'Januari', 'Februari', 'Maart', 'April', 'Mei', 'Juni', 'Juli', 'Augustus', 'September', 'Oktober', 'November', 'December' ]
   },
   table: {
     time: 'Tijd'
   },
   map: {
-    userLocation: 'Hier is uw huidige locatie',
+    userLocation: 'U huidige locatie',
     stationSelection: {
       station: 'Station',
-      selectAllTimeseries: 'Alles selecteren tijdreeks'
+      selectAllTimeseries: 'Selecteer alle tijdreeksen'
     },
     stationLocation: {
       station: 'Station',
       timeseries: 'Tijdreeks',
-      provider: 'Leverancier',
+      provider: 'Aanbieder',
       jumpBackToChart: 'terug naar overzicht'
     },
     providerList: {
-      provider: 'Leverancier',
+      provider: 'Aanbieders',
       stations: 'Stations',
       timeseries: 'Tijdreeks',
       phenomena: 'Fenomenen'
     },
     search: {
       label: 'zoeken naar het adres ...',
-      noResult: 'Sorry, dat adres kon niet worden gevonden.'
+      noResult: 'Sorry, het adres kon niet worden gevonden.'
     }
   },
   listSelection: {
-    header: 'Kies een tijdreeks door lijst',
+    header: 'Kies een tijdreeks in de lijst',
     headers: {
       category: 'Categorie',
       station: 'Station',
@@ -1183,23 +1183,23 @@ i18n.nl = {
       procedure: 'Sensor'
     },
     warning: {
-      moreThanOneTimeseries: 'Er voldeden meer dan één tijdreeks'
+      moreThanOneTimeseries: 'Er voldeden meer dan één tijdreeks aan de vraag'
     }
   },
   legend: {
     entry: {
       noData: 'geen gegevens beschikbaar',
       jumpToLastValue: 'Ga naar de laatste waarde',
-      firstValueAt: 'Eerste waarde',
-      lastValueAt: 'Laatste waarde bij'
+      firstValueAt: 'Eerste waarde op',
+      lastValueAt: 'Laatste waarde op'
     }
   },
   export: {
     label: 'Gegevens als CSV (zip-archief)'
   },
   timeSelection: {
-    header: 'Time Range',
-    presetsHeader: 'presets',
+    header: 'Tijdsinterval',
+    presetsHeader: 'Voorinstellingen',
     presets: {
       lastHour: 'afgelopen uur',
       today: 'vandaag',
@@ -1209,24 +1209,24 @@ i18n.nl = {
       lastWeek: 'vorige week',
       thisMonth: 'deze maand',
       lastMonth: 'vorige maand',
-      thisYear: 'dit jaar',
+      thisYear: 'huidig jaar',
       lastYear: 'vorig jaar'
     },
     custom: {
-      header: 'gewoonte',
+      header: 'op maat',
       start: 'Startdatum',
       end: 'Einddatum'
     },
     warning: {
       startBeforeEnd: 'De startdatum kan niet groter zijn dan de einddatum',
-      maxTimeRange: 'De tijd bereik kan niet groter zijn dan één jaar'
+      maxTimeRange: 'De tijdsinterval kan niet groter zijn dan één jaar'
     }
   },
   styleChange: {
     header: 'Stijl wijzigen',
     currentColor: 'Huidige kleur',
     selectColor: 'Selecteer een nieuwe kleur',
-    selectBarInterval: 'Selecteer de bar interval',
+    selectBarInterval: 'Selecteer de intervalbar',
     barChartInterval: {
       hour: 'Uur',
       day: 'Dag',
@@ -1234,64 +1234,64 @@ i18n.nl = {
       month: 'Maand'
     },
     zeroScaled: 'zero geschaald Y-as',
-    groupedAxis: 'gegroepeerd as'
+    groupedAxis: 'gegroepeerde Y-as'
   },
   settings: {
     header: 'Instellingen',
     chooseLanguage: 'Andere talen',
-    requiresRestart: 'Moet Restart!',
+    requiresRestart: 'Vereist herstarten van de applicatie!',
     permalink: {
       create: 'Maak een permalink als',
-      inWindow: 'link in een nieuw venster',
-      inMail: 'link in een e-mail',
-      inClipboard: 'Link naar het klembord',
+      inWindow: 'Kopieer link in een nieuw venster',
+      inMail: 'Kopieer link in een e-mail',
+      inClipboard: 'Kopieer link naar het klembord',
       clipboardInfo: 'Kopiëren naar het klembord:',
       inQrCode: 'als QR-Code',
-      favorite: 'Opslaan werkomgeving als favoriet binnenkomst'
+      favorite: 'Werkomgeving opslaan als favoriet'
     },
-    clusterMarker: 'cluster marker',
+    clusterMarker: 'bundel stationsiconen',
     markerWithLastInfo: {
-      header: 'marker met de laatste waarde informatie',
-      label: 'aandacht - enkele data provider zijn erg traag'
+      header: 'Stationsiconen kleuren volgens schaal met de laatste beschikbare waarde',
+      label: 'Aandacht - enkele gegevensprovider zijn erg traag'
     },
     saveStatus: {
-      header: 'Opslaan milieu',
+      header: 'Opslaan omgeveing',
       label: 'Alle tijdreeks, in de geselecteerde periode en de instellingen worden continu opgeslagen.'
     },
-    resetStatus: 'Reset milieu',
-    generalizeData: 'generaliseren Gegevens',
+    resetStatus: 'Reset omgeving',
+    generalizeData: 'Generaliseren van gegevens',
     imprint: {
-      header: 'Afdruk',
-      github: 'Vind dit project op <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
-      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
+      header: 'Colofon',
+      github: 'De broncode van dit project is terug te vinden op <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
+      text: '<p>Deze app werd ontwikkeld binnen het <a href="http://www.eenvplus.eu">eENVplus-project</a></p><p>De ontwikkeling werd door <a href="http://www.sinergis.it">Sinergis srl</a> en <a href="http://www.irceline.be">IRCEL-CELINE</a> uitgevoerd</p>'
     }
   },
   permalink: {
-    noMatchingTimeseriesFound: 'Geen bijpassende tijdreeksen wordt gevonden.'
+    noMatchingTimeseriesFound: 'Er werden geen passende tijdreeksen gevonden.'
   },
   guide: {
     start: {
-      request: 'Wanneer je deze handleiding beginnen, zal de de huidige stand gereset.'
+      request: 'Wanneer je deze handleiding start, zal de huidige stand gereset worden.'
     },
     step1: {
-      header: 'JavaScript Client - Guided Tour',
-      text: 'Deze tour geeft in een paar stappen een overzicht hoe u deze client gebruiken. Eerste voegen we een tijdreeks van de kaart.'
+      header: 'JavaScript Client - Rondleiding',
+      text: 'Deze tour geeft in een paar stappen een overzicht van hoe u deze client kan gebruiken. Eerst voegen we een tijdreeks van de kaart toe aan onze selectie.'
     },
     step2: {
       header: 'Ga naar de kaart',
-      text: 'Hier wisselen we het oog op een kaart te krijgen.'
+      text: 'Hier wisselen we de focus op een kaartweergave.'
     },
     step3: {
       header: 'Kaartweergave',
-      text: 'Dit is de kaartweergave. In de kaart kunt u markeringen of markergroups zien.'
+      text: 'Dit is de kaartweergave. In de kaart kunt u stationsiconen of gegroepeerde stationsiconen zien.'
     },
     step4: {
-      header: 'Verandering Provider',
-      text: 'Hier kunt u een andere tijdreeksen provider te kiezen.'
+      header: 'Verandering Aanbieder',
+      text: 'Hier kunt u een andere tijdreeksen aanbieder kiezen.'
     },
     step5: {
       header: 'Toon locatie',
-      text: 'En hier kunt u uw apparaat op de kaart.'
+      text: 'En hier kunt u uw apparaat op de kaart weergeven.'
     },
     step6: {
       header: 'Lijst selectie',
@@ -1315,50 +1315,50 @@ i18n.nl = {
     },
     step11: {
       header: 'Tijd wijzigen',
-      text: 'Hier kunt u de tijd die mate veranderen voor uw geselecteerde tijdreeksen.'
+      text: 'Hier kunt u het tijdsinterval veranderen voor uw geselecteerde tijdreeksen.'
     },
     step12: {
-      header: 'Table View',
-      text: 'Hier krijg je een tabel van de ruwe data waarden aan uw geselecteerde tijdreeksen.'
+      header: 'Tabelweergave',
+      text: 'Hier kunt u een tabelweergave van de ruwe waarden van uw geselecteerde tijdreeksen bekijken.'
     },
     step13: {
-      header: 'Favoriete beheer',
-      text: 'De legende inzendingen / tijdreeks kan worden opgeslagen als favorieten. In deze visie alle favorieten zijn opgenomen en kon worden gehandhaafd.'
+      header: 'Favorieten beheren',
+      text: 'Geselecteerde tijdreeksen kunnen worden opgeslagen als favorieten. In deze weergave worden alle opgeslagen favorieten weergegeven.'
     },
     step14: {
       header: 'Afgewerkt',
-      text: 'Goed gedaan! <br> Deze opdrachtgever is een product van <a href="http://52north.org" target="_blank">52 ° Noord GmbH</a> . U kunt de broncode op zoek <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a> .'
+      text: 'Goed gedaan! <br> Deze app is een product van <a href="http://52north.org" target="_blank">52 ° Noord GmbH</a> . U kunt de broncode hier vinden: <a href="https://github.com/52North/js-sensorweb-client" target="_blank">GitHub</a> .'
     }
   },
   favorite: {
-    firstValueAt: 'Eerste waarde',
-    lastValueAt: 'Laatste waarde bij',
+    firstValueAt: 'Eerste waarde op',
+    lastValueAt: 'Laatste waarde op',
     label: 'favoriet',
     edit: {
-      header: 'Favoriet bewerken'
+      header: 'Favorieten bewerken'
     },
     group: {
       add: 'De status &#39;{0}&#39; wordt toegevoegd aan de lijst met favorieten.',
       exists: 'Deze status bestaat nog steeds.',
-      noTimeseries: 'Geen tijdreeksen worden geselecteerd.',
+      noTimeseries: 'Geen tijdreeksen zijn geselecteerd.',
       notSupported: 'De aanbieder van een vermelding van de status &#39;{0}&#39; wordt niet ondersteund en kan niet worden geladen.'
     },
     single: {
       add: 'Een nieuwe favoriet &#39;{0}&#39; wordt toegevoegd aan de lijst.',
-      remove: 'De favoriete &#39;{0}&#39; is verwijderd.',
+      remove: 'De favoriet &#39;{0}&#39; is verwijderd.',
       exists: 'Deze favoriete bestaat nog steeds.',
-      notSupported: 'De aanbieder van de favoriete &#39;{0}&#39; wordt niet ondersteund en kan niet worden geladen.'
+      notSupported: 'De aanbieder van de favoriet &#39;{0}&#39; wordt niet ondersteund en kan niet worden geladen.'
     },
     import: {
       override: 'Wilt u uw huidige favorieten overschrijven?',
-      wrongFile: 'Kon het bestand niet lezen',
-      noValidJson: 'De JSON-bestand is niet geldig!',
-      header: 'Favorieten import',
-      text: 'Hier kunt u uw geëxporteerde favorieten importeren. Net plak de JSON in dit tekstveld:'
+      wrongFile: 'Kan het bestand niet lezen',
+      noValidJson: 'Het JSON-bestand is niet geldig!',
+      header: 'Favorieten importeren',
+      text: 'Hier kunt u uw geëxporteerde favorieten importeren. Plak de JSON in dit tekstveld:'
     },
     export: {
       header: 'Favorieten export',
-      text: 'Hier kunt u uw favorieten exporteren. Kopieer de JSON uit dit tekstvak en opslaan in een bestand om het later te importeren:'
+      text: 'Hier kunt u uw favorieten exporteren. Kopieer de JSON uit dit tekstvak en bewaar deze in een bestand om het later te importeren:'
     },
     error: {
       fileApiNotSupported: 'De File API&#39;s worden niet volledig ondersteund in deze browser.'
@@ -1366,7 +1366,7 @@ i18n.nl = {
   },
   inform: {
     error: 'Er is een fout opgetreden:',
-    warn: 'Vergeet niet dat:'
+    warn: 'Waarschuwing:'
   }
 };
 /*
