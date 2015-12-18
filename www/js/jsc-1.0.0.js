@@ -175,7 +175,7 @@ i18n.en = {
       PM10_description: 'The mass of all particles smaller than 10 µm. This fraction of particulate matter (PM) has many other sources besides combustion and the scientific evidence of detrimental health effects are well documented. A large part of PM<sub>10</sub> is typically secondary, meaning that particles are formed in the presence of precursors (Nitrogen oxides – NOx – from traffic/industry, Sulphur dioxide – SO<sub>2</sub> – from industry and ammonia – NH<sub>3</sub> – primarily agricultural emissions).',
       PM25_description: 'The mass of all particles smaller than 2.5 µm. There is a clear link between higher mortality risk and high PM<sub>2.5</sub> concentrations. Besides traffic and industrial emissions, secondary emissions play a significant role (see explanation PM<sub>10</sub>). PM<sub>2.5</sub> is more harmful for human health than PM<sub>10</sub>. PM<sub>2.5</sub> is by far the most important pollutant linked to adverse effects on human health. There is a better relationship between traffic emissions and PM<sub>2.5</sub> than PM<sub>10</sub>.',
       source: 'Source:',
-      cooperation: 'The <a title="Belgian Interregional Environment Agency (IRCEL - CELINE)" href="http://www.irceline.be/en">Belgian Interregional Environment Agency (IRCEL - CELINE)</a> is a permanent cooperation between three Belgian regional environment agencies:'
+      cooperation: 'The <a title="Belgian Interregional Environment Agency (IRCEL - CELINE)" href="http://www.irceline.be/en">Belgian Interregional Environment Agency (IRCEL - CELINE)</a> is a permanent cooperation between the three Belgian regional environment agencies:'
     },
   //end customIRCELINE
     fullName: 'English',
