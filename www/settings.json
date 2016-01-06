@@ -20,7 +20,7 @@
     "concentrationMarker": true,
     "pagesize": 24,
     "enableGeoSearch": true,
-    "mapExtent": [[49.5, 3.3],[51.5, 5.7]],
+    "mapExtent": [[49.5, 3.27],[51.5, 5.67]],
     "selectedPhenomenon": "6001",
     "phenomenonsInMap": {
         "1": ["391", "8", "7", "5", "6001"]

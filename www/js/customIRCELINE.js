@@ -786,7 +786,7 @@ Map.init = function () {
     $(document).ready(function () {
         $('[data-action="zoom"]').click(function () {
             Map.map.fitBounds([
-                [49.5, 3.3], [51.5, 5.7]
+                [49.5, 3.27], [51.5, 5.67]
             ]);
         });
         $('[data-action="refresh"]').click(function () {
@@ -861,7 +861,7 @@ Map.createStationMarker = function (results, clustering) {
             }
         }, this));
         this.map.addLayer(this.stationMarkers);
-        boundingbox = [[49.5, 3.3],[51.5, 5.7]];//override zoom to extend of stations with particular phenomenon [// customIRCELINE (double-click zoom to extend of phenomenon)
+        boundingbox = [[49.5, 3.27],[51.5, 5.67]];//override zoom to extend of stations with particular phenomenon [// customIRCELINE (double-click zoom to extend of phenomenon)
             // [parseFloat(bottommost), parseFloat(leftmost)], // customIRCELINE
             // [parseFloat(topmost), parseFloat(rightmost)]]; // customIRCELINE
         /*this.map.fitBounds([
@@ -926,7 +926,7 @@ Map.createColoredMarkers = function (results) {
             }
         }, this));
         this.map.addLayer(this.stationMarkers);
-        boundingbox = [[49.5, 3.3],[51.5, 5.7]];//override zoom to extend of stations with particular phenomenon [// customIRCELINE (double-click zoom to extend of phenomenon)
+        boundingbox = [[49.5, 3.27],[51.5, 5.67]];//override zoom to extend of stations with particular phenomenon [// customIRCELINE (double-click zoom to extend of phenomenon)
             // [parseFloat(bottommost), parseFloat(leftmost)], // customIRCELINE
             // [parseFloat(topmost), parseFloat(rightmost)]]; // customIRCELINE
         /*this.map.fitBounds([
