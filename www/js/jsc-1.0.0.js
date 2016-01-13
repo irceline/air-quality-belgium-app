@@ -175,7 +175,8 @@ i18n.en = {
       PM10_description: 'The mass of all particles smaller than 10 µm. This fraction of particulate matter (PM) has many other sources besides combustion and the scientific evidence of detrimental health effects are well documented. A large part of PM<sub>10</sub> is typically secondary, meaning that particles are formed in the presence of precursors (Nitrogen oxides – NOx – from traffic/industry, Sulphur dioxide – SO<sub>2</sub> – from industry and ammonia – NH<sub>3</sub> – primarily agricultural emissions).',
       PM25_description: 'The mass of all particles smaller than 2.5 µm. There is a clear link between higher mortality risk and high PM<sub>2.5</sub> concentrations. Besides traffic and industrial emissions, secondary emissions play a significant role (see explanation PM<sub>10</sub>). PM<sub>2.5</sub> is more harmful for human health than PM<sub>10</sub>. PM<sub>2.5</sub> is by far the most important pollutant linked to adverse effects on human health. There is a better relationship between traffic emissions and PM<sub>2.5</sub> than PM<sub>10</sub>.',
       source: 'Source:',
-      cooperation: 'The <a title="Belgian Interregional Environment Agency (IRCEL - CELINE)" href="http://www.irceline.be/en">Belgian Interregional Environment Agency (IRCEL - CELINE)</a> is a permanent cooperation between the three Belgian regional environment agencies:'
+      cooperation: 'The <a title="Belgian Interregional Environment Agency (IRCEL - CELINE)" href="http://www.irceline.be/en">Belgian Interregional Environment Agency (IRCEL - CELINE)</a> is a permanent cooperation between the three Belgian regional environment agencies:',
+      maps: 'Background map &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors.'
     },
   //end customIRCELINE
     fullName: 'English',
@@ -318,8 +319,8 @@ i18n.en = {
         generalizeData: 'generalize Data',
         imprint: {
             header: 'Imprint',
-            github: 'Find this project at <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
-            text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
+            github: 'Find this project at <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>', // customIRCELINE
+            text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p><p>Background map &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors</p>' // customIRCELINE
         }
     },
     permalink: {
@@ -521,7 +522,8 @@ i18n.de = {
     PM10_description: 'Die Masse aller Teilchen, die kleiner als 10 µm sind. Diese Fraktion vom Feinstaub hat viele andere Quellen neben Verbrennung und die wissenschaftlichen Beweise für nachteilige Auswirkungen auf die Gesundheit sind gut dokumentiert. Ein großer Teil des PM<sub>10</sub> ist in der Regel sekundär, was bedeutet, dass Teilchen in Gegenwart von Präkursoren gebildet werden (Stickstoffoxide - NOx - vom Verkehr/Industrie, Schwefeldioxid - SO<sub>2</sub> – von der Industrie und Ammoniak - NH<sub>3</sub> - vorwiegend landwirtschaftliche Emissionen).',
     PM25_description: 'Die Masse aller Teilchen kleiner als 2,5 µm. Es gibt einen deutlichen Verband zwischen einem höheren Mortalitätsrisiko und hohen PM<sub>2.5</sub>-Konzentrationen. Neben Verkehr- und Industrieemissionen, spielen Sekundäremission eine wichtige Rolle (siehe Erläuterung von PM<sub>10</sub>). PM<sub>2.5</sub> ist schädlicher für die menschliche Gesundheit als PM<sub>10</sub>. PM<sub>2.5</sub> ist mit Abstand der wichtigste Schadstoff was nachteilige Auswirkungen auf die menschliche Gesundheit betrifft. Es gibt eine bessere Beziehung zwischen Verkehrsemissionen und PM<sub>2.5</sub> als PM<sub>10</sub>.',
     source: 'Quelle:',
-    cooperation: 'Die <a title="Belgische Interregionale Umweltagentur (IRCEL - CELINE)" href="http://www.irceline.be/de">Belgische Interregionale Umweltagentur (IRCEL - CELINE)</a> ist eine dauerhafte Kooperationsvereinbarung zwischen den drei belgischen regionalen Umweltagenturen:'
+    cooperation: 'Die <a title="Belgische Interregionale Umweltagentur (IRCEL - CELINE)" href="http://www.irceline.be/de">Belgische Interregionale Umweltagentur (IRCEL - CELINE)</a> ist eine dauerhafte Kooperationsvereinbarung zwischen den drei belgischen regionalen Umweltagenturen:',
+    maps: 'Hintergrundkarte &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors.'
   },
 //end customIRCELINE
   fullName: 'Deutsch',
@@ -664,8 +666,8 @@ i18n.de = {
     generalizeData: 'Daten generalisiert abfragen',
     imprint: {
       header: 'Impressum',
-      github: 'Zur <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>-Seite dieses Projekts',
-      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
+      github: 'Zur <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>-Seite dieses Projekts', // customIRCELINE
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p><p>Background map &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors</p>' // customIRCELINE
     }
   },
   permalink: {
@@ -820,7 +822,8 @@ i18n.fr = {
     PM10_description: 'La masse de toutes les particules plus petites que 10 µm. Cette fraction des particules fines (PM) a beaucoup de sources différentes y compris les processus de combustion. Les effets néfastes des PM<sub>10</sub> sur la santé sont scientifiquement bien établis.',
     PM25_description: 'La masse de toutes les particules plus petites que 2,5 µm. A côté des émissions directes du trafic et de l’industrie, une fraction importante des PM<sub>2.5</sub> est d’origine secondaire. Ce qui signifie que ces particules ne sont pas émises directement mais se forment dans l’air à partir de gaz précurseurs (oxydes d’azote, NOx, du trafic/industrie, dioxyde de soufre – SO<sub>2</sub> - de l’industrie et ammoniaque - NH<sub>3</sub> - de l’agriculture). La fraction PM<sub>2.5</sub> est plus toxique que la fraction PM<sub>10</sub>. La fraction PM<sub>2.5</sub> est de loin le polluant présentant le plus d’effets néfastes pour la santé humaine. Il y a un lien direct entre les concentrations élevées de PM<sub>2.5</sub> et un risque accru de mortalité.',
     source: 'Source:',
-    cooperation: 'La <a title="Cellule Interrégionale de l’Environnement (CELINE)" href="http://www.irceline.be/fr">CELlule INterrégionale de l’Environnement (CELINE)</a> est une collaboration permanente entre les trois régions de Belgique:'
+    cooperation: 'La <a title="Cellule Interrégionale de l’Environnement (CELINE)" href="http://www.irceline.be/fr">CELlule INterrégionale de l’Environnement (CELINE)</a> est une collaboration permanente entre les trois régions de Belgique:',
+    maps: 'Fond de carte &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors.'
   },
 //end customIRCELINE
   fullName: 'Français',
@@ -963,8 +966,8 @@ i18n.fr = {
     generalizeData: 'Généraliser données',
     imprint: {
       header: 'Références',
-      github: 'Retrouvez ce projet sur <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
-      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p>'
+      github: 'Retrouvez ce projet sur <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>', // customIRCELINE
+      text: '<p>This app was created within the <a href="http://www.eenvplus.eu">eENVplus project</a></p><p>The development was performed by <a href="http://www.sinergis.it">Sinergis srl</a> and <a href="http://www.irceline.be">IRCEL-CELINE</a></p><p>Background map &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors</p>' // customIRCELINE
     }
   },
   permalink: {
@@ -1119,7 +1122,8 @@ i18n.nl = {
     PM10_description: 'De massa van alle deeltjes kleiner dan 10 micrometer. Deze fractie van fijnstof (PM) heeft naast verbranding andere belangrijke bronnen en de wetenschappelijke bewijslast m.b.t. de schadelijke effecten op de gezondheid zijn goed gedocumenteerd.',
     PM25_description: 'De massa van alle deeltjes kleiner dan 2,5 micrometer. Er is een duidelijk verband tussen  mortaliteit en hoge PM<sub>2.5</sub> concentraties. Naast het verkeer en industriële emissies, speelt ook de secundaire vorming een belangrijke rol. Secundair fijn stof wordt niet rechtstreeks uitgestoten maar de deeltjes worden gevormd in de atmosfeer in de aanwezigheid van precursoren (stikstofoxiden - NOx - van verkeer/industrie, zwaveldioxide - SO<sub>2</sub> - van industrie en ammoniak - NH<sub>3</sub> - voornamelijk agrarische emissies). PM<sub>2.5</sub> is schadelijker voor de gezondheid dan PM<sub>10</sub>. PM<sub>2.5</sub> is veruit de belangrijkste polluent in verband met schadelijke effecten op de gezondheid van de mens. Er is een betere relatie tussen de verkeersemissies en PMPM<sub>2.5</sub> dan PMPM<sub>10</sub>.',
     source: 'Bron:',
-    cooperation: 'De <a title="Intergewestelijke Cel voor het Leefmilieu (IRCEL)" href="http://www.irceline.be/nl">Intergewestelijke Cel voor het Leefmilieu (IRCEL)</a> is een permanente samenwerking tussen de drie Belgische regionale milieuagentschappen:'
+    cooperation: 'De <a title="Intergewestelijke Cel voor het Leefmilieu (IRCEL)" href="http://www.irceline.be/nl">Intergewestelijke Cel voor het Leefmilieu (IRCEL)</a> is een permanente samenwerking tussen de drie Belgische regionale milieuagentschappen:',
+    maps: 'Achtergrondkaart &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors.'
   },
 //end customIRCELINE
   fullName: 'Nederlands',
@@ -1262,8 +1266,8 @@ i18n.nl = {
     generalizeData: 'Generaliseren van gegevens',
     imprint: {
       header: 'Colofon',
-      github: 'De broncode van dit project is terug te vinden op <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>',
-      text: '<p>Deze app werd ontwikkeld binnen het <a href="http://www.eenvplus.eu">eENVplus-project</a></p><p>De ontwikkeling werd door <a href="http://www.sinergis.it">Sinergis srl</a> en <a href="http://www.irceline.be">IRCEL-CELINE</a> uitgevoerd</p>'
+      github: 'De broncode van dit project is terug te vinden op <a href="https://github.com/irceline/air-quality-belgium-app" target="_blank">GitHub</a>', // customIRCELINE
+      text: '<p>Deze app werd ontwikkeld binnen het <a href="http://www.eenvplus.eu">eENVplus-project</a></p><p>De ontwikkeling werd door <a href="http://www.sinergis.it">Sinergis srl</a> en <a href="http://www.irceline.be">IRCEL-CELINE</a> uitgevoerd</p><p>Achtergrondkaart &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors</p>' // customIRCELINE
     }
   },
   permalink: {

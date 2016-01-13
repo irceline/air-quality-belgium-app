@@ -783,6 +783,9 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
 var oldInit = Map.init;
 Map.init = function () {
     oldInit.apply(Map, arguments); // Use #apply in case `init` uses `this`
+    Map.map.attributionControl.setPrefix(
+        ""
+    );
     $(document).ready(function () {
         $('[data-action="zoom"]').click(function () {
             Map.map.fitBounds([
