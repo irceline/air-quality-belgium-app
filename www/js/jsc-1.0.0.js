@@ -3501,7 +3501,7 @@ var Map = {
                 this.map.on('locationerror', this.onLocationError);
             }, this);
 
-            L.control.scale().addTo(this.map);
+            L.control.scale({imperial: false}).addTo(this.map); // customIRCELINE
             if (Settings.enableGeoSearch) {
                 new L.Control.GeoSearch({
                     url: 'http://nominatim.openstreetmap.org/search?format=json&q={s}',
