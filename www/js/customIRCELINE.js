@@ -786,6 +786,7 @@ Map.init = function () {
     Map.map.attributionControl.setPrefix(
         ""
     );
+    this.selectedPhenomenon = top_pollutant_today;
     $(document).ready(function () {
         $('[data-action="zoom"]').click(function () {
             Map.map.fitBounds([
