@@ -125,13 +125,13 @@ fieldset[disabled] .btn-primary.active {
     padding: 4px 10px;
 }
 @media (max-width: 1024px) {
-				.lastupdate{
+				.lastupdate_current{
 					position: relative;
 					top: -10px !important;
 				}
 }
 @media (max-width: 768px) {
-				.lastupdate{
+				.lastupdate_current{
 					position: relative;
 					top: -11px !important;
 				}
@@ -140,7 +140,7 @@ fieldset[disabled] .btn-primary.active {
         body {
           font-size: 1.4em;
         }
-				.lastupdate{
+				.lastupdate_current{
 					position: relative;
 					top: -11px !important;
 				}
@@ -149,7 +149,7 @@ fieldset[disabled] .btn-primary.active {
         body {
           font-size: 1.35em;
         }
-				.lastupdate{
+				.lastupdate_current{
 					position: relative;
 					top: -11px !important;
 				}
@@ -158,7 +158,7 @@ fieldset[disabled] .btn-primary.active {
         body {
           font-size: 1.3em;
         }
-				.lastupdate{
+				.lastupdate_current{
 					position: relative;
 					top: -10px !important;
 				}
@@ -167,7 +167,7 @@ fieldset[disabled] .btn-primary.active {
         body {
           font-size: 1.25em;
         }
-				.lastupdate{
+				.lastupdate_current{
 					position: relative;
 					top: -10px !important;
 				}
@@ -179,7 +179,7 @@ fieldset[disabled] .btn-primary.active {
         body {
           font-size: 1.2em;
         }
-				.lastupdate{
+				.lastupdate_current{
 					position: relative;
 					top: -9px !important;
 				}
@@ -190,7 +190,7 @@ fieldset[disabled] .btn-primary.active {
 .modal-body{
     overflow-x: auto;
 }
-.lastupdate{
+.lastupdate_current{
 	font-size: 0.8em;
 	text-align: center;
 	width: 100%;

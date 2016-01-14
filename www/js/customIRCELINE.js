@@ -813,7 +813,7 @@ Map.init = function () {
     else {
         var a = moment(lastupdate).format('dddd D MMMM YYYY, HH:mm');
     }
-    $("span#lastupdate").text(a);
+    $("span#lastupdate_current").text(a);
 };
 
 Map.createStationMarker = function (results, clustering) {
