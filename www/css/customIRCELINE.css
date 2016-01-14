@@ -200,3 +200,8 @@ fieldset[disabled] .btn-primary.active {
 .leaflet-popup {
 	z-index: 1;
 }
+.noChart {
+    text-align: center;
+    margin: 30px;
+		padding-top: 3.5em;
+}
