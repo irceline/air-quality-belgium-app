@@ -169,14 +169,15 @@ i18n.en = {
       O3: 'Ozone',
       PM25: 'Particulate Matter < 2.5 µm',
       PM10:'Particulate Matter < 10 µm',
-      BC_description: 'Black carbon (BC) or soot is the most strongly light-absorbing component of particulate matter (PM) and is formed during incomplete combustion of fossil fuels (e.g. diesel), biofuels (e.g. bio-diesel), and biomass (e.g. wood). BC is emitted directly into the atmosphere in the form of fine particles (smaller than 2.5 µm, see PM2.5). There is evidence of carcinogenic effects of BC and this pollutant is also a known as a “short-lived climate forcer”. This means that there is a clear relation between climate change and BC, but this pollutant remains in the atmosphere much shorter than e.g. carbon dioxide (CO<sub>2</sub>). After CO<sub>2</sub>, BC is the second most important factor with regards to climate change.',
+      BC_description: 'Black carbon (BC) or soot is the most strongly light-absorbing component of particulate matter (PM) and is formed during incomplete combustion of fossil fuels (e.g. diesel), biofuels (e.g. bio-diesel), and biomass (e.g. wood). BC is emitted directly into the atmosphere in the form of fine particles (smaller than 2.5 µm, see PM2.5). The direct toxicity of BC is not clearly established but it\'s capacity to function as a vector for other pollutants is well-known. There is a link between exposure to fine particles and the risk to develop cancer. The emissions of diesel engines have been classified as carcinogenic by the WHO. These emissions are an important part of black carbon which can absorb other highly carcinogenic pollutants like e.g. polycyclic hydrocarbons. BC is also a known as a “short-lived climate forcer”. This means that there is a clear relation between climate change and BC, but this pollutant remains in the atmosphere much shorter than e.g. carbon dioxide (CO<sub>2</sub>). After CO<sub>2</sub>, BC is the second most important factor with regards to climate change.',
       NO2_description: 'Nitrogen dioxide (NO<sub>2</sub>) is emitted during combustion at  high temperatures (e.g. diesel engines, industrial processes). NO<sub>2</sub> is considered a good proxy for traffic related air pollution, but there are also significant industrial sources. NO<sub>2</sub> is an important precursor for the formation of ozone (summer-SMOG) and “Secondary Inorganic Aerosols” (fine particles). There is growing evidence of detrimental health effects of this pollutant (adverse respiratory effects including airway inflammation).',
       O3_description: 'High ozone (O<sub>3</sub>) concentrations are associated with hot, sunny days. O<sub>3</sub> is formed in a photochemical reaction when nitrogen oxides (NOx) and volatile organic compounds (VOC\'s) react in the atmosphere in the presence of sunlight (UV - ultra violate radiation). Ozone concentrations are typically lower close to traffic emissions since (diesel) engines also emit nitrogen monoxide (NO), which consumes formed O3. Indoors ozone concentrations are typically about half as high as outdoor concentrations during summer-SMOG episodes. High ozone concentration have well documented adverse respiratory effects.',
-      PM10_description: 'The mass of all particles smaller than 10 µm. This fraction of particulate matter (PM) has many other sources besides combustion and the scientific evidence of detrimental health effects are well documented. A large part of PM<sub>10</sub> is typically secondary, meaning that particles are formed in the presence of precursors (Nitrogen oxides – NOx – from traffic/industry, Sulphur dioxide – SO<sub>2</sub> – from industry and ammonia – NH<sub>3</sub> – primarily agricultural emissions).',
-      PM25_description: 'The mass of all particles smaller than 2.5 µm. There is a clear link between higher mortality risk and high PM<sub>2.5</sub> concentrations. Besides traffic and industrial emissions, secondary emissions play a significant role (see explanation PM<sub>10</sub>). PM<sub>2.5</sub> is more harmful for human health than PM<sub>10</sub>. PM<sub>2.5</sub> is by far the most important pollutant linked to adverse effects on human health. There is a better relationship between traffic emissions and PM<sub>2.5</sub> than PM<sub>10</sub>.',
+      PM10_description: 'The mass of all particles smaller than 10 µm. This fraction of particulate matter (PM) has many other sources besides combustion and the scientific evidence of detrimental health effects are well documented.',
+      PM25_description: 'The mass of all particles smaller than 2.5 µm. There is a clear link between higher mortality risk and high PM<sub>2.5</sub> concentrations. Besides traffic and industrial emissions, secondary emissions play a significant role. Secondary particulate matter is not directly emitted into the atmosphere but formed in the presence of precursors (Nitrogen oxides – NOx – from traffic/industry, Sulphur dioxide – SO<sub>2</sub> – from industry and ammonia – NH<sub>3</sub> – primarily agricultural emissions). PM<sub>2.5</sub> is more harmful for human health than PM<sub>10</sub>. PM<sub>2.5</sub> is by far the most important pollutant linked to adverse effects on human health. There is a better relationship between traffic emissions and PM<sub>2.5</sub> than PM<sub>10</sub>.',
       source: 'Source:',
       cooperation: 'The <a title="Belgian Interregional Environment Agency (IRCEL - CELINE)" href="http://www.irceline.be/en">Belgian Interregional Environment Agency (IRCEL - CELINE)</a> is a permanent cooperation between the three Belgian regions. For the domain of air quality the following three regional environment agencies are involved:',
-      maps: 'Background map &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors.'
+      maps: 'Background map &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors.',
+      close: 'Close'
     },
   //end customIRCELINE
     fullName: 'English',
@@ -495,7 +496,7 @@ i18n.de = {
     title: 'Informationen',
     head_index: 'Index',
     head_BC: 'BC',
-    head_NO2: 'NO<sub>2</sub',
+    head_NO2: 'NO<sub>2</sub>',
     head_O3: 'O<sub>3</sub>',
     head_PM10: 'PM<sub>10</sub>',
     head_PM25: 'PM<sub>2.5</sub>',
@@ -523,7 +524,8 @@ i18n.de = {
     PM25_description: 'Die Masse aller Teilchen kleiner als 2,5 µm. Es gibt einen deutlichen Verband zwischen einem höheren Mortalitätsrisiko und hohen PM<sub>2.5</sub>-Konzentrationen. Neben Verkehr- und Industrieemissionen, spielen Sekundäremission eine wichtige Rolle (siehe Erläuterung von PM<sub>10</sub>). PM<sub>2.5</sub> ist schädlicher für die menschliche Gesundheit als PM<sub>10</sub>. PM<sub>2.5</sub> ist mit Abstand der wichtigste Schadstoff was nachteilige Auswirkungen auf die menschliche Gesundheit betrifft. Es gibt eine bessere Beziehung zwischen Verkehrsemissionen und PM<sub>2.5</sub> als PM<sub>10</sub>.',
     source: 'Quelle:',
     cooperation: 'Die <a title="Belgische Interregionale Umweltagentur (IRCEL - CELINE)" href="http://www.irceline.be/de">Belgische Interregionale Umweltagentur (IRCEL - CELINE)</a> ist eine dauerhafte Kooperationsvereinbarung zwischen den drei belgischen Regionen. Für den Bereich der Luftqualität sind die folgenden drei Umweltagenturen beteiligt:',
-    maps: 'Hintergrundkarte &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors.'
+    maps: 'Hintergrundkarte &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors.',
+    close: 'Schließen'
   },
 //end customIRCELINE
   fullName: 'Deutsch',
@@ -823,7 +825,8 @@ i18n.fr = {
     PM25_description: 'La masse de toutes les particules plus petites que 2,5 µm. A côté des émissions directes du trafic et de l’industrie, une fraction importante des PM<sub>2.5</sub> est d’origine secondaire. Ce qui signifie que ces particules ne sont pas émises directement mais se forment dans l’air à partir de gaz précurseurs (oxydes d’azote, NOx, du trafic/industrie, dioxyde de soufre – SO<sub>2</sub> - de l’industrie et ammoniaque - NH<sub>3</sub> - de l’agriculture). La fraction PM<sub>2.5</sub> est plus toxique que la fraction PM<sub>10</sub>. La fraction PM<sub>2.5</sub> est de loin le polluant présentant le plus d’effets néfastes pour la santé humaine. Il y a un lien direct entre les concentrations élevées de PM<sub>2.5</sub> et un risque accru de mortalité.',
     source: 'Source:',
     cooperation: 'La <a title="Cellule Interrégionale de l’Environnement (CELINE)" href="http://www.irceline.be/fr">CELlule INterrégionale de l’Environnement (CELINE)</a> est une collaboration permanente entre les trois régions de Belgique. Pour le domaine de la qualité de l’air, les trois agences environnementales régionales suivantes sont concernées :',
-    maps: 'Fond de carte &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors.'
+    maps: 'Fond de carte &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors.',
+    close: 'Fermer'
   },
 //end customIRCELINE
   fullName: 'Français',
@@ -1123,7 +1126,8 @@ i18n.nl = {
     PM25_description: 'De massa van alle deeltjes kleiner dan 2,5 micrometer. Er is een duidelijk verband tussen  mortaliteit en hoge PM<sub>2.5</sub> concentraties. Naast het verkeer en industriële emissies, speelt ook de secundaire vorming een belangrijke rol. Secundair fijn stof wordt niet rechtstreeks uitgestoten maar de deeltjes worden gevormd in de atmosfeer in de aanwezigheid van precursoren (stikstofoxiden - NOx - van verkeer/industrie, zwaveldioxide - SO<sub>2</sub> - van industrie en ammoniak - NH<sub>3</sub> - voornamelijk agrarische emissies). PM<sub>2.5</sub> is schadelijker voor de gezondheid dan PM<sub>10</sub>. PM<sub>2.5</sub> is veruit de belangrijkste polluent in verband met schadelijke effecten op de gezondheid van de mens. Er is een betere relatie tussen de verkeersemissies en PMPM<sub>2.5</sub> dan PMPM<sub>10</sub>.',
     source: 'Bron:',
     cooperation: 'De <a title="Intergewestelijke Cel voor het Leefmilieu (IRCEL)" href="http://www.irceline.be/nl">Intergewestelijke Cel voor het Leefmilieu (IRCEL)</a> is een permanente samenwerking tussen de drie Belgische gewesten. Voor het domein luchtkwaliteit zijn de volgende drie regionale milieuagentschappen de betrokken partijen:',
-    maps: 'Achtergrondkaart &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors.'
+    maps: 'Achtergrondkaart &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors.',
+    close: 'Sluiten'
   },
 //end customIRCELINE
   fullName: 'Nederlands',
