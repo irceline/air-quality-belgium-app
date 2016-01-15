@@ -1,6 +1,12 @@
 .leaflet-tile {
 	-webkit-backface-visibility: visible !important;
 }
+.leaflet-container img.leaflet-image-layer {
+    max-width: none !important;
+    }
+.leaflet-popup {
+	z-index: 1;
+}
 .btn-xs{
 	height: 38px;
 	font-size: 1em;
@@ -196,9 +202,6 @@ fieldset[disabled] .btn-primary.active {
 	width: 100%;
 	position: relative;
 	top: -10px;
-}
-.leaflet-popup {
-	z-index: 1;
 }
 .noChart {
     text-align: center;
