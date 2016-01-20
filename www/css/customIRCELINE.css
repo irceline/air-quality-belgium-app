@@ -12,7 +12,7 @@
 	font-size: 1em;
 }
 .leftPanelButton{
-	top:10px;
+	top:27px;
 	right:10px;
 	z-index: 10000;
 }
@@ -131,15 +131,24 @@ fieldset[disabled] .btn-primary.active {
     padding: 4px 10px;
 }
 @media (max-width: 1024px) {
-				.lastupdate_current{
+				/*.lastupdate_current{
 					position: relative;
 					top: -10px !important;
-				}
+				}*/
 }
 @media (max-width: 768px) {
-				.lastupdate_current{
+				/*.lastupdate_current{
 					position: relative;
 					top: -11px !important;
+				}*/
+				.content {
+				    height: 100%;
+				    padding-top: 53px !important;
+				}
+				.leftPanelButton{
+					top:30px;
+					right:10px;
+					z-index: 10000;
 				}
 }
 @media (max-width: 640px) {
@@ -148,34 +157,48 @@ fieldset[disabled] .btn-primary.active {
         }
 				.lastupdate_current{
 					position: relative;
-					top: -11px !important;
+					top: 1px !important;
+				}
+				.content {
+				    height: 100%;
+				    padding-top: 57px !important;
 				}
 }
 @media (max-width: 580px) {
         body {
           font-size: 1.35em;
         }
-				.lastupdate_current{
+				/*.lastupdate_current{
 					position: relative;
 					top: -11px !important;
+				}*/
+				.leftPanelButton{
+					top:29px;
+					right:10px;
+					z-index: 10000;
 				}
 }
 @media (max-width: 540px) {
         body {
           font-size: 1.3em;
         }
-				.lastupdate_current{
+				/*.lastupdate_current{
 					position: relative;
 					top: -10px !important;
-				}
+				}*/
 }
 @media (max-width: 480px) {
         body {
           font-size: 1.25em;
         }
-				.lastupdate_current{
+				/*.lastupdate_current{
 					position: relative;
 					top: -10px !important;
+				}*/
+				.leftPanelButton{
+					top:28px;
+					right:10px;
+					z-index: 10000;
 				}
 				.btn-phenomena{
 					font-size: 0.95em;
@@ -185,10 +208,10 @@ fieldset[disabled] .btn-primary.active {
         body {
           font-size: 1.2em;
         }
-				.lastupdate_current{
+				/*.lastupdate_current{
 					position: relative;
 					top: -9px !important;
-				}
+				}*/
 				.btn-phenomena{
 					font-size: 0.8em;
 				}
@@ -197,11 +220,15 @@ fieldset[disabled] .btn-primary.active {
     overflow-x: auto;
 }
 .lastupdate_current{
-	font-size: 0.8em;
+	font-size: 1em;
 	text-align: center;
 	width: 100%;
 	position: relative;
-	top: -10px;
+	top: 1px !important;
+}
+.content {
+    height: 100%;
+    padding-top: 57px;
 }
 .noChart {
     text-align: center;
