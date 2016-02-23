@@ -18,6 +18,7 @@
     "saveStatus": false,
     "saveStatusPossible": false,
     "concentrationMarker": true,
+    "defaultZeroScale": true,
     "pagesize": 24,
     "enableGeoSearch": true,
     "mapExtent": [[49.5, 3.27],[51.5, 5.67]],
