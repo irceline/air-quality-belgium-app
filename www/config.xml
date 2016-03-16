@@ -74,7 +74,7 @@
     <plugin name="cordova-plugin-splashscreen" source="pgb" />
     <!-- <gap:plugin name="org.apache.cordova.vibration" source="npm" version="0.3.13" /> -->
     <!-- <plugin name="com.phonegap.plugin.statusbar" spec="1.1.0" source="pgb" /> -->
-    <plugin name="cordova-plugin-statusbar" spec="2.1.2" source="pgb" />
+    <plugin name="cordova-plugin-statusbar" source="pgb" />
 
 
 
