@@ -71,10 +71,10 @@
     <!-- <gap:plugin name="cordova-plugin-media" source="npm" /> -->
     <!-- <gap:plugin name="cordova-plugin-media-capture" source="npm" /> -->
     <plugin name="cordova-plugin-network-information" spec="1.0.1" source="pgb" />
-    <plugin name="cordova-plugin-splashscreen" source="pgb" />
+    <plugin name="cordova-plugin-splashscreen" spec="2.1.0" source="pgb" />
     <!-- <gap:plugin name="org.apache.cordova.vibration" source="npm" version="0.3.13" /> -->
     <plugin name="com.phonegap.plugin.statusbar" spec="1.1.0" source="pgb" />
-    <!-- <plugin name="cordova-plugin-statusbar" source="pgb" /> -->
+
 
 
 
