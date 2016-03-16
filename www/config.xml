@@ -123,9 +123,9 @@
     <gap:splash src="res/screen/ios/screen-ipad-landscape-2x.png"          gap:platform="ios"     width="2048 " height="1536" />
     <gap:splash src="res/screen/windows-phone/screen-portrait.png"      gap:platform="winphone" />
 
-    <!-- <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-    <string>100</string>
-    </gap:config-file> -->
+    <gap:config-file platform="ios" parent="CFBundleShortVersionString">
+    <string>101</string>
+    </gap:config-file>
 
     <!--
         Define access to external domains.
