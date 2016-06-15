@@ -24,7 +24,7 @@
     "mapExtent": [[49.5, 3.27],[51.5, 5.67]],
     "selectedPhenomenon": "6001",
     "phenomenonsInMap": {
-        "1": ["391", "8", "7", "5", "6001"]
+        "1": ["391", "8", "7", "5", "6001", "61102"]
     },
     "tileLayerOptions": {
     "attribution": ""

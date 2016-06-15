@@ -905,16 +905,27 @@ Map.createColoredMarkers = function (results) {
                 }
                 var marker;
                 if (elem.isCurrent()) {
-                    var interval = this.getMatchingInterval(elem);
-                    var fillcolor = interval && interval.color ? interval.color : Settings.defaultMarkerColor;
-                    marker = new L.circleMarker([geom[1], geom[0]], {
-                        id: elem.getStationId(),
-                        fillColor: fillcolor,
-                        color: "#000",
-                        opacity: 1,
-                        weight: 2,
-                        fillOpacity: 0.8
-                    });
+                    if (this.selectedPhenomenon === "61102") {
+                        marker = new L.marker([geom[1], geom[0]], {
+                            id: elem.getStationId(),
+                            icon: L.icon({
+                                iconUrl: 'images/wind-direction.png',
+                                iconSize: [32, 32]
+                            }),
+                            rotationAngle: elem.getLastValue().value
+                        });
+                    } else {
+                        var interval = this.getMatchingInterval(elem);
+                        var fillcolor = interval && interval.color ? interval.color : Settings.defaultMarkerColor;
+                        marker = new L.circleMarker([geom[1], geom[0]], {
+                            id: elem.getStationId(),
+                            fillColor: fillcolor,
+                            color: "#000",
+                            opacity: 1,
+                            weight: 2,
+                            fillOpacity: 0.8
+                        });
+                    }
                 } else {
                     marker = new L.circleMarker([geom[1], geom[0]], {
                         id: elem.getStationId(),
