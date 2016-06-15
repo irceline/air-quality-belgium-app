@@ -906,13 +906,17 @@ Map.createColoredMarkers = function (results) {
                 var marker;
                 if (elem.isCurrent()) {
                     if (this.selectedPhenomenon === "61102") {
+                        var svg_icon_begin = "<svg xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' xmlns='http://www.w3.org/2000/svg' height='32' width='32' version='1.1' xmlns:cc='http://creativecommons.org/ns#' xmlns:dc='http://purl.org/dc/elements/1.1/' viewBox='0 0 35.433071 35.433071'><metadata><rdf:RDF><cc:Work rdf:about=''><dc:format>image/svg+xml</dc:format><dc:type rdf:resource='http://purl.org/dc/dcmitype/StillImage'/><dc:title/></cc:Work></rdf:RDF></metadata><path fill-rule='evenodd' fill='#000000' d='m12.027 3.7 5.69 28 5.69-27.942-5.69 4.5127z' transform='rotate(";
+                        var svg_rotation = elem.getLastValue().value;
+                        var svg_icon_end =  " 16 16)'/></svg>";
+                        var svg_icon = svg_icon_begin.concat(svg_rotation, svg_icon_end);
+                        var svg_icon_base64 = "data:image/svg+xml;base64," + btoa(svg_icon);
                         marker = new L.marker([geom[1], geom[0]], {
                             id: elem.getStationId(),
                             icon: L.icon({
-                                iconUrl: 'images/wind-direction.png',
+                                iconUrl: svg_icon_base64,
                                 iconSize: [32, 32]
-                            }),
-                            rotationAngle: elem.getLastValue().value
+                            })
                         });
                     } else {
                         var interval = this.getMatchingInterval(elem);
