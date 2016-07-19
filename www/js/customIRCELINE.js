@@ -276,9 +276,9 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
             "current 8 hour mean": this.o3_current8,
             "max hourly mean today": this.o3_max_hour,
             "max 8 hour mean today": this.o3_max_8hour,
-            "forecast - daily mean today": this.o3day0,
-            "forecast - daily mean tomorrow": this.o3day1,
-            "forecast - daily mean in 2 days": this.o3day2
+            "forecast - max hourly mean today": this.o3day0,
+            "forecast - max hourly mean tomorrow": this.o3day1,
+            "forecast - max hourly mean in 2 days": this.o3day2
         };
         this.o3ControlLayer = L.control.layers(this.baseLayers, null, {
             position: 'bottomright',
@@ -291,11 +291,11 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
                 Map.map.removeLayer(Map.stationMarkers);
             } else if (eventLayer.name === 'max 8 hour mean today') {
                 Map.map.removeLayer(Map.stationMarkers);
-            } else if (eventLayer.name === 'forecast - daily mean today') {
+            } else if (eventLayer.name === 'forecast - max hourly mean today') {
                 Map.map.removeLayer(Map.stationMarkers);
-            } else if (eventLayer.name === 'forecast - daily mean tomorrow') {
+            } else if (eventLayer.name === 'forecast - max hourly mean tomorrow') {
                 Map.map.removeLayer(Map.stationMarkers);
-            } else if (eventLayer.name === 'forecast - daily mean in 2 days') {
+            } else if (eventLayer.name === 'forecast - max hourly mean in 2 days') {
                 Map.map.removeLayer(Map.stationMarkers);
             } else {
                 Map.map.addLayer(Map.stationMarkers);
