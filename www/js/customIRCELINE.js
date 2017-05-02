@@ -793,9 +793,11 @@ Map.init = function () {
                 [49.5, 3.27], [51.5, 5.67]
             ]);
         });
-        var initialHref = window.location.href;
         $('[data-action="refresh"]').click(function () {
-            window.location = initialHref;
+            // var initialHref = window.location.href;
+            // window.location = initialHref;
+            // window.location.reload();
+            document.location = "index.html"
         });
     });
     function checkInternet() {
