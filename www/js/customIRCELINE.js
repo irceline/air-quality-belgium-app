@@ -793,8 +793,9 @@ Map.init = function () {
                 [49.5, 3.27], [51.5, 5.67]
             ]);
         });
+        var initialHref = window.location.href;
         $('[data-action="refresh"]').click(function () {
-            location.reload();
+            window.location = initialHref;
         });
     });
     function checkInternet() {
