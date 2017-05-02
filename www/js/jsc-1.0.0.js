@@ -1990,7 +1990,7 @@ var Settings = {
     },
     wmsLayer: [],
     // configuration for the tile layer in the leaflet map (see for more information: http://leafletjs.com/reference.html#tilelayer )
-    tileLayerUrl: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+    tileLayerUrl: 'https://osm.irceline.be/styles/klokantech-basic/rendered/{z}/{x}/{y}.png',
     tileLayerOptions: {
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
       pane: 'mapPane',
