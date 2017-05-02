@@ -797,7 +797,7 @@ Map.init = function () {
             // var initialHref = window.location.href;
             // window.location = initialHref;
             // window.location.reload();
-            document.location = "index.html"
+            document.location = "index.html";
         });
     });
     function checkInternet() {
