@@ -12,67 +12,60 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
         console.log('same selection');
         return;
     }
+// convert lastupdate to ISO - cf TIME parameter WMS
+    var now=moment(lastupdate).toISOString();
+    var day_0=moment(lastupdate).format('YYYY-MM-DD').concat('T00:00:00.000Z');
+    var day_0_text=moment(lastupdate).format('YYYY-MM-DD');
+    var day_min_1=moment(lastupdate).subtract(1, 'days').format('YYYY-MM-DD').concat('T00:00:00.000Z');
+    var day_min_1_text=moment(lastupdate).subtract(1, 'days').format('YYYY-MM-DD');
+    console.log("Yesterday: " + day_min_1);
+    console.log("Today: " + day_0);
 // different aggregations of the same pollutant (PM10):
     if (phenomenonId === "5") {
-        this.pm10_current = L.tileLayer.wms("http://geo.irceline.be/wms", {
-            layers: 'rio:pm10_actueel',
+        this.pm10_current = L.tileLayer.wms("http://geo.irceline.be/rio/wms", {
+            layers: 'rio:pm10_hmean_1x1',
             transparent: true,
             format: 'image/png',
-            cql_filter: timestring,
-            opacity: 0.7,
-            visibility: true,
-            pane: 'tilePane',
-            zIndex: -9998,
-            projection: 'EPSG:4326',
-            units: 'm'
+            time: now,
+            tiled: true,
+            opacity: 0.7
         }).addTo(Map.map);
         this.pm10_current24 = new L.LayerGroup();
-        this.pm10_current24_rio = L.tileLayer.wms("http://geo.irceline.be/wms", {
-            layers: 'rio:pm10_actueel24',
+        this.pm10_current24_rio = L.tileLayer.wms("http://geo.irceline.be/rio/wms", {
+            layers: 'rio:pm10_24hmean_1x1',
             transparent: true,
             format: 'image/png',
-            cql_filter: timestring,
+            time: now,
+            tiled: true,
             opacity: 0.7,
-            visibility: true,
-            pane: 'tilePane',
-            zIndex: -9998,
-            projection: 'EPSG:4326',
-            units: 'm'
+            zIndex: -9998
         }).addTo(pm10_current24);
-        this.pm10_current24_station = L.tileLayer.wms("http://geo.irceline.be/wms", {
-            layers: 'realtime:pm10_station_actueel24',
+        this.pm10_current24_station = L.tileLayer.wms("http://geo.irceline.be/realtime/wms", {
+            layers: 'realtime:pm10_24hmean_station',
             transparent: true,
             format: 'image/png',
-            cql_filter: timestring,
+            now: now,
+            tiled: true,
             opacity: 0.7,
-            projection: 'EPSG:4326',
-            pane: 'tilePane',
-            zIndex: -9997,
-            units: 'm'
+            zIndex: -9997
         }).addTo(pm10_current24);
         this.pm10_daily_mean = new L.LayerGroup();
-        this.pm10_daily_mean_rio = L.tileLayer.wms("http://geo.irceline.be/wms", {
-            layers: 'rio:pm10_daggemiddelde',
+        this.pm10_daily_mean_rio = L.tileLayer.wms("http://geo.irceline.be/rio/wms", {
+            layers: 'rio:pm10_dmean',
             transparent: true,
             format: 'image/png',
-            cql_filter: timestring_day,
+            time: day_min_1,
+            tiled: true,
             opacity: 0.7,
-            visibility: true,
-            pane: 'tilePane',
-            zIndex: -9998,
-            projection: 'EPSG:4326',
-            units: 'm'
+            zIndex: -9998
         }).addTo(pm10_daily_mean);
-        this.pm10_daily_mean_station = L.tileLayer.wms("http://geo.irceline.be/wms", {
-            layers: 'realtime:pm10_station_daggemiddelde',
+        this.pm10_daily_mean_station = L.tileLayer.wms("http://geo.irceline.be/realtime/wms", {
+            layers: 'realtime:pm10_dmean_station',
             transparent: true,
             format: 'image/png',
-            cql_filter: timestring_day,
-            visibility: true,
-            pane: 'tilePane',
-            zIndex: -9997,
-            projection: 'EPSG:4326',
-            units: 'm'
+            time: day_min_1,
+            tiled: true,
+            zIndex: -9997
         }).addTo(pm10_daily_mean);
         // the forecast layers
         this.imageUrlPM10day0 = 'http://www.irceline.be/air/forecast/map/air_quality_PM10ovl_day0.png';
@@ -86,7 +79,7 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
         this.baseLayers = {
             "current hourly mean PM10": this.pm10_current,
             "current running 24 hour mean PM10": this.pm10_current24,
-            "daily mean (yesterday) PM10": this.pm10_daily_mean,
+            "daily mean (day_min_1) PM10": this.pm10_daily_mean,
             "forecast - daily mean today": this.pm10day0,
             "forecast - daily mean tomorrow": this.pm10day1,
             "forecast - daily mean in 2 days": this.pm10day2
@@ -98,7 +91,7 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
         Map.map.on('baselayerchange', function (eventLayer) {
             if (eventLayer.name === 'current running 24 hour mean PM10') {
                 Map.map.removeLayer(Map.stationMarkers);
-            } else if (eventLayer.name === 'daily mean (yesterday) PM10') {
+            } else if (eventLayer.name === 'daily mean (day_min_1) PM10') {
                 Map.map.removeLayer(Map.stationMarkers);
             } else if (eventLayer.name === 'forecast - daily mean today') {
                   Map.map.removeLayer(Map.stationMarkers);
@@ -179,88 +172,69 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
     }
 // different aggregations of O3 (phenomenonId === 7):
     if (phenomenonId === "7") {
-        this.o3_current = L.tileLayer.wms("http://geo.irceline.be/wms", {
-            layers: 'rio:o3_actueel',
+        this.o3_current = L.tileLayer.wms("http://geo.irceline.be/rio/wms", {
+            layers: 'rio:o3_hmean_1x1',
             transparent: true,
             format: 'image/png',
-            cql_filter: timestring,
+            time: now,
+            tiled: true,
             opacity: 0.7,
-            projection: 'EPSG:4326',
-            pane: 'tilePane',
-            zIndex: -9998,
-            units: 'm'
+            zIndex: -9998
         }).addTo(Map.map);
         this.o3_current8 = new L.LayerGroup();
-        this.o3_current8_rio = L.tileLayer.wms("http://geo.irceline.be/wms", {
-            layers: 'rio:o3_actueel8',
+        this.o3_current8_rio = L.tileLayer.wms("http://geo.irceline.be/rio/wms", {
+            layers: 'rio:o3_8hmean_1x1',
             transparent: true,
             format: 'image/png',
-            cql_filter: timestring,
+            time: now,
+            tiled: true,
             opacity: 0.7,
-            visibility: true,
-            pane: 'tilePane',
-            zIndex: -9998,
-            projection: 'EPSG:4326',
-            units: 'm'
+            zIndex: -9998
         }).addTo(o3_current8);
-        this.o3_current8_station = L.tileLayer.wms("http://geo.irceline.be/wms", {
-            layers: 'realtime:o3_station_actueel8',
+        this.o3_current8_station = L.tileLayer.wms("http://geo.irceline.be/realtime/wms", {
+            layers: 'realtime:o3_8hmean_station',
             transparent: true,
             format: 'image/png',
-            cql_filter: timestring,
-            visibility: true,
-            pane: 'tilePane',
-            zIndex: -9997,
-            projection: 'EPSG:4326',
-            units: 'm'
+            time: now,
+            tiled: true,
+            zIndex: -9997
         }).addTo(o3_current8);
         this.o3_max_hour = new L.LayerGroup();
-        this.o3_max_hour_rio = L.tileLayer.wms("http://geo.irceline.be/wms", {
-            layers: 'rio:o3_max',
+        this.o3_max_hour_rio = L.tileLayer.wms("http://geo.irceline.be/rio/wms", {
+            layers: 'rio:o3_maxhmean',
             transparent: true,
             format: 'image/png',
-            cql_filter: timestring_day,
+            time: day_0,
+            tiled: true,
             opacity: 0.7,
             visibility: true,
-            pane: 'tilePane',
-            zIndex: -9998,
-            projection: 'EPSG:4326',
-            units: 'm'
+            zIndex: -9998
         }).addTo(o3_max_hour);
-        this.o3_max_hour_station = L.tileLayer.wms("http://geo.irceline.be/wms", {
-            layers: 'realtime:o3_station_max',
+        this.o3_max_hour_station = L.tileLayer.wms("http://geo.irceline.be/realtime/wms", {
+            layers: 'realtime:o3_maxhmean_station',
             transparent: true,
             format: 'image/png',
-            cql_filter: timestring_day,
-            visibility: true,
-            pane: 'tilePane',
-            zIndex: -9997,
-            projection: 'EPSG:4326',
-            units: 'm'
+            time: day_0,
+            tiled: true,
+            zIndex: -9997
         }).addTo(o3_max_hour);
         this.o3_max_8hour = new L.LayerGroup();
-        this.o3_max_8hour_rio = L.tileLayer.wms("http://geo.irceline.be/wms", {
-            layers: 'rio:o3_max8',
+        this.o3_max_8hour_rio = L.tileLayer.wms("http://geo.irceline.be/rio/wms", {
+            layers: 'rio:o3_max8hmean',
             transparent: true,
             format: 'image/png',
-            cql_filter: timestring_day,
+            time: day_0,
+            tiled: true,
             opacity: 0.7,
-            visibility: true,
-            pane: 'tilePane',
-            zIndex: -9998,
-            projection: 'EPSG:4326',
-            units: 'm'
+            zIndex: -9998
         }).addTo(o3_max_8hour);
-        this.o3_max_8hour_station = L.tileLayer.wms("http://geo.irceline.be/wms", {
-            layers: 'realtime:o3_station_max8',
+        this.o3_max_8hour_station = L.tileLayer.wms("http://geo.irceline.be/realtime/wms", {
+            layers: 'realtime:o3_max8hmean_station',
             transparent: true,
             format: 'image/png',
-            cql_filter: timestring_day,
-            visibility: true,
-            pane: 'tilePane',
-            zIndex: -9997,
-            projection: 'EPSG:4326',
-            units: 'm'
+            time: day_0,
+            tiled: true,
+            zIndex: -9997
         }).addTo(o3_max_8hour);
         // the forecast layers
         this.imageUrlo3day0 = 'http://www.irceline.be/air/forecast/map/air_quality_O3max_day0.png';
@@ -386,41 +360,32 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
     }
     // different aggregations of the same pollutant (NO2):
         if (phenomenonId === "8") {
-            this.no2_current = L.tileLayer.wms("http://geo.irceline.be/wms", {
-                layers: 'rio:no2_actueel',
+            this.no2_current = L.tileLayer.wms("http://geo.irceline.be/rio/wms", {
+                layers: 'rio:no2_hmean_1x1',
                 transparent: true,
                 format: 'image/png',
-                cql_filter: timestring,
+                time: now,
+                tiled: true,
                 opacity: 0.7,
-                visibility: true,
-                pane: 'tilePane',
-                zIndex: -9998,
-                projection: 'EPSG:4326',
-                units: 'm'
+                zIndex: -9998
             }).addTo(Map.map);
             this.no2_max = new L.LayerGroup();
-            this.no2_max_rio = L.tileLayer.wms("http://geo.irceline.be/wms", {
-                layers: 'rio:no2_max',
+            this.no2_max_rio = L.tileLayer.wms("http://geo.irceline.be/rio/wms", {
+                layers: 'rio:no2_maxhmean',
                 transparent: true,
                 format: 'image/png',
-                cql_filter: timestring_day,
+                time: day_0,
+                tiled: true,
                 opacity: 0.7,
-                visibility: true,
-                pane: 'tilePane',
-                zIndex: -9998,
-                projection: 'EPSG:4326',
-                units: 'm'
+                zIndex: -9998
             }).addTo(no2_max);
-            this.no2_max_station = L.tileLayer.wms("http://geo.irceline.be/wms", {
-                layers: 'realtime:no2_station_max',
+            this.no2_max_station = L.tileLayer.wms("http://geo.irceline.be/realtime/wms", {
+                layers: 'realtime:no2_maxhmean_station',
                 transparent: true,
                 format: 'image/png',
-                cql_filter: timestring_day,
+                time: day_0,
                 opacity: 0.7,
-                projection: 'EPSG:4326',
-                pane: 'tilePane',
-                zIndex: -9997,
-                units: 'm'
+                zIndex: -9997
             }).addTo(no2_max);
             // the forecast layers
             this.imageUrlNO2day0 = 'http://www.irceline.be/air/forecast/map/air_quality_NO2max_day0.png';
@@ -519,70 +484,56 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
     // different aggregations of the same pollutant (BC):
         if (phenomenonId === "391") {
             this.bc_current = L.tileLayer.wms("http://geo.irceline.be/wms", {
-                layers: 'rio:bc_actueel',
+                layers: 'rio:bc_hmean_1x1',
                 transparent: true,
                 format: 'image/png',
-                cql_filter: timestring,
+                time: now,
+                tiled: true,
                 opacity: 0.7,
-                visibility: true,
-                pane: 'tilePane',
-                zIndex: -9998,
-                projection: 'EPSG:4326',
-                units: 'm'
+                zIndex: -9998
             }).addTo(Map.map);
             this.bc_current24 = new L.LayerGroup();
             this.bc_current24_rio = L.tileLayer.wms("http://geo.irceline.be/wms", {
-                layers: 'rio:bc_actueel24',
+                layers: 'rio:bc_24hmean',
                 transparent: true,
                 format: 'image/png',
-                cql_filter: timestring,
+                time: now,
+                tiled: true,
                 opacity: 0.7,
-                visibility: true,
-                pane: 'tilePane',
-                zIndex: -9998,
-                projection: 'EPSG:4326',
-                units: 'm'
+                zIndex: -9998
             }).addTo(bc_current24);
             this.bc_current24_station = L.tileLayer.wms("http://geo.irceline.be/wms", {
-                layers: 'realtime:bc_station_actueel24',
+                layers: 'realtime:bc_24hmean_station',
                 transparent: true,
                 format: 'image/png',
-                cql_filter: timestring,
+                time: now,
+                tiled: true,
                 opacity: 0.7,
-                projection: 'EPSG:4326',
-                pane: 'tilePane',
-                zIndex: -9997,
-                units: 'm'
+                zIndex: -9997
             }).addTo(bc_current24);
             this.bc_daily_mean = new L.LayerGroup();
             this.bc_daily_mean_rio = L.tileLayer.wms("http://geo.irceline.be/wms", {
-                layers: 'rio:bc_daggemiddelde',
+                layers: 'rio:bc_dmean',
                 transparent: true,
                 format: 'image/png',
-                cql_filter: timestring_day,
+                time: day_min_1,
+                tiled: true,
                 opacity: 0.7,
-                visibility: true,
-                pane: 'tilePane',
-                zIndex: -9998,
-                projection: 'EPSG:4326',
-                units: 'm'
+                zIndex: -9998
             }).addTo(bc_daily_mean);
             this.bc_daily_mean_station = L.tileLayer.wms("http://geo.irceline.be/wms", {
-                layers: 'realtime:bc_station_daggemiddelde',
+                layers: 'realtime:bc_dmean_station',
                 transparent: true,
                 format: 'image/png',
-                cql_filter: timestring_day,
-                visibility: true,
-                pane: 'tilePane',
-                zIndex: -9997,
-                projection: 'EPSG:4326',
-                units: 'm'
+                time: day_min_1,
+                tiled: true,
+                zIndex: -9997
             }).addTo(bc_daily_mean);
             // add layers control
             this.baseLayers = {
                 "current hourly mean BC": this.bc_current,
                 "current running 24 hour mean BC": this.bc_current24,
-                "daily mean (yesterday) BC": this.bc_daily_mean
+                "daily mean (day_min_1) BC": this.bc_daily_mean
             };
             this.bcControlLayer = L.control.layers(this.baseLayers, null, {
                 position: 'bottomright',
@@ -591,7 +542,7 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
             Map.map.on('baselayerchange', function (eventLayer) {
                 if (eventLayer.name === 'current running 24 hour mean BC') {
                     Map.map.removeLayer(Map.stationMarkers);
-                } else if (eventLayer.name === 'daily mean (yesterday) BC') {
+                } else if (eventLayer.name === 'daily mean (day_min_1) BC') {
                     Map.map.removeLayer(Map.stationMarkers);
                 } else {
                     Map.map.addLayer(Map.stationMarkers);
@@ -648,71 +599,52 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
         }
     // different aggregations of the same pollutant (PM2.5):
         if (phenomenonId === "6001") {
-            this.pm25_current = L.tileLayer.wms("http://geo.irceline.be/wms", {
-                layers: 'rio:pm25_actueel',
+            this.pm25_current = L.tileLayer.wms("http://geo.irceline.be/rio/wms", {
+                layers: 'rio:pm25_hmean_1x1',
                 transparent: true,
                 format: 'image/png',
-                cql_filter: timestring,
+                time: now,
+                tiled: true,
                 opacity: 0.7,
-                visibility: true,
-                pane: 'tilePane',
-                zIndex: -9998,
-                projection: 'EPSG:4326',
-                units: 'm'
+                zIndex: -9998
             }).addTo(Map.map);
             this.pm25_current24 = new L.LayerGroup();
-            this.pm25_current24_rio = L.tileLayer.wms("http://geo.irceline.be/wms", {
-                layers: 'rio:pm25_actueel24',
+            this.pm25_current24_rio = L.tileLayer.wms("http://geo.irceline.be/rio/wms", {
+                layers: 'rio:pm25_24hmean_1x1',
                 transparent: true,
                 format: 'image/png',
-                cql_filter: timestring,
+                time: now,
                 opacity: 0.7,
-                visibility: true,
-                pane: 'tilePane',
-                zIndex: -9998,
-                projection: 'EPSG:4326',
-                units: 'm'
+                zIndex: -9998
             }).addTo(pm25_current24);
-            this.pm25_current24_station = L.tileLayer.wms("http://geo.irceline.be/wms", {
-                layers: 'realtime:pm25_station_actueel24',
+            this.pm25_current24_station = L.tileLayer.wms("http://geo.irceline.be/realtime/wms", {
+                layers: 'realtime:pm25_24hmean_station',
                 transparent: true,
                 format: 'image/png',
-                cql_filter: timestring,
-                opacity: 0.7,
-                projection: 'EPSG:4326',
-                pane: 'tilePane',
-                zIndex: -9997,
-                units: 'm'
+                time: now,
+                zIndex: -9997
             }).addTo(pm25_current24);
             this.pm25_daily_mean = new L.LayerGroup();
-            this.pm25_daily_mean_rio = L.tileLayer.wms("http://geo.irceline.be/wms", {
-                layers: 'rio:pm25_daggemiddelde',
+            this.pm25_daily_mean_rio = L.tileLayer.wms("http://geo.irceline.be/rio/wms", {
+                layers: 'rio:pm25_dmean',
                 transparent: true,
                 format: 'image/png',
-                cql_filter: timestring_day,
+                time: day_min_1,
                 opacity: 0.7,
-                visibility: true,
-                pane: 'tilePane',
-                zIndex: -9998,
-                projection: 'EPSG:4326',
-                units: 'm'
+                zIndex: -9998
             }).addTo(pm25_daily_mean);
-            this.pm25_daily_mean_station = L.tileLayer.wms("http://geo.irceline.be/wms", {
-                layers: 'realtime:pm25_station_daggemiddelde',
+            this.pm25_daily_mean_station = L.tileLayer.wms("http://geo.irceline.be/realtime/wms", {
+                layers: 'realtime:pm25_dmean_station',
                 transparent: true,
                 format: 'image/png',
-                cql_filter: timestring_day,
-                visibility: true,
-                pane: 'tilePane',
-                zIndex: -9997,
-                projection: 'EPSG:4326',
-                units: 'm'
+                time: day_min_1,
+                zIndex: -9997
             }).addTo(pm25_daily_mean);
             // add layers control
             this.baseLayers = {
                 "current hourly mean PM2.5": this.pm25_current,
                 "current running 24 hour mean PM2.5": this.pm25_current24,
-                "daily mean (yesterday) PM2.5": this.pm25_daily_mean
+                "daily mean (day_min_1) PM2.5": this.pm25_daily_mean
             };
             this.pm25ControlLayer = L.control.layers(this.baseLayers, null, {
                 position: 'bottomright',
@@ -721,7 +653,7 @@ function changeWMS(phenomenonId, hourComputed, dayComputed, boundingbox) {
             Map.map.on('baselayerchange', function (eventLayer) {
                 if (eventLayer.name === 'current running 24 hour mean PM2.5') {
                     Map.map.removeLayer(Map.stationMarkers);
-                } else if (eventLayer.name === 'daily mean (yesterday) PM2.5') {
+                } else if (eventLayer.name === 'daily mean (day_min_1) PM2.5') {
                     Map.map.removeLayer(Map.stationMarkers);
                 } else {
                     Map.map.addLayer(Map.stationMarkers);
@@ -797,7 +729,8 @@ Map.init = function () {
             // var initialHref = window.location.href;
             // window.location = initialHref;
             // window.location.reload();
-            document.location = "index.html";
+            // document.location = "../index.html";
+            window.location = "../index.html";
         });
     });
     function checkInternet() {
