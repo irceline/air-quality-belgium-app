@@ -11,7 +11,14 @@
     "chartOptions":{
         "yaxis":{
             "tickDecimals" : 2
-        }
+        },
+        "points": {
+					"show": true
+				},
+        "grid": {
+				"hoverable": true,
+				"clickable": true
+  			}
     },
     "clusterStations": false,
     "generalizeData": true,
