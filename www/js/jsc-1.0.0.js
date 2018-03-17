@@ -162,7 +162,7 @@ i18n.en = {
       index_8: 'bad',
       index_9: 'very bad',
       index_10: 'extremely bad',
-      schale_decription: 'Note: all values in the above table are given as microgram per cubic meter (µg/m³)',
+      schale_description: 'Note: all values in the above table are given as microgram per cubic meter (µg/m³)',
       pollutant: 'Pollutants:',
       BC: 'Black Carbon',
       NO2: 'Nitrogen dioxide',
@@ -176,6 +176,7 @@ i18n.en = {
       PM25_description: 'The mass of all particles smaller than 2.5 µm. There is a clear link between higher mortality risk and high PM<sub>2.5</sub> concentrations. Besides traffic and industrial emissions, secondary emissions play a significant role. Secondary particulate matter is not directly emitted into the atmosphere but formed in the presence of precursors (Nitrogen oxides – NOx – from traffic/industry, Sulphur dioxide – SO<sub>2</sub> – from industry and ammonia – NH<sub>3</sub> – primarily agricultural emissions). PM<sub>2.5</sub> is more harmful for human health than PM<sub>10</sub>. PM<sub>2.5</sub> is by far the most important pollutant linked to adverse effects on human health. There is a better relationship between traffic emissions and PM<sub>2.5</sub> than PM<sub>10</sub>.',
       source: 'Source:',
       cooperation: 'The <a title="Belgian Interregional Environment Agency (IRCEL - CELINE)" href="http://www.irceline.be/en">Belgian Interregional Environment Agency (IRCEL - CELINE)</a> is a permanent cooperation between the three Belgian regions. For the domain of air quality the following three regional environment agencies are involved:',
+      logo_ibgebim: 'images/illu_fr_logobe.jpeg',
       maps: 'Background map &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors.',
       close: 'Close'
     },
@@ -510,7 +511,7 @@ i18n.de = {
     index_8: 'schlecht',
     index_9: 'sehr schlecht',
     index_10: 'extrem schlecht',
-    schale_decription: 'Hinweis: Alle Werte in der obigen Tabelle sind als Mikrogramm pro Kubikmeter (µg/m³) gegeben',
+    schale_description: 'Hinweis: Alle Werte in der obigen Tabelle sind als Mikrogramm pro Kubikmeter (µg/m³) gegeben',
     pollutant: 'Schadstoffe:',
     BC: 'Black Carbon',
     NO2: 'Stickstoffdioxid ',
@@ -524,6 +525,7 @@ i18n.de = {
     PM25_description: 'Die Masse aller Teilchen kleiner als 2,5 µm. Es gibt einen deutlichen Verband zwischen einem höheren Mortalitätsrisiko und hohen PM<sub>2.5</sub>-Konzentrationen. Neben Verkehr- und Industrieemissionen, spielen Sekundäremission eine wichtige Rolle. Sekundärer Feinstaub wird nicht direkt in die Atmosphäre emittiert, sondern in Gegenwart von Präkursoren gebildet (Stickstoffoxide - NOx - vom Verkehr/Industrie, Schwefeldioxid - SO<sub>2</sub> – von der Industrie und Ammoniak - NH<sub>3</sub> - vorwiegend landwirtschaftliche Emissionen). PM<sub>2.5</sub> ist schädlicher für die menschliche Gesundheit als PM<sub>10</sub>. PM<sub>2.5</sub> ist mit Abstand der wichtigste Schadstoff was nachteilige Auswirkungen auf die menschliche Gesundheit betrifft. Es gibt eine bessere Beziehung zwischen Verkehrsemissionen und PM<sub>2.5</sub> als PM<sub>10</sub>.',
     source: 'Quelle:',
     cooperation: 'Die <a title="Belgische Interregionale Umweltagentur (IRCEL - CELINE)" href="http://www.irceline.be/de">Belgische Interregionale Umweltagentur (IRCEL - CELINE)</a> ist eine dauerhafte Kooperationsvereinbarung zwischen den drei belgischen Regionen. Für den Bereich der Luftqualität sind die folgenden drei Umweltagenturen beteiligt:',
+    logo_ibgebim: 'images/illu_fr_logobe.jpeg',
     maps: 'Hintergrundkarte &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors.',
     close: 'Schließen'
   },
@@ -811,7 +813,7 @@ i18n.fr = {
     index_8: 'mauvais',
     index_9: 'très mauvais',
     index_10: 'exécrable',
-    schale_decription: 'Remarque : toutes les valeurs dans la table ci-dessus sont en microgrammes par mètre cube (µg/m³)',
+    schale_description: 'Remarque : toutes les valeurs dans la table ci-dessus sont en microgrammes par mètre cube (µg/m³)',
     pollutant: 'Pollutants:',
     BC: 'Black Carbon',
     NO2: 'Dioxyde d\'azote',
@@ -825,6 +827,7 @@ i18n.fr = {
     PM25_description: 'La masse de toutes les particules plus petites que 2,5 µm. A côté des émissions directes du trafic et de l’industrie, une fraction importante des PM<sub>2.5</sub> est d’origine secondaire. Ce qui signifie que ces particules ne sont pas émises directement mais se forment dans l’air à partir de gaz précurseurs (oxydes d’azote, NOx, du trafic/industrie, dioxyde de soufre – SO<sub>2</sub> - de l’industrie et ammoniaque - NH<sub>3</sub> - de l’agriculture). La fraction PM<sub>2.5</sub> est plus toxique que la fraction PM<sub>10</sub>. La fraction PM<sub>2.5</sub> est de loin le polluant présentant le plus d’effets néfastes pour la santé humaine. Il y a un lien direct entre les concentrations élevées de PM<sub>2.5</sub> et un risque accru de mortalité.',
     source: 'Source:',
     cooperation: 'La <a title="Cellule Interrégionale de l’Environnement (CELINE)" href="http://www.irceline.be/fr">CELlule INterrégionale de l’Environnement (CELINE)</a> est une collaboration permanente entre les trois régions de Belgique. Pour le domaine de la qualité de l’air, les trois agences environnementales régionales suivantes sont concernées :',
+    logo_ibgebim: 'images/illu_fr_logobe.jpeg',
     maps: 'Fond de carte &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors.',
     close: 'Fermer'
   },
@@ -1112,7 +1115,7 @@ i18n.nl = {
     index_8: 'slecht',
     index_9: 'zeer slecht',
     index_10: 'uitermate slecht',
-    schale_decription: 'Nota: alle waarden in de bovenstaande tabel worden gegeven in microgram per kubieke meter (µg/m³)',
+    schale_description: 'Nota: alle waarden in de bovenstaande tabel worden gegeven in microgram per kubieke meter (µg/m³)',
     pollutant: 'Polluenten:',
     BC: 'Black Carbon',
     NO2: 'Stikstofdioxide',
@@ -1126,6 +1129,7 @@ i18n.nl = {
     PM25_description: 'De massa van alle deeltjes kleiner dan 2,5 micrometer. Er is een duidelijk verband tussen  mortaliteit en hoge PM<sub>2.5</sub> concentraties. Naast het verkeer en industriële emissies, speelt ook de secundaire vorming een belangrijke rol. Secundair fijn stof wordt niet rechtstreeks uitgestoten maar de deeltjes worden gevormd in de atmosfeer in de aanwezigheid van precursoren (stikstofoxiden - NOx - van verkeer/industrie, zwaveldioxide - SO<sub>2</sub> - van industrie en ammoniak - NH<sub>3</sub> - voornamelijk agrarische emissies). PM<sub>2.5</sub> is schadelijker voor de gezondheid dan PM<sub>10</sub>. PM<sub>2.5</sub> is veruit de belangrijkste polluent in verband met schadelijke effecten op de gezondheid van de mens. Er is een betere relatie tussen de verkeersemissies en PMPM<sub>2.5</sub> dan PMPM<sub>10</sub>.',
     source: 'Bron:',
     cooperation: 'De <a title="Intergewestelijke Cel voor het Leefmilieu (IRCEL)" href="http://www.irceline.be/nl">Intergewestelijke Cel voor het Leefmilieu (IRCEL)</a> is een permanente samenwerking tussen de drie Belgische gewesten. Voor het domein luchtkwaliteit zijn de volgende drie regionale milieuagentschappen de betrokken partijen:',
+    logo_ibgebim: 'images/illu_nl_logobe.jpeg',
     maps: 'Achtergrondkaart &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors.',
     close: 'Sluiten'
   },
@@ -1990,7 +1994,7 @@ var Settings = {
     },
     wmsLayer: [],
     // configuration for the tile layer in the leaflet map (see for more information: http://leafletjs.com/reference.html#tilelayer )
-    tileLayerUrl: 'https://osm.irceline.be/styles/irceline-basic/{z}/{x}/{y}.png',
+    tileLayerUrl: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
     tileLayerOptions: {
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
       pane: 'mapPane',
@@ -3450,7 +3454,7 @@ var TimeController = {
  * limitations under the License.
  */
 var Map = {
-    defaultTileLayerUrl: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+    defaultTileLayerUrl: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
     defaultTileLayerOptions: {
       attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
       pane: 'mapPane',
